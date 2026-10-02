@@ -750,7 +750,7 @@ S_get_RV(pTHX_ SV *sv, SV *sobj) {
         if (SvROK(sv)) {
             SvREFCNT_dec(SvRV(sv));
         } else {
-            assert(SvTYPE(sv) >= SVt_IV);
+            assert(SvTYPE(sv) >= SVt_RV);
             sv_setsv_nomg(sv, &PL_sv_undef);
             SvROK_on(sv);
         }
@@ -817,7 +817,7 @@ sharedsv_scalar_store(pTHX_ SV *sv, SV *ssv)
     assert(PL_sharedsv_lock.owner == aTHX);
     if (!PL_dirty && SvROK(ssv) && SvREFCNT(SvRV(ssv)) == 1) {
         SV *sv = sv_newmortal();
-        sv_upgrade(sv, SVt_IV);
+        sv_upgrade(sv, SVt_RV);
         get_RV(sv, SvRV(ssv));
     }
     if (SvROK(sv)) {
@@ -898,7 +898,7 @@ sharedsv_scalar_mg_free(pTHX_ SV *sv, MAGIC *mg)
     if (!PL_dirty
      && SvROK((SV *)mg->mg_ptr) && SvREFCNT(SvRV((SV *)mg->mg_ptr)) == 1) {
         SV *sv = sv_newmortal();
-        sv_upgrade(sv, SVt_IV);
+        sv_upgrade(sv, SVt_RV);
         get_RV(sv, SvRV((SV *)mg->mg_ptr));
     }
     S_sharedsv_dec(aTHX_ (SV*)mg->mg_ptr);
@@ -1159,7 +1159,7 @@ sharedsv_array_mg_CLEAR(pTHX_ SV *sv, MAGIC *mg)
                     SV *tmp;
                     PERL_SET_CONTEXT((aTHX = caller_perl));
                     tmp = sv_newmortal();
-                    sv_upgrade(tmp, SVt_IV);
+                    sv_upgrade(tmp, SVt_RV);
                     get_RV(tmp, sv);
                     PERL_SET_CONTEXT((aTHX = PL_sharedsv_space));
                 }
@@ -1651,7 +1651,7 @@ XS_EUPXS(XS_threads__shared__tie_STORESIZE)
                     SV *tmp;
                     PERL_SET_CONTEXT((aTHX = caller_perl));
                     tmp = sv_newmortal();
-                    sv_upgrade(tmp, SVt_IV);
+                    sv_upgrade(tmp, SVt_RV);
                     get_RV(tmp, sv);
                     PERL_SET_CONTEXT((aTHX = PL_sharedsv_space));
                 }

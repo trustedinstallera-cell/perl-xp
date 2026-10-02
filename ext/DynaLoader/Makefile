@@ -35,18 +35,18 @@ SHELL = C:\WINDOWS\system32\cmd.exe
 
 # These definitions are from config.sh (via D:\perl-xp\perl-5.40.3\lib/Config.pm).
 # They may have been overridden via Makefile.PL or on the command line.
-AR = i686-w64-mingw32-ar
-CC = i686-w64-mingw32-gcc
+AR = ar
+CC = gcc
 CCCDLFLAGS =  
 CCDLFLAGS =  
-CPPRUN = i686-w64-mingw32-gcc -E
+CPPRUN = gcc -E
 DLEXT = dll
 DLSRC = dl_win32.xs
 EXE_EXT = .exe
 FULL_AR = 
-LD = i686-w64-mingw32-g++
-LDDLFLAGS = -shared -s -L"c:\perl\lib\CORE" -L"C:/toolchains/gcc-win98\i686-w64-mingw32\lib"
-LDFLAGS = -s -L"c:\perl\lib\CORE" -L"C:/toolchains/gcc-win98\i686-w64-mingw32\lib"
+LD = g++
+LDDLFLAGS = -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0"
+LDFLAGS = -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0"
 LIBC = -lmsvcrt
 LIB_EXT = .a
 OBJ_EXT = .o
@@ -89,25 +89,25 @@ PREFIX = $(PERLPREFIX)
 PERLPREFIX = c:\perl
 SITEPREFIX = c:\perl\site
 VENDORPREFIX = 
-INSTALLPRIVLIB = 
+INSTALLPRIVLIB = c:\perl\lib
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = 
+INSTALLSITELIB = c:\perl\site\lib
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
 INSTALLARCHLIB = c:\perl\lib
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = 
+INSTALLSITEARCH = c:\perl\site\lib
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
 INSTALLBIN = c:\perl\bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = $(INSTALLBIN)
+INSTALLSITEBIN = c:\perl\bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
 INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = 
+INSTALLSCRIPT = c:\perl\bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
 INSTALLSITESCRIPT = $(INSTALLSCRIPT)
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
@@ -158,7 +158,7 @@ MM_REVISION = 77000
 # BASEEXT = Basename part of FULLEXT. May be just equal FULLEXT. (eg Oracle)
 # PARENT_NAME = NAME without BASEEXT and no trailing :: (eg Foo::Bar)
 # DLBASE  = Basename part of dynamic library. May be just equal BASEEXT.
-MAKE = gmake
+MAKE = make
 FULLEXT = DynaLoader
 BASEEXT = DynaLoader
 PARENT_NAME = 
@@ -171,8 +171,7 @@ LINKTYPE = static
 BOOTDEP = 
 
 # Handy lists of source code files:
-XS_FILES = DynaLoader.xs \
-	dl_aix.xs \
+XS_FILES = dl_aix.xs \
 	dl_dllload.xs \
 	dl_dlopen.xs \
 	dl_dyld.xs \
@@ -181,8 +180,7 @@ XS_FILES = DynaLoader.xs \
 	dl_none.xs \
 	dl_vms.xs \
 	dl_win32.xs
-C_FILES  = DynaLoader.c \
-	dl_aix.c \
+C_FILES  = dl_aix.c \
 	dl_dllload.c \
 	dl_dlopen.c \
 	dl_dyld.c \
@@ -192,8 +190,7 @@ C_FILES  = DynaLoader.c \
 	dl_vms.c \
 	dl_win32.c \
 	dlutils.c
-O_FILES  = DynaLoader.o \
-	dl_aix.o \
+O_FILES  = dl_aix.o \
 	dl_dllload.o \
 	dl_dlopen.o \
 	dl_dyld.o \
@@ -317,7 +314,7 @@ DynaLoader.c : DynaLoader.xs
 
 # --- MakeMaker cflags section:
 
-CCFLAGS = -D_WIN32_WINNT=0x0501 -Wno-error -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -O0 -g -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -DPERLDLL
+CCFLAGS = -std=gnu99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -DPERLDLL
 OPTIMIZE = -Os
 PERLTYPE = 
 
@@ -538,11 +535,7 @@ clean :: clean_subdirs
 	  $(BOOTSTRAP) $(INST_ARCHAUTODIR)\extralibs.all \
 	  $(INST_ARCHAUTODIR)\extralibs.ld $(MAKE_APERL_FILE) \
 	  *$(LIB_EXT) *$(OBJ_EXT) \
-	  *perl.core DynaLoader.base \
-	  DynaLoader.bs DynaLoader.bso \
-	  DynaLoader.c DynaLoader.def \
-	  DynaLoader.exp DynaLoader.o \
-	  DynaLoader_def.old MYMETA.json \
+	  *perl.core MYMETA.json \
 	  MYMETA.yml blibdirs.ts \
 	  core core.*perl.*.? \
 	  core.[0-9] core.[0-9][0-9] \
@@ -574,13 +567,13 @@ clean :: clean_subdirs
 	  dl_hpux_def.old dl_none.base \
 	  dl_none.bs dl_none.bso \
 	  dl_none.c dl_none.def \
-	  dl_none.exp dl_none.o 
-	- $(RM_F) \
+	  dl_none.exp dl_none.o \
 	  dl_none_def.old dl_vms.base \
 	  dl_vms.bs dl_vms.bso \
 	  dl_vms.c dl_vms.def \
 	  dl_vms.exp dl_vms.o \
-	  dl_vms_def.old dl_win32.base \
+	  dl_vms_def.old dl_win32.base 
+	- $(RM_F) \
 	  dl_win32.bs dl_win32.bso \
 	  dl_win32.c dl_win32.def \
 	  dl_win32.exp dl_win32.o \
@@ -714,15 +707,15 @@ distmeta : create_distdir metafile
 eval { maniadd({q{META.yml} => q{Module YAML meta-data (added by MakeMaker)}}) }\
     or die \"Could not add META.yml to MANIFEST: $${'^@'}\"" --
 	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "exit unless -f q{META.json};\
-eval { maniadd({q{META.json} =^> q{Module JSON meta-data (added by MakeMaker)}}) }\
-    or die \"Could not add META.json to MANIFEST: $${'@'}\"" --
+eval { maniadd({q{META.json} => q{Module JSON meta-data (added by MakeMaker)}}) }\
+    or die \"Could not add META.json to MANIFEST: $${'^@'}\"" --
 
 
 
 # --- MakeMaker distsignature section:
 distsignature : distmeta
-	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "eval { maniadd({q{SIGNATURE} =^> q{Public-key signature (added by MakeMaker)}}) }\
-    or die \"Could not add SIGNATURE to MANIFEST: $${'@'}\"" --
+	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "eval { maniadd({q{SIGNATURE} => q{Public-key signature (added by MakeMaker)}}) }\
+    or die \"Could not add SIGNATURE to MANIFEST: $${'^@'}\"" --
 	$(NOECHO) cd $(DISTVNAME) && $(TOUCH) SIGNATURE
 	cd $(DISTVNAME) && cpansign -s
 
@@ -945,7 +938,7 @@ PERL_HDRS = \
 
 $(OBJECT) : $(PERL_HDRS)
 
-DynaLoader.c dl_aix.c dl_dllload.c dl_dlopen.c dl_dyld.c dl_freemint.c dl_hpux.c dl_none.c dl_vms.c dl_win32.c : $(XSUBPPDEPS)
+dl_aix.c dl_dllload.c dl_dlopen.c dl_dyld.c dl_freemint.c dl_hpux.c dl_none.c dl_vms.c dl_win32.c : $(XSUBPPDEPS)
 
 
 # --- MakeMaker makefile section:
@@ -1032,7 +1025,7 @@ ppd :
 	$(NOECHO) $(ECHO) "    <ABSTRACT></ABSTRACT>" >> DynaLoader.ppd
 	$(NOECHO) $(ECHO) "    <AUTHOR></AUTHOR>" >> DynaLoader.ppd
 	$(NOECHO) $(ECHO) "    <IMPLEMENTATION>" >> DynaLoader.ppd
-	$(NOECHO) $(ECHO) "        ^<ARCHITECTURE NAME=\"MSWin32-x86-multi-5.40\" />" >> DynaLoader.ppd
+	$(NOECHO) $(ECHO) "        <ARCHITECTURE NAME=\"MSWin32-x86-multi-thread-5.40\" />" >> DynaLoader.ppd
 	$(NOECHO) $(ECHO) "        <CODEBASE HREF=\"\" />" >> DynaLoader.ppd
 	$(NOECHO) $(ECHO) "    </IMPLEMENTATION>" >> DynaLoader.ppd
 	$(NOECHO) $(ECHO) ^</SOFTPKG^> >> DynaLoader.ppd

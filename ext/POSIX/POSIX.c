@@ -10,18 +10,6 @@
 #define PERL_EXT_POSIX
 #define PERL_EXT
 
-/* MinGW32 compatibility: map POSIX math/bessel names to MSVCRT _-prefixed names */
-#ifdef __MINGW32__
-#  define j0 _j0
-#  define j1 _j1
-#  define jn _jn
-#  define y0 _y0
-#  define y1 _y1
-#  define yn _yn
-#  define finite _finite
-#endif
-
-
 #if defined(_WIN32) && defined(__GNUC__) /* mingw compiler */
 #define _POSIX_
 #endif
@@ -1743,7 +1731,7 @@ fix_win32_tzenv(void)
         newenv = (char*)malloc((strlen(perl_tz_env) + 4) * sizeof(char));
         if (newenv != NULL) {
             sprintf(newenv, "TZ=%s", perl_tz_env);
-            _putenv(newenv);
+            putenv(newenv);
             if (oldenv != NULL)
                 free(oldenv);
             oldenv = newenv;
@@ -1775,7 +1763,7 @@ my_tzset(pTHX)
      * self-consistent */
 }
 
-#line 1779 "POSIX.c"
+#line 1767 "POSIX.c"
 #ifndef PERL_UNUSED_VAR
 #  define PERL_UNUSED_VAR(var) if (0) var = var
 #endif
@@ -1919,7 +1907,7 @@ S_croak_xs_usage(const CV *const cv, const char *const params)
 #  define newXS_deffile(a,b) Perl_newXS_deffile(aTHX_ a,b)
 #endif
 
-#line 1923 "POSIX.c"
+#line 1911 "POSIX.c"
 
 XS_EUPXS(XS_POSIX__SigSet_new); /* prototype to pass -Wmissing-prototypes */
 XS_EUPXS(XS_POSIX__SigSet_new)
@@ -1936,7 +1924,7 @@ XS_EUPXS(XS_POSIX__SigSet_new)
 	    packname = (const char *)SvPV_nolen(ST(0))
 ;
 	}
-#line 1775 "POSIX.xs"
+#line 1763 "POSIX.xs"
 	{
 	    int i;
 	    sigset_t *const s
@@ -1951,7 +1939,7 @@ XS_EUPXS(XS_POSIX__SigSet_new)
             }
 	    XSRETURN(1);
 	}
-#line 1955 "POSIX.c"
+#line 1943 "POSIX.c"
     }
     XSRETURN(1);
 }
@@ -1986,9 +1974,9 @@ XS_EUPXS(XS_POSIX__SigSet_addset)
                                    sig);
 	}
 ;
-#line 1797 "POSIX.xs"
+#line 1785 "POSIX.xs"
 	RETVAL = ix ? sigdelset(sigset, sig) : sigaddset(sigset, sig);
-#line 1992 "POSIX.c"
+#line 1980 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = sv_newmortal();
@@ -2026,9 +2014,9 @@ XS_EUPXS(XS_POSIX__SigSet_emptyset)
 			"sigset", "POSIX::SigSet");
 	}
 ;
-#line 1807 "POSIX.xs"
+#line 1795 "POSIX.xs"
 	RETVAL = ix ? sigfillset(sigset) : sigemptyset(sigset);
-#line 2032 "POSIX.c"
+#line 2020 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = sv_newmortal();
@@ -2098,7 +2086,7 @@ XS_EUPXS(XS_POSIX__Termios_new)
 	    packname = (const char *)SvPV_nolen(ST(0))
 ;
 	}
-#line 1822 "POSIX.xs"
+#line 1810 "POSIX.xs"
 	{
 #ifdef I_TERMIOS
 	    void *const p = allocate_struct(aTHX_ (ST(0) = sv_newmortal()),
@@ -2113,7 +2101,7 @@ XS_EUPXS(XS_POSIX__Termios_new)
 	    not_here("termios");
 #endif
 	}
-#line 2117 "POSIX.c"
+#line 2105 "POSIX.c"
     }
     XSRETURN(1);
 }
@@ -2150,9 +2138,9 @@ XS_EUPXS(XS_POSIX__Termios_getattr)
 	    }
 ;
 	}
-#line 1842 "POSIX.xs"
+#line 1830 "POSIX.xs"
 	RETVAL = tcgetattr(fd, termios_ref);
-#line 2156 "POSIX.c"
+#line 2144 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = sv_newmortal();
@@ -2213,7 +2201,7 @@ XS_EUPXS(XS_POSIX__Termios_setattr)
 	    optional_actions = (int)SvIV(ST(2))
 ;
 	}
-#line 1860 "POSIX.xs"
+#line 1848 "POSIX.xs"
 	/* The second argument to the call is mandatory, but we'd like to give
 	   it a useful default. 0 isn't valid on all operating systems - on
            Solaris (at least) TCSANOW, TCSADRAIN and TCSAFLUSH have the same
@@ -2224,7 +2212,7 @@ XS_EUPXS(XS_POSIX__Termios_setattr)
         } else {
             RETVAL = tcsetattr(fd, optional_actions, termios_ref);
         }
-#line 2228 "POSIX.c"
+#line 2216 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = sv_newmortal();
@@ -2263,9 +2251,9 @@ XS_EUPXS(XS_POSIX__Termios_getispeed)
 			"termios_ref", "POSIX::Termios");
 	}
 ;
-#line 1879 "POSIX.xs"
+#line 1867 "POSIX.xs"
 	RETVAL = ix ? cfgetospeed(termios_ref) : cfgetispeed(termios_ref);
-#line 2269 "POSIX.c"
+#line 2257 "POSIX.c"
 	XSprePUSH;
 	PUSHi((IV)RETVAL);
     }
@@ -2295,7 +2283,7 @@ XS_EUPXS(XS_POSIX__Termios_getiflag)
 			"termios_ref", "POSIX::Termios");
 	}
 ;
-#line 1891 "POSIX.xs"
+#line 1879 "POSIX.xs"
 #ifdef I_TERMIOS /* References a termios structure member so ifdef it out. */
 	switch(ix) {
 	case 0:
@@ -2317,7 +2305,7 @@ XS_EUPXS(XS_POSIX__Termios_getiflag)
 	not_here(GvNAME(CvGV(cv)));
 	RETVAL = 0;
 #endif
-#line 2321 "POSIX.c"
+#line 2309 "POSIX.c"
 	XSprePUSH;
 	PUSHi((IV)RETVAL);
     }
@@ -2348,7 +2336,7 @@ XS_EUPXS(XS_POSIX__Termios_getcc)
 			"termios_ref", "POSIX::Termios");
 	}
 ;
-#line 1920 "POSIX.xs"
+#line 1908 "POSIX.xs"
 #ifdef I_TERMIOS /* References a termios structure member so ifdef it out. */
 	if (ccix >= NCCS)
 	    croak("Bad getcc subscript");
@@ -2357,7 +2345,7 @@ XS_EUPXS(XS_POSIX__Termios_getcc)
      not_here("getcc");
      RETVAL = 0;
 #endif
-#line 2361 "POSIX.c"
+#line 2349 "POSIX.c"
 	XSprePUSH;
 	PUSHi((IV)RETVAL);
     }
@@ -2388,10 +2376,10 @@ XS_EUPXS(XS_POSIX__Termios_setispeed)
 			"termios_ref", "POSIX::Termios");
 	}
 ;
-#line 1938 "POSIX.xs"
+#line 1926 "POSIX.xs"
 	RETVAL = ix
 	    ? cfsetospeed(termios_ref, speed) : cfsetispeed(termios_ref, speed);
-#line 2395 "POSIX.c"
+#line 2383 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = sv_newmortal();
@@ -2430,7 +2418,7 @@ XS_EUPXS(XS_POSIX__Termios_setiflag)
 			"termios_ref", "POSIX::Termios");
 	}
 ;
-#line 1952 "POSIX.xs"
+#line 1940 "POSIX.xs"
 #ifdef I_TERMIOS /* References a termios structure member so ifdef it out. */
 	switch(ix) {
 	case 0:
@@ -2449,7 +2437,7 @@ XS_EUPXS(XS_POSIX__Termios_setiflag)
 #else
 	not_here(GvNAME(CvGV(cv)));
 #endif
-#line 2453 "POSIX.c"
+#line 2441 "POSIX.c"
     }
     XSRETURN_EMPTY;
 }
@@ -2478,7 +2466,7 @@ XS_EUPXS(XS_POSIX__Termios_setcc)
 			"termios_ref", "POSIX::Termios");
 	}
 ;
-#line 1977 "POSIX.xs"
+#line 1965 "POSIX.xs"
 #ifdef I_TERMIOS /* References a termios structure member so ifdef it out. */
 	if (ccix >= NCCS)
 	    croak("Bad setcc subscript");
@@ -2486,7 +2474,7 @@ XS_EUPXS(XS_POSIX__Termios_setcc)
 #else
 	    not_here("setcc");
 #endif
-#line 2490 "POSIX.c"
+#line 2478 "POSIX.c"
     }
     XSRETURN_EMPTY;
 }
@@ -2511,7 +2499,7 @@ XS_EUPXS(XS_POSIX_constant)
 	/* cx is NULL if we've been called from the top level. PL_curcop isn't
 	   ideal, but it's much cheaper than other ways of not going SEGV.  */
 	const COP *cop = cx ? cx->blk_oldcop : PL_curcop;
-#line 2515 "POSIX.c"
+#line 2503 "POSIX.c"
 #line 1722 "./const-xs.inc"
 #ifndef SYMBIAN
 	/* It's not obvious how to calculate this at C pre-processor time.
@@ -2534,7 +2522,7 @@ XS_EUPXS(XS_POSIX_constant)
 			  sv, COP_FILE(cop), (UV)CopLINE(cop));
 	}
 	croak_sv(sv_2mortal(sv));
-#line 2538 "POSIX.c"
+#line 2526 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -2556,7 +2544,7 @@ XS_EUPXS(XS_POSIX_WEXITSTATUS)
 ;
 	int	RETVAL;
 	dXSTARG;
-#line 2000 "POSIX.xs"
+#line 1988 "POSIX.xs"
 #if !defined(WEXITSTATUS) || !defined(WIFEXITED) || !defined(WIFSIGNALED) \
       || !defined(WIFSTOPPED) || !defined(WSTOPSIG) || !defined(WTERMSIG)
         RETVAL = 0; /* Silence compilers that notice this, but don't realise
@@ -2608,7 +2596,7 @@ XS_EUPXS(XS_POSIX_WEXITSTATUS)
 	default:
 	    croak("Illegal alias %d for POSIX::W*", (int)ix);
 	}
-#line 2612 "POSIX.c"
+#line 2600 "POSIX.c"
 	XSprePUSH;
 	PUSHi((IV)RETVAL);
     }
@@ -2642,11 +2630,11 @@ XS_EUPXS(XS_POSIX_open)
 	    mode = (Mode_t)SvIV(ST(2))
 ;
 	}
-#line 2060 "POSIX.xs"
+#line 2048 "POSIX.xs"
 	if (flags & (O_APPEND|O_CREAT|O_TRUNC|O_RDWR|O_WRONLY|O_EXCL))
 	    TAINT_PROPER("open");
 	RETVAL = open(filename, flags, mode);
-#line 2650 "POSIX.c"
+#line 2638 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = sv_newmortal();
@@ -2671,9 +2659,9 @@ XS_EUPXS(XS_POSIX_localeconv)
        croak_xs_usage(cv,  "");
     {
 	HV *	RETVAL;
-#line 2070 "POSIX.xs"
+#line 2058 "POSIX.xs"
         RETVAL = Perl_localeconv(aTHX);
-#line 2677 "POSIX.c"
+#line 2665 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = newRV((SV*)RETVAL);
@@ -2695,9 +2683,9 @@ XS_EUPXS(XS_POSIX_setlocale)
 	int	category = (int)SvIV(ST(0))
 ;
 	const char *	locale;
-#line 2079 "POSIX.xs"
+#line 2067 "POSIX.xs"
 	char *		retval;
-#line 2701 "POSIX.c"
+#line 2689 "POSIX.c"
 	char *	RETVAL;
 	dXSTARG;
 
@@ -2707,14 +2695,14 @@ XS_EUPXS(XS_POSIX_setlocale)
 	    locale = (const char *)SvPV_nolen(ST(1))
 ;
 	}
-#line 2081 "POSIX.xs"
+#line 2069 "POSIX.xs"
 	retval = (char *) Perl_setlocale(category, locale);
         if (! retval) {
             XSRETURN_UNDEF;
         }
 
         RETVAL = retval;
-#line 2718 "POSIX.c"
+#line 2706 "POSIX.c"
 	sv_setpv(TARG, RETVAL);
 	XSprePUSH;
 	PUSHTARG;
@@ -2735,7 +2723,7 @@ XS_EUPXS(XS_POSIX_acos)
 ;
 	NV	RETVAL;
 	dXSTARG;
-#line 2125 "POSIX.xs"
+#line 2113 "POSIX.xs"
 	PERL_UNUSED_VAR(x);
 #ifdef NV_NAN
 	RETVAL = NV_NAN;
@@ -2926,7 +2914,7 @@ XS_EUPXS(XS_POSIX_acos)
 	    not_here("y1");
 #endif
 	}
-#line 2930 "POSIX.c"
+#line 2918 "POSIX.c"
 	XSprePUSH;
 	PUSHn((NV)RETVAL);
     }
@@ -2944,7 +2932,7 @@ XS_EUPXS(XS_POSIX_fegetround)
     {
 	IV	RETVAL;
 	dXSTARG;
-#line 2324 "POSIX.xs"
+#line 2312 "POSIX.xs"
         switch (ix) {
         case 0:
         default:
@@ -2982,7 +2970,7 @@ XS_EUPXS(XS_POSIX_fegetround)
 #endif
             break;
         }
-#line 2986 "POSIX.c"
+#line 2974 "POSIX.c"
 	XSprePUSH;
 	PUSHi((IV)RETVAL);
     }
@@ -3001,7 +2989,7 @@ XS_EUPXS(XS_POSIX_fesetround)
 ;
 	IV	RETVAL;
 	dXSTARG;
-#line 2368 "POSIX.xs"
+#line 2356 "POSIX.xs"
 #ifdef HAS_FEGETROUND /* canary for fesetround */
 	RETVAL = fesetround(x);
 #elif defined(HAS_FPGETROUND) /* canary for fpsetround */
@@ -3025,7 +3013,7 @@ XS_EUPXS(XS_POSIX_fesetround)
 	RETVAL = -1;
 	not_here("fesetround");
 #endif
-#line 3029 "POSIX.c"
+#line 3017 "POSIX.c"
 	XSprePUSH;
 	PUSHi((IV)RETVAL);
     }
@@ -3045,7 +3033,7 @@ XS_EUPXS(XS_POSIX_fpclassify)
 ;
 	IV	RETVAL;
 	dXSTARG;
-#line 2407 "POSIX.xs"
+#line 2395 "POSIX.xs"
         PERL_UNUSED_VAR(x);
 	RETVAL = -1;
 	switch (ix) {
@@ -3098,7 +3086,7 @@ XS_EUPXS(XS_POSIX_fpclassify)
 	    RETVAL = Perl_signbit(x);
 	    break;
 	}
-#line 3102 "POSIX.c"
+#line 3090 "POSIX.c"
 	XSprePUSH;
 	PUSHi((IV)RETVAL);
     }
@@ -3117,7 +3105,7 @@ XS_EUPXS(XS_POSIX_getpayload)
 ;
 	NV	RETVAL;
 	dXSTARG;
-#line 2466 "POSIX.xs"
+#line 2454 "POSIX.xs"
 #ifdef DOUBLE_HAS_NAN
 	RETVAL = S_getpayload(nv);
 #else
@@ -3125,7 +3113,7 @@ XS_EUPXS(XS_POSIX_getpayload)
         RETVAL = 0.0;
 	not_here("getpayload");
 #endif
-#line 3129 "POSIX.c"
+#line 3117 "POSIX.c"
 	XSprePUSH;
 	PUSHn((NV)RETVAL);
     }
@@ -3144,7 +3132,7 @@ XS_EUPXS(XS_POSIX_setpayload)
 ;
 	NV	payload = (NV)SvNV(ST(1))
 ;
-#line 2481 "POSIX.xs"
+#line 2469 "POSIX.xs"
 #ifdef DOUBLE_HAS_NAN
 	S_setpayload(&nv, payload, FALSE);
 #else
@@ -3152,7 +3140,7 @@ XS_EUPXS(XS_POSIX_setpayload)
         PERL_UNUSED_VAR(payload);
 	not_here("setpayload");
 #endif
-#line 3156 "POSIX.c"
+#line 3144 "POSIX.c"
 	sv_setnv(ST(0), (NV)nv);
 	SvSETMAGIC(ST(0));
     }
@@ -3171,7 +3159,7 @@ XS_EUPXS(XS_POSIX_setpayloadsig)
 ;
 	NV	payload = (NV)SvNV(ST(1))
 ;
-#line 2496 "POSIX.xs"
+#line 2484 "POSIX.xs"
 #ifdef DOUBLE_HAS_NAN
 	nv = NV_NAN;
 	S_setpayload(&nv, payload, TRUE);
@@ -3180,7 +3168,7 @@ XS_EUPXS(XS_POSIX_setpayloadsig)
         PERL_UNUSED_VAR(payload);
 	not_here("setpayloadsig");
 #endif
-#line 3184 "POSIX.c"
+#line 3172 "POSIX.c"
 	sv_setnv(ST(0), (NV)nv);
 	SvSETMAGIC(ST(0));
     }
@@ -3199,7 +3187,7 @@ XS_EUPXS(XS_POSIX_issignaling)
 ;
 	int	RETVAL;
 	dXSTARG;
-#line 2511 "POSIX.xs"
+#line 2499 "POSIX.xs"
 #ifdef DOUBLE_HAS_NAN
 	RETVAL = Perl_isnan(nv) && NV_NAN_IS_SIGNALING(&nv);
 #else
@@ -3207,7 +3195,7 @@ XS_EUPXS(XS_POSIX_issignaling)
         RETVAL = 0.0;
 	not_here("issignaling");
 #endif
-#line 3211 "POSIX.c"
+#line 3199 "POSIX.c"
 	XSprePUSH;
 	PUSHi((IV)RETVAL);
     }
@@ -3229,7 +3217,7 @@ XS_EUPXS(XS_POSIX_copysign)
 ;
 	NV	RETVAL;
 	dXSTARG;
-#line 2541 "POSIX.xs"
+#line 2529 "POSIX.xs"
         PERL_UNUSED_VAR(x);
         PERL_UNUSED_VAR(y);
 #ifdef NV_NAN
@@ -3341,7 +3329,7 @@ XS_EUPXS(XS_POSIX_copysign)
 #endif
 	    break;
 	}
-#line 3345 "POSIX.c"
+#line 3333 "POSIX.c"
 	XSprePUSH;
 	PUSHn((NV)RETVAL);
     }
@@ -3360,12 +3348,12 @@ XS_EUPXS(XS_POSIX_frexp)
     {
 	NV	x = (NV)SvNV(ST(0))
 ;
-#line 2659 "POSIX.xs"
+#line 2647 "POSIX.xs"
 	int expvar;
 	/* (We already know stack is long enough.) */
 	PUSHs(sv_2mortal(newSVnv(Perl_frexp(x,&expvar)))); /* C89 math */
 	PUSHs(sv_2mortal(newSViv(expvar)));
-#line 3369 "POSIX.c"
+#line 3357 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -3385,9 +3373,9 @@ XS_EUPXS(XS_POSIX_ldexp)
 ;
 	NV	RETVAL;
 	dXSTARG;
-#line 2669 "POSIX.xs"
+#line 2657 "POSIX.xs"
         RETVAL = Perl_ldexp(x, exp);
-#line 3391 "POSIX.c"
+#line 3379 "POSIX.c"
 	XSprePUSH;
 	PUSHn((NV)RETVAL);
     }
@@ -3406,12 +3394,12 @@ XS_EUPXS(XS_POSIX_modf)
     {
 	NV	x = (NV)SvNV(ST(0))
 ;
-#line 2677 "POSIX.xs"
+#line 2665 "POSIX.xs"
 	NV intvar;
 	/* (We already know stack is long enough.) */
 	PUSHs(sv_2mortal(newSVnv(Perl_modf(x,&intvar)))); /* C89 math */
 	PUSHs(sv_2mortal(newSVnv(intvar)));
-#line 3415 "POSIX.c"
+#line 3403 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -3431,7 +3419,7 @@ XS_EUPXS(XS_POSIX_remquo)
 ;
 	NV	y = (NV)SvNV(ST(1))
 ;
-#line 2687 "POSIX.xs"
+#line 2675 "POSIX.xs"
 #ifdef c99_remquo
         int intvar;
         PUSHs(sv_2mortal(newSVnv(c99_remquo(x,y,&intvar))));
@@ -3441,7 +3429,7 @@ XS_EUPXS(XS_POSIX_remquo)
 	PERL_UNUSED_VAR(y);
 	not_here("remquo");
 #endif
-#line 3445 "POSIX.c"
+#line 3433 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -3461,7 +3449,7 @@ XS_EUPXS(XS_POSIX_scalbn)
 ;
 	NV	RETVAL;
 	dXSTARG;
-#line 2702 "POSIX.xs"
+#line 2690 "POSIX.xs"
 #ifdef c99_scalbn
 	RETVAL = c99_scalbn(x, y);
 #else
@@ -3470,7 +3458,7 @@ XS_EUPXS(XS_POSIX_scalbn)
 	RETVAL = NV_NAN;
 	not_here("scalbn");
 #endif
-#line 3474 "POSIX.c"
+#line 3462 "POSIX.c"
 	XSprePUSH;
 	PUSHn((NV)RETVAL);
     }
@@ -3493,7 +3481,7 @@ XS_EUPXS(XS_POSIX_fma)
 ;
 	NV	RETVAL;
 	dXSTARG;
-#line 2719 "POSIX.xs"
+#line 2707 "POSIX.xs"
 #ifdef c99_fma
 	RETVAL = c99_fma(x, y, z);
 #else
@@ -3502,7 +3490,7 @@ XS_EUPXS(XS_POSIX_fma)
 	PERL_UNUSED_VAR(z);
 	not_here("fma");
 #endif
-#line 3506 "POSIX.c"
+#line 3494 "POSIX.c"
 	XSprePUSH;
 	PUSHn((NV)RETVAL);
     }
@@ -3527,7 +3515,7 @@ XS_EUPXS(XS_POSIX_nan)
 	    payload = (NV)SvNV(ST(0))
 ;
 	}
-#line 2734 "POSIX.xs"
+#line 2722 "POSIX.xs"
 #ifdef NV_NAN
         /* If no payload given, just return the default NaN.
          * This makes a difference in platforms where the default
@@ -3554,7 +3542,7 @@ XS_EUPXS(XS_POSIX_nan)
 #else
 	not_here("nan");
 #endif
-#line 3558 "POSIX.c"
+#line 3546 "POSIX.c"
 	XSprePUSH;
 	PUSHn((NV)RETVAL);
     }
@@ -3576,7 +3564,7 @@ XS_EUPXS(XS_POSIX_jn)
 ;
 	NV	RETVAL;
 	dXSTARG;
-#line 2770 "POSIX.xs"
+#line 2758 "POSIX.xs"
 #ifdef NV_NAN
 	RETVAL = NV_NAN;
 #else
@@ -3603,7 +3591,7 @@ XS_EUPXS(XS_POSIX_jn)
 #endif
             break;
 	}
-#line 3607 "POSIX.c"
+#line 3595 "POSIX.c"
 	XSprePUSH;
 	PUSHn((NV)RETVAL);
     }
@@ -3642,7 +3630,7 @@ XS_EUPXS(XS_POSIX_sigaction)
 	    } STMT_END
 ;
 	}
-#line 2805 "POSIX.xs"
+#line 2793 "POSIX.xs"
 #if defined(WIN32) || (defined(__amigaos4__) && defined(__NEWLIB__))
 	RETVAL = not_here("sigaction");
 #else
@@ -3850,7 +3838,7 @@ XS_EUPXS(XS_POSIX_sigaction)
 	    LEAVE;
 	}
 #endif
-#line 3854 "POSIX.c"
+#line 3842 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = sv_newmortal();
@@ -3888,13 +3876,13 @@ XS_EUPXS(XS_POSIX_sigpending)
 			"sigset", "POSIX::SigSet");
 	}
 ;
-#line 3023 "POSIX.xs"
+#line 3011 "POSIX.xs"
 #ifdef __amigaos4__
 	RETVAL = not_here("sigpending");
 #else
 	RETVAL = ix ? sigsuspend(sigset) : sigpending(sigset);
 #endif
-#line 3898 "POSIX.c"
+#line 3886 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = sv_newmortal();
@@ -3906,9 +3894,9 @@ XS_EUPXS(XS_POSIX_sigpending)
 	    }
 	    ST(0) = RETVALSV;
 	}
-#line 3031 "POSIX.xs"
+#line 3019 "POSIX.xs"
     PERL_ASYNC_CHECK();
-#line 3912 "POSIX.c"
+#line 3900 "POSIX.c"
     }
     XSRETURN(1);
 }
@@ -3926,7 +3914,7 @@ XS_EUPXS(XS_POSIX_sigprocmask)
 	POSIX__SigSet	sigset;
 	POSIX__SigSet	oldsigset;
 	SysRet	RETVAL;
-#line 3039 "POSIX.xs"
+#line 3027 "POSIX.xs"
 	if (! SvOK(ST(1))) {
 	    sigset = NULL;
 	} else if (sv_isa(ST(1), "POSIX::SigSet")) {
@@ -3942,7 +3930,7 @@ XS_EUPXS(XS_POSIX_sigprocmask)
 	} else {
 	    croak("oldsigset is not of type POSIX::SigSet");
 	}
-#line 3946 "POSIX.c"
+#line 3934 "POSIX.c"
 
 	RETVAL = sigprocmask(how, sigset, oldsigset);
 	{
@@ -3989,7 +3977,7 @@ XS_EUPXS(XS_POSIX_dup2)
 	int	fd2 = (int)SvIV(ST(1))
 ;
 	SysRet	RETVAL;
-#line 3064 "POSIX.xs"
+#line 3052 "POSIX.xs"
 	if (fd1 >= 0 && fd2 >= 0) {
 #ifdef WIN32
             /* RT #98912 - More Microsoft muppetry - failing to
@@ -4004,7 +3992,7 @@ XS_EUPXS(XS_POSIX_dup2)
             SETERRNO(EBADF,RMS_IFI);
             RETVAL = -1;
         }
-#line 4008 "POSIX.c"
+#line 3996 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = sv_newmortal();
@@ -4040,13 +4028,13 @@ XS_EUPXS(XS_POSIX_lseek)
 	     XSRETURN_IV(-1);
 	}
 ;
-#line 3087 "POSIX.xs"
+#line 3075 "POSIX.xs"
 	{
               Off_t pos = PerlLIO_lseek(fd, offset, whence);
               RETVAL = sizeof(Off_t) > sizeof(IV)
                 ? newSVnv((NV)pos) : newSViv((IV)pos);
         }
-#line 4050 "POSIX.c"
+#line 4038 "POSIX.c"
 	RETVAL = sv_2mortal(RETVAL);
 	ST(0) = RETVAL;
     }
@@ -4065,7 +4053,7 @@ XS_EUPXS(XS_POSIX_nice)
     {
 	int	incr = (int)SvIV(ST(0))
 ;
-#line 3099 "POSIX.xs"
+#line 3087 "POSIX.xs"
 	errno = 0;
 	if ((incr = nice(incr)) != -1 || errno == 0) {
 	    if (incr == 0)
@@ -4073,7 +4061,7 @@ XS_EUPXS(XS_POSIX_nice)
 	    else
 		XPUSHs(sv_2mortal(newSViv(incr)));
 	}
-#line 4077 "POSIX.c"
+#line 4065 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -4089,14 +4077,14 @@ XS_EUPXS(XS_POSIX_pipe)
     PERL_UNUSED_VAR(ax); /* -Wall */
     SP -= items;
     {
-#line 3110 "POSIX.xs"
+#line 3098 "POSIX.xs"
 	int fds[2];
 	if (pipe(fds) != -1) {
 	    EXTEND(SP,2);
 	    PUSHs(sv_2mortal(newSViv(fds[0])));
 	    PUSHs(sv_2mortal(newSViv(fds[1])));
 	}
-#line 4100 "POSIX.c"
+#line 4088 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -4110,9 +4098,9 @@ XS_EUPXS(XS_POSIX_read)
     if (items != 3)
        croak_xs_usage(cv,  "fd, buffer, nbytes");
     {
-#line 3120 "POSIX.xs"
+#line 3108 "POSIX.xs"
         SV *sv_buffer = SvROK(ST(1)) ? SvRV(ST(1)) : ST(1);
-#line 4116 "POSIX.c"
+#line 4104 "POSIX.c"
 	POSIX__Fd	fd;
 	size_t	nbytes = (size_t)SvUV(ST(2))
 ;
@@ -4137,14 +4125,14 @@ XS_EUPXS(XS_POSIX_read)
 	    }
 	    ST(0) = RETVALSV;
 	}
-#line 3126 "POSIX.xs"
+#line 3114 "POSIX.xs"
         if (RETVAL >= 0) {
             SvCUR_set(sv_buffer, RETVAL);
             SvPOK_only(sv_buffer);
             *SvEND(sv_buffer) = '\0';
             SvTAINTED_on(sv_buffer);
         }
-#line 4148 "POSIX.c"
+#line 4136 "POSIX.c"
     }
     XSRETURN(1);
 }
@@ -4267,7 +4255,7 @@ XS_EUPXS(XS_POSIX_uname)
     PERL_UNUSED_VAR(ax); /* -Wall */
     SP -= items;
     {
-#line 3153 "POSIX.xs"
+#line 3141 "POSIX.xs"
 #ifdef HAS_UNAME
 	struct utsname buf;
 	if (uname(&buf) >= 0) {
@@ -4281,7 +4269,7 @@ XS_EUPXS(XS_POSIX_uname)
 #else
 	uname((char *) 0); /* A stub to call not_here(). */
 #endif
-#line 4285 "POSIX.c"
+#line 4273 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -4363,7 +4351,7 @@ XS_EUPXS(XS_POSIX_mblen)
 	    n = (size_t)SvUV(ST(1))
 ;
 	}
-#line 3187 "POSIX.xs"
+#line 3175 "POSIX.xs"
         errno = 0;
 
         CHECK_AND_WARN_PROBLEMATIC_LOCALE_;
@@ -4405,7 +4393,7 @@ XS_EUPXS(XS_POSIX_mblen)
 #endif
             }
         }
-#line 4409 "POSIX.c"
+#line 4397 "POSIX.c"
 	XSprePUSH;
 	PUSHi((IV)RETVAL);
     }
@@ -4434,7 +4422,7 @@ XS_EUPXS(XS_POSIX_mbtowc)
 	    n = (size_t)SvUV(ST(2))
 ;
 	}
-#line 3237 "POSIX.xs"
+#line 3225 "POSIX.xs"
         RETVAL = -1;
 #if ! defined(HAS_MBTOWC) && ! defined(HAS_MBRTOWC)
         PERL_UNUSED_ARG(pwc);
@@ -4467,7 +4455,7 @@ XS_EUPXS(XS_POSIX_mbtowc)
             }
         }
 #endif
-#line 4471 "POSIX.c"
+#line 4459 "POSIX.c"
 	XSprePUSH;
 	PUSHi((IV)RETVAL);
     }
@@ -4493,7 +4481,7 @@ XS_EUPXS(XS_POSIX_wctomb)
 ;
 	int	RETVAL;
 	dXSTARG;
-#line 3283 "POSIX.xs"
+#line 3271 "POSIX.xs"
         errno = 0;
         CHECK_AND_WARN_PROBLEMATIC_LOCALE_;
         SvGETMAGIC(s);
@@ -4527,7 +4515,7 @@ XS_EUPXS(XS_POSIX_wctomb)
                 sv_setpvn_mg(s, buffer, RETVAL);
             }
         }
-#line 4531 "POSIX.c"
+#line 4519 "POSIX.c"
 	XSprePUSH;
 	PUSHi((IV)RETVAL);
     }
@@ -4548,12 +4536,12 @@ XS_EUPXS(XS_POSIX_strcoll)
 ;
 	int	RETVAL;
 	dXSTARG;
-#line 3324 "POSIX.xs"
+#line 3312 "POSIX.xs"
         CHECK_AND_WARN_PROBLEMATIC_LOCALE_;
 	LC_COLLATE_LOCK;
         RETVAL = strcoll(s1, s2);
         LC_COLLATE_UNLOCK;
-#line 4557 "POSIX.c"
+#line 4545 "POSIX.c"
 	XSprePUSH;
 	PUSHi((IV)RETVAL);
     }
@@ -4572,11 +4560,11 @@ XS_EUPXS(XS_POSIX_strtod)
     {
 	char *	str = (char *)SvPV_nolen(ST(0))
 ;
-#line 3335 "POSIX.xs"
+#line 3323 "POSIX.xs"
 	double num;
 	char *unparsed;
-#line 4579 "POSIX.c"
-#line 3338 "POSIX.xs"
+#line 4567 "POSIX.c"
+#line 3326 "POSIX.xs"
         DECLARATION_FOR_LC_NUMERIC_MANIPULATION;
         STORE_LC_NUMERIC_FORCE_TO_UNDERLYING();
 	num = strtod(str, &unparsed);
@@ -4589,7 +4577,7 @@ XS_EUPXS(XS_POSIX_strtod)
 	    else
 		PUSHs(&PL_sv_undef);
 	}
-#line 4593 "POSIX.c"
+#line 4581 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -4610,11 +4598,11 @@ XS_EUPXS(XS_POSIX_strtold)
     {
 	char *	str = (char *)SvPV_nolen(ST(0))
 ;
-#line 3357 "POSIX.xs"
+#line 3345 "POSIX.xs"
 	long double num;
 	char *unparsed;
-#line 4617 "POSIX.c"
-#line 3360 "POSIX.xs"
+#line 4605 "POSIX.c"
+#line 3348 "POSIX.xs"
         DECLARATION_FOR_LC_NUMERIC_MANIPULATION;
         STORE_LC_NUMERIC_FORCE_TO_UNDERLYING();
 	num = strtold(str, &unparsed);
@@ -4627,7 +4615,7 @@ XS_EUPXS(XS_POSIX_strtold)
 	    else
 		PUSHs(&PL_sv_undef);
 	}
-#line 4631 "POSIX.c"
+#line 4619 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -4647,10 +4635,10 @@ XS_EUPXS(XS_POSIX_strtol)
 	char *	str = (char *)SvPV_nolen(ST(0))
 ;
 	int	base;
-#line 3380 "POSIX.xs"
+#line 3368 "POSIX.xs"
 	long num;
 	char *unparsed;
-#line 4654 "POSIX.c"
+#line 4642 "POSIX.c"
 
 	if (items < 2)
 	    base = 0;
@@ -4658,7 +4646,7 @@ XS_EUPXS(XS_POSIX_strtol)
 	    base = (int)SvIV(ST(1))
 ;
 	}
-#line 3383 "POSIX.xs"
+#line 3371 "POSIX.xs"
         CHECK_AND_WARN_PROBLEMATIC_LOCALE_;
 	if (base == 0 || inRANGE(base, 2, 36)) {
             num = strtol(str, &unparsed, base);
@@ -4683,7 +4671,7 @@ XS_EUPXS(XS_POSIX_strtol)
                PUSHs(&PL_sv_undef);
             }
         }
-#line 4687 "POSIX.c"
+#line 4675 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -4702,10 +4690,10 @@ XS_EUPXS(XS_POSIX_strtoul)
 	const char *	str = (const char *)SvPV_nolen(ST(0))
 ;
 	int	base;
-#line 3413 "POSIX.xs"
+#line 3401 "POSIX.xs"
 	unsigned long num;
 	char *unparsed = NULL;
-#line 4709 "POSIX.c"
+#line 4697 "POSIX.c"
 
 	if (items < 2)
 	    base = 0;
@@ -4713,7 +4701,7 @@ XS_EUPXS(XS_POSIX_strtoul)
 	    base = (int)SvIV(ST(1))
 ;
 	}
-#line 3416 "POSIX.xs"
+#line 3404 "POSIX.xs"
 	PERL_UNUSED_VAR(str);
 	PERL_UNUSED_VAR(base);
         CHECK_AND_WARN_PROBLEMATIC_LOCALE_;
@@ -4740,7 +4728,7 @@ XS_EUPXS(XS_POSIX_strtoul)
                PUSHs(&PL_sv_undef);
             }
         }
-#line 4744 "POSIX.c"
+#line 4732 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -4756,14 +4744,14 @@ XS_EUPXS(XS_POSIX_strxfrm)
     {
 	SV *	src = ST(0)
 ;
-#line 3447 "POSIX.xs"
+#line 3435 "POSIX.xs"
 #ifdef USE_LOCALE_COLLATE
       CHECK_AND_WARN_PROBLEMATIC_LOCALE_;
       ST(0) = Perl_strxfrm(aTHX_ src);
 #else
       ST(0) = src;
 #endif
-#line 4767 "POSIX.c"
+#line 4755 "POSIX.c"
     }
     XSRETURN(1);
 }
@@ -4782,14 +4770,14 @@ XS_EUPXS(XS_POSIX_mkfifo)
 	Mode_t	mode = (Mode_t)SvIV(ST(1))
 ;
 	SysRet	RETVAL;
-#line 3461 "POSIX.xs"
+#line 3449 "POSIX.xs"
 	if(ix) {
 	    RETVAL = access(filename, mode);
 	} else {
 	    TAINT_PROPER("mkfifo");
 	    RETVAL = mkfifo(filename, mode);
 	}
-#line 4793 "POSIX.c"
+#line 4781 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = sv_newmortal();
@@ -4822,7 +4810,7 @@ XS_EUPXS(XS_POSIX_tcdrain)
 	     XSRETURN_IV(-1);
 	}
 ;
-#line 3477 "POSIX.xs"
+#line 3465 "POSIX.xs"
 	if (fd >= 0) {
 	    RETVAL = ix == 1 ? close(fd)
 	      : (ix < 1 ? tcdrain(fd) : dup(fd));
@@ -4830,7 +4818,7 @@ XS_EUPXS(XS_POSIX_tcdrain)
 	    SETERRNO(EBADF,RMS_IFI);
 	    RETVAL = -1;
 	}
-#line 4834 "POSIX.c"
+#line 4822 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = sv_newmortal();
@@ -4865,7 +4853,7 @@ XS_EUPXS(XS_POSIX_tcflow)
 	     XSRETURN_IV(-1);
 	}
 ;
-#line 3496 "POSIX.xs"
+#line 3484 "POSIX.xs"
         if (action >= 0) {
             RETVAL = ix == 1 ? tcflush(fd, action)
               : (ix < 1 ? tcflow(fd, action) : tcsendbreak(fd, action));
@@ -4873,7 +4861,7 @@ XS_EUPXS(XS_POSIX_tcflow)
             SETERRNO(EINVAL,LIB_INVARG);
             RETVAL = -1;
         }
-#line 4877 "POSIX.c"
+#line 4865 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = sv_newmortal();
@@ -4936,7 +4924,7 @@ XS_EUPXS(XS_POSIX_asctime)
 	    isdst = (int)SvIV(ST(8))
 ;
 	}
-#line 3520 "POSIX.xs"
+#line 3508 "POSIX.xs"
 	{
 	    dXSTARG;
 	    struct tm mytm;
@@ -4971,7 +4959,7 @@ XS_EUPXS(XS_POSIX_asctime)
 	    ST(0) = TARG;
 	    XSRETURN(1);
 	}
-#line 4975 "POSIX.c"
+#line 4963 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -5026,7 +5014,7 @@ XS_EUPXS(XS_POSIX_times)
     PERL_UNUSED_VAR(ax); /* -Wall */
     SP -= items;
     {
-#line 3565 "POSIX.xs"
+#line 3553 "POSIX.xs"
 	struct tms tms;
 	clock_t realtime;
 	realtime = times( &tms );
@@ -5036,7 +5024,7 @@ XS_EUPXS(XS_POSIX_times)
 	PUSHs( sv_2mortal( newSViv( (IV) tms.tms_stime ) ) );
 	PUSHs( sv_2mortal( newSViv( (IV) tms.tms_cutime ) ) );
 	PUSHs( sv_2mortal( newSViv( (IV) tms.tms_cstime ) ) );
-#line 5040 "POSIX.c"
+#line 5028 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -5110,7 +5098,7 @@ XS_EUPXS(XS_POSIX_strftime)
 	    isdst = (int)SvIV(ST(9))
 ;
 	}
-#line 3596 "POSIX.xs"
+#line 3584 "POSIX.xs"
 	{
             SV *sv = sv_strftime_ints(fmt, sec, min, hour, mday, mon, year,
                                       wday, yday, isdst);
@@ -5131,7 +5119,7 @@ XS_EUPXS(XS_POSIX_strftime)
 
             ST(0) = sv;
 	}
-#line 5135 "POSIX.c"
+#line 5123 "POSIX.c"
     }
     XSRETURN(1);
 }
@@ -5146,9 +5134,9 @@ XS_EUPXS(XS_POSIX_tzset)
     PERL_UNUSED_VAR(ax); /* -Wall */
     SP -= items;
     {
-#line 3620 "POSIX.xs"
+#line 3608 "POSIX.xs"
     my_tzset(aTHX);
-#line 5152 "POSIX.c"
+#line 5140 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -5164,7 +5152,7 @@ XS_EUPXS(XS_POSIX_tzname)
     PERL_UNUSED_VAR(ax); /* -Wall */
     SP -= items;
     {
-#line 3625 "POSIX.xs"
+#line 3613 "POSIX.xs"
 	EXTEND(SP,2);
         /* It is undefined behavior if another thread is changing this while
          * its being read */
@@ -5172,7 +5160,7 @@ XS_EUPXS(XS_POSIX_tzname)
 	PUSHs(newSVpvn_flags(tzname[0], strlen(tzname[0]), SVs_TEMP));
 	PUSHs(newSVpvn_flags(tzname[1], strlen(tzname[1]), SVs_TEMP));
         ENVr_LOCALEr_UNLOCK;
-#line 5176 "POSIX.c"
+#line 5164 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -5189,22 +5177,22 @@ XS_EUPXS(XS_POSIX_ctermid)
 	char *	s = 0;
 	char *	RETVAL;
 	dXSTARG;
-#line 3637 "POSIX.xs"
+#line 3625 "POSIX.xs"
 #ifdef I_TERMIOS
         /* On some systems L_ctermid is a #define; but not all; this code works
          * for all cases (so far...) */
 	s = (char *) safemalloc((size_t) L_ctermid);
 #endif
 	RETVAL = ctermid(s);
-#line 5200 "POSIX.c"
+#line 5188 "POSIX.c"
 	sv_setpv(TARG, RETVAL);
 	XSprePUSH;
 	PUSHTARG;
-#line 3646 "POSIX.xs"
+#line 3634 "POSIX.xs"
 #ifdef I_TERMIOS
 	Safefree(s);
 #endif
-#line 5208 "POSIX.c"
+#line 5196 "POSIX.c"
     }
     XSRETURN(1);
 }
@@ -5220,7 +5208,7 @@ XS_EUPXS(XS_POSIX_cuserid)
 	char *	s = 0;
 	char *	RETVAL;
 	dXSTARG;
-#line 3654 "POSIX.xs"
+#line 3642 "POSIX.xs"
 #ifdef HAS_CUSERID
   RETVAL = cuserid(s);
 #else
@@ -5228,7 +5216,7 @@ XS_EUPXS(XS_POSIX_cuserid)
   RETVAL = 0;
   not_here("cuserid");
 #endif
-#line 5232 "POSIX.c"
+#line 5220 "POSIX.c"
 	sv_setpv(TARG, RETVAL);
 	XSprePUSH;
 	PUSHTARG;
@@ -5323,9 +5311,9 @@ XS_EUPXS(XS_POSIX_pause)
 	    }
 	    ST(0) = RETVALSV;
 	}
-#line 3677 "POSIX.xs"
+#line 3665 "POSIX.xs"
     PERL_ASYNC_CHECK();
-#line 5329 "POSIX.c"
+#line 5317 "POSIX.c"
     }
     XSRETURN(1);
 }
@@ -5342,9 +5330,9 @@ XS_EUPXS(XS_POSIX_sleep)
 ;
 	unsigned int	RETVAL;
 	dXSTARG;
-#line 3683 "POSIX.xs"
+#line 3671 "POSIX.xs"
 	RETVAL = PerlProc_sleep(seconds);
-#line 5348 "POSIX.c"
+#line 5336 "POSIX.c"
 	XSprePUSH;
 	PUSHu((UV)RETVAL);
     }
@@ -5471,13 +5459,13 @@ XS_EUPXS(XS_POSIX_getcwd)
     PERL_UNUSED_VAR(ax); /* -Wall */
     SP -= items;
     {
-#line 3706 "POSIX.xs"
+#line 3694 "POSIX.xs"
       {
 	dXSTARG;
 	getcwd_sv(TARG);
 	XSprePUSH; PUSHTARG;
       }
-#line 5481 "POSIX.c"
+#line 5469 "POSIX.c"
 	PUTBACK;
 	return;
     }
@@ -5498,7 +5486,7 @@ XS_EUPXS(XS_POSIX_lchown)
 	char *	path = (char *)SvPV_nolen(ST(2))
 ;
 	SysRet	RETVAL;
-#line 3718 "POSIX.xs"
+#line 3706 "POSIX.xs"
 #ifdef HAS_LCHOWN
        /* yes, the order of arguments is different,
         * but consistent with CORE::chown() */
@@ -5509,7 +5497,7 @@ XS_EUPXS(XS_POSIX_lchown)
        PERL_UNUSED_VAR(path);
        RETVAL = not_here("lchown");
 #endif
-#line 5513 "POSIX.c"
+#line 5501 "POSIX.c"
 	{
 	    SV * RETVALSV;
 	    RETVALSV = sv_newmortal();
@@ -7523,7 +7511,7 @@ XS_EXTERNAL(boot_POSIX)
 
 #if XSubPPtmpAAAA
 #endif
-#line 7527 "POSIX.c"
+#line 7515 "POSIX.c"
 
     /* End of Initialisation Section */
 

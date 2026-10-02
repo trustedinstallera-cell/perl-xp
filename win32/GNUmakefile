@@ -623,7 +623,7 @@ CWARNFLAGS	= -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Wer
 ifeq ($(USE_CPLUSPLUS),define)
 EXTRACFLAGS	+= $(CXX_FLAG)
 else
-EXTRACFLAGS	+= -std=c99
+EXTRACFLAGS	+= -std=gnu99
 endif
 CFLAGS		= $(EXTRACFLAGS) $(INCLUDES) $(DEFINES) $(LOCDEFS) $(OPTIMIZE)
 LINK_FLAGS	= $(LINK_DBG) -L"$(INST_COREDIR)" -L"$(subst ;," -L",$(CCLIBDIR))"
@@ -922,7 +922,7 @@ PERLDLL		= ..\perl540.dll
 PERLDLLBASE	= perl540.dll
 
 # don't let "gmake -n all" try to run "miniperl.exe make_ext.pl"
-PLMAKE		= gmake
+PLMAKE = make
 
 XCOPY		= xcopy /f /r /i /d /y
 RCOPY		= xcopy /f /r /i /e /d /y

@@ -84,22 +84,19 @@
         ((__GNUC__ < 3) || ((__GNUC__ == 3) && (__GNUC_MINOR__ <= 5))))
 /* use default fallbacks from perl.h for this particular GCC */
 #else
-#  if !defined(PERLDLL) && !defined(PERL_EXT_RE_BUILD) && !defined(PERL_STATIC_SYMS)
+#  if !defined(PERLDLL) && !defined(PERL_EXT_RE_BUILD)
 #    ifdef __cplusplus
-#      define PERL_CALLCONV extern "C" __declspec(dllimport)
+#      define PERL_CALLCONV extern "C"  
 #      ifdef _MSC_VER
-#        define PERL_CALLCONV_NO_RET extern "C" __declspec(dllimport) __declspec(noreturn)
+#        define PERL_CALLCONV_NO_RET extern "C"   __declspec(noreturn)
 #      endif
 #    else
-#      define PERL_CALLCONV __declspec(dllimport)
+#      define PERL_CALLCONV  
 #      ifdef _MSC_VER
-#        define PERL_CALLCONV_NO_RET __declspec(dllimport) __declspec(noreturn)
+#        define PERL_CALLCONV_NO_RET   __declspec(noreturn)
 #      endif
 #    endif
 #  else /* MSVC noreturn support inside the interp */
-#    ifndef PERL_CALLCONV
-#      define PERL_CALLCONV
-#    endif
 #    ifdef _MSC_VER
 #      define PERL_CALLCONV_NO_RET __declspec(noreturn)
 #    endif

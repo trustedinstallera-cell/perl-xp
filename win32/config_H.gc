@@ -2031,7 +2031,7 @@
  */
 #define I_DIRENT		/**/
 #define DIRNAMLEN	/**/
-#define Direntry_t struct direct
+#define Direntry_t struct dirent
 
 /* I_EXECINFO:
  *	This symbol, if defined, indicates to the C program that it should

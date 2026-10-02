@@ -468,7 +468,7 @@ XS_EUPXS(XS_IO__Poll__poll)
 {
 #ifdef HAS_POLL
     const int nfd = (items - 1) / 2;
-    SV *tmpsv = sv_2mortal(newSV(nfd * sizeof(struct pollfd)));
+    SV *tmpsv = sv_2mortal(NEWSV(999,nfd * sizeof(struct pollfd)));
     /* We should pass _some_ valid pointer even if nfd is zero, but it
      * doesn't matter what it is, since we're telling it to not check any fds.
      */

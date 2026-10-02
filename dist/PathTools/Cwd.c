@@ -7,7 +7,6 @@
  */
 
 #line 1 "Cwd.xs"
-#define DOUBLE_SLASHES_SPECIAL 0
 /*
  * ex: set ts=8 sts=4 sw=4 et:
  */
@@ -565,7 +564,7 @@ THX_unix_canonpath(pTHX_ SV *path)
     return retval;
 }
 
-#line 569 "Cwd.c"
+#line 568 "Cwd.c"
 #ifndef PERL_UNUSED_VAR
 #  define PERL_UNUSED_VAR(var) if (0) var = var
 #endif
@@ -709,7 +708,7 @@ S_croak_xs_usage(const CV *const cv, const char *const params)
 #  define newXS_deffile(a,b) Perl_newXS_deffile(aTHX_ a,b)
 #endif
 
-#line 713 "Cwd.c"
+#line 712 "Cwd.c"
 #if USE_MY_CXT
 #define XSubPPtmpAAAA 1
 
@@ -721,10 +720,10 @@ XS_EUPXS(XS_Cwd_CLONE)
     PERL_UNUSED_VAR(cv); /* -W */
     PERL_UNUSED_VAR(items); /* -W */
     {
-#line 576 "Cwd.xs"
+#line 575 "Cwd.xs"
 	PERL_UNUSED_VAR(items);
 	{ MY_CXT_CLONE; POPULATE_MY_CXT; }
-#line 728 "Cwd.c"
+#line 727 "Cwd.c"
     }
     XSRETURN_EMPTY;
 }
@@ -741,7 +740,7 @@ XS_EUPXS(XS_Cwd_getcwd)
     PERL_UNUSED_VAR(ax); /* -Wall */
     SP -= items;
     {
-#line 586 "Cwd.xs"
+#line 585 "Cwd.xs"
 {
     dXSTARG;
     /* fastcwd takes zero parameters:  */
@@ -751,7 +750,7 @@ XS_EUPXS(XS_Cwd_getcwd)
     XSprePUSH; PUSHTARG;
     SvTAINTED_on(TARG);
 }
-#line 755 "Cwd.c"
+#line 754 "Cwd.c"
 	PUTBACK;
 	return;
     }
@@ -763,19 +762,19 @@ XS_EUPXS(XS_Cwd_abs_path)
 {
     dVAR; dXSARGS;
     if (items < 0 || items > 1)
-       croak_xs_usage(cv,  "pathsv=NULL");
+       croak_xs_usage(cv,  "pathsv=Nullsv");
     PERL_UNUSED_VAR(ax); /* -Wall */
     SP -= items;
     {
 	SV *	pathsv;
 
 	if (items < 1)
-	    pathsv = NULL;
+	    pathsv = Nullsv;
 	else {
 	    pathsv = ST(0)
 ;
 	}
-#line 600 "Cwd.xs"
+#line 599 "Cwd.xs"
 {
     dXSTARG;
     char *const path = pathsv ? SvPV_nolen(pathsv) : (char *)".";
@@ -798,7 +797,7 @@ XS_EUPXS(XS_Cwd_abs_path)
     XSprePUSH; PUSHs(TARG);
     SvTAINTED_on(TARG);
 }
-#line 802 "Cwd.c"
+#line 801 "Cwd.c"
 	PUTBACK;
 	return;
     }
@@ -817,7 +816,7 @@ XS_EUPXS(XS_Cwd_getdcwd)
     PERL_UNUSED_VAR(ax); /* -Wall */
     SP -= items;
     {
-#line 629 "Cwd.xs"
+#line 628 "Cwd.xs"
 {
     dXSTARG;
     int drive;
@@ -833,7 +832,7 @@ XS_EUPXS(XS_Cwd_getdcwd)
     else
         croak("Usage: getdcwd(DRIVE)");
 
-    Newx(dir,MAXPATHLEN,char);
+    New(0,dir,MAXPATHLEN,char);
     if (_getdcwd(drive, dir, MAXPATHLEN)) {
         sv_setpv_mg(TARG, dir);
         SvPOK_only(TARG);
@@ -846,7 +845,7 @@ XS_EUPXS(XS_Cwd_getdcwd)
     XSprePUSH; PUSHs(TARG);
     SvTAINTED_on(TARG);
 }
-#line 850 "Cwd.c"
+#line 849 "Cwd.c"
 	PUTBACK;
 	return;
     }
@@ -872,10 +871,10 @@ XS_EUPXS(XS_File__Spec__Unix_canonpath)
 	    path = ST(1)
 ;
 	}
-#line 665 "Cwd.xs"
+#line 664 "Cwd.xs"
     PERL_UNUSED_VAR(self);
     RETVAL = unix_canonpath(path);
-#line 879 "Cwd.c"
+#line 878 "Cwd.c"
 	RETVAL = sv_2mortal(RETVAL);
 	ST(0) = RETVAL;
     }
@@ -899,9 +898,9 @@ XS_EUPXS(XS_File__Spec__Unix__fn_canonpath)
 	    path = ST(0)
 ;
 	}
-#line 673 "Cwd.xs"
+#line 672 "Cwd.xs"
     RETVAL = unix_canonpath(path);
-#line 905 "Cwd.c"
+#line 904 "Cwd.c"
 	RETVAL = sv_2mortal(RETVAL);
 	ST(0) = RETVAL;
     }
@@ -916,14 +915,14 @@ XS_EUPXS(XS_File__Spec__Unix_catdir)
     if (items < 1)
        croak_xs_usage(cv,  "self, ...");
     {
-#line 680 "Cwd.xs"
+#line 679 "Cwd.xs"
     dUSE_MY_CXT;
     SV *joined;
-#line 923 "Cwd.c"
+#line 922 "Cwd.c"
 	SV *	RETVAL;
 	SV *	self = ST(0)
 ;
-#line 683 "Cwd.xs"
+#line 682 "Cwd.xs"
     EXTEND(SP, items+1);
     ST(items) = EMPTY_STRING_SV;
     joined = sv_newmortal();
@@ -943,7 +942,7 @@ XS_EUPXS(XS_File__Spec__Unix_catdir)
 	LEAVE;
 	SvREFCNT_inc(RETVAL);
     }
-#line 947 "Cwd.c"
+#line 946 "Cwd.c"
 	RETVAL = sv_2mortal(RETVAL);
 	ST(0) = RETVAL;
     }
@@ -958,18 +957,18 @@ XS_EUPXS(XS_File__Spec__Unix__fn_catdir)
     PERL_UNUSED_VAR(cv); /* -W */
     PERL_UNUSED_VAR(items); /* -W */
     {
-#line 708 "Cwd.xs"
+#line 707 "Cwd.xs"
     dUSE_MY_CXT;
     SV *joined;
-#line 965 "Cwd.c"
+#line 964 "Cwd.c"
 	SV *	RETVAL;
-#line 711 "Cwd.xs"
+#line 710 "Cwd.xs"
     EXTEND(SP, items+1);
     ST(items) = EMPTY_STRING_SV;
     joined = sv_newmortal();
     do_join(joined, SLASH_STRING_SV, &ST(-1), &ST(items));
     RETVAL = unix_canonpath(joined);
-#line 973 "Cwd.c"
+#line 972 "Cwd.c"
 	RETVAL = sv_2mortal(RETVAL);
 	ST(0) = RETVAL;
     }
@@ -984,13 +983,13 @@ XS_EUPXS(XS_File__Spec__Unix_catfile)
     if (items < 1)
        croak_xs_usage(cv,  "self, ...");
     {
-#line 722 "Cwd.xs"
+#line 721 "Cwd.xs"
     dUSE_MY_CXT;
-#line 990 "Cwd.c"
+#line 989 "Cwd.c"
 	SV *	RETVAL;
 	SV *	self = ST(0)
 ;
-#line 724 "Cwd.xs"
+#line 723 "Cwd.xs"
     if(invocant_is_unix(self)) {
 	if(items == 1) {
 	    RETVAL = &PL_sv_undef;
@@ -1042,7 +1041,7 @@ XS_EUPXS(XS_File__Spec__Unix_catfile)
 	    sv_catsv(RETVAL, file);
 	}
     }
-#line 1046 "Cwd.c"
+#line 1045 "Cwd.c"
 	RETVAL = sv_2mortal(RETVAL);
 	ST(0) = RETVAL;
     }
@@ -1057,11 +1056,11 @@ XS_EUPXS(XS_File__Spec__Unix__fn_catfile)
     PERL_UNUSED_VAR(cv); /* -W */
     PERL_UNUSED_VAR(items); /* -W */
     {
-#line 781 "Cwd.xs"
+#line 780 "Cwd.xs"
     dUSE_MY_CXT;
-#line 1063 "Cwd.c"
+#line 1062 "Cwd.c"
 	SV *	RETVAL;
-#line 783 "Cwd.xs"
+#line 782 "Cwd.xs"
     if(items == 0) {
 	RETVAL = &PL_sv_undef;
     } else {
@@ -1079,7 +1078,7 @@ XS_EUPXS(XS_File__Spec__Unix__fn_catfile)
 	    sv_catsv(RETVAL, file);
 	}
     }
-#line 1083 "Cwd.c"
+#line 1082 "Cwd.c"
 	RETVAL = sv_2mortal(RETVAL);
 	ST(0) = RETVAL;
     }
@@ -1134,7 +1133,7 @@ XS_EXTERNAL(boot_Cwd)
 
     /* Initialisation Section */
 
-#line 564 "Cwd.xs"
+#line 563 "Cwd.xs"
 #if USE_MY_CXT
 {
     MY_CXT_INIT;
@@ -1146,7 +1145,7 @@ XS_EXTERNAL(boot_Cwd)
 #endif
 #if XSubPPtmpAAAB
 #endif
-#line 1150 "Cwd.c"
+#line 1149 "Cwd.c"
 
     /* End of Initialisation Section */
 

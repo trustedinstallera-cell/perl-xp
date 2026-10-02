@@ -27,6 +27,7 @@
  */
 
 #include "EXTERN.h"
+#include <dirent.h>
 #define PERL_IN_PP_SYS_C
 #include "perl.h"
 #include "time64.h"
@@ -4327,7 +4328,7 @@ PP_wrapped(pp_readdir, 1, 0)
         if (!dp)
             break;
 #ifdef DIRNAMLEN
-        sv = newSVpvn(dp->d_name, dp->d_namlen);
+        sv = newSVpv(dp->d_name, 0);
 #else
         sv = newSVpv(dp->d_name, 0);
 #endif

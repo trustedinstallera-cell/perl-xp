@@ -1085,7 +1085,7 @@ XS_EUPXS(XS_List__Util_unpairs)
 
         SvGETMAGIC(pair);
 
-        if(SvTYPE(pair) != SVt_IV)
+        if(SvTYPE(pair) != SVt_RV)
             croak("Not a reference at List::Util::unpairs() argument %d", i);
         if(SvTYPE(SvRV(pair)) != SVt_PVAV)
             croak("Not an ARRAY reference at List::Util::unpairs() argument %d", i);

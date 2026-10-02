@@ -64,6 +64,20 @@
 #include <float.h>
 #include <time.h>
 #include <sys/utime.h>
+/* Provide _mkgmtime since gcc-win98 libmsvcrt lacks it */
+static time_t _mkgmtime(struct tm *t)
+{
+    time_t tt = mktime(t);
+    if (tt == (time_t)-1) return -1;
+    struct tm g;
+    memcpy(&g, gmtime(&tt), sizeof(g));
+    struct tm l;
+    memcpy(&l, localtime(&tt), sizeof(l));
+    time_t tg = mktime(&g);
+    time_t tl = mktime(&l);
+    return tt + (tg - tl);
+}
+#define _mkgmtime _mkgmtime /* override any prototype */
 #include <wchar.h>
 
 #ifdef __GNUC__

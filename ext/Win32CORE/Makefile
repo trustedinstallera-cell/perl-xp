@@ -27,18 +27,18 @@ SHELL = C:\WINDOWS\system32\cmd.exe
 
 # These definitions are from config.sh (via D:\perl-xp\perl-5.40.3\lib/Config.pm).
 # They may have been overridden via Makefile.PL or on the command line.
-AR = i686-w64-mingw32-ar
-CC = i686-w64-mingw32-gcc
+AR = ar
+CC = gcc
 CCCDLFLAGS =  
 CCDLFLAGS =  
-CPPRUN = i686-w64-mingw32-gcc -E
+CPPRUN = gcc -E
 DLEXT = dll
 DLSRC = dl_win32.xs
 EXE_EXT = .exe
 FULL_AR = 
-LD = i686-w64-mingw32-g++
-LDDLFLAGS = -shared -s -L"c:\perl\lib\CORE" -L"C:/toolchains/gcc-win98\i686-w64-mingw32\lib"
-LDFLAGS = -s -L"c:\perl\lib\CORE" -L"C:/toolchains/gcc-win98\i686-w64-mingw32\lib"
+LD = g++
+LDDLFLAGS = -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0"
+LDFLAGS = -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0"
 LIBC = -lmsvcrt
 LIB_EXT = .a
 OBJ_EXT = .o
@@ -81,25 +81,25 @@ PREFIX = $(PERLPREFIX)
 PERLPREFIX = c:\perl
 SITEPREFIX = c:\perl\site
 VENDORPREFIX = 
-INSTALLPRIVLIB = 
+INSTALLPRIVLIB = c:\perl\lib
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = 
+INSTALLSITELIB = c:\perl\site\lib
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
 INSTALLARCHLIB = c:\perl\lib
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = 
+INSTALLSITEARCH = c:\perl\site\lib
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
 INSTALLBIN = c:\perl\bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = $(INSTALLBIN)
+INSTALLSITEBIN = c:\perl\bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
 INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = 
+INSTALLSCRIPT = c:\perl\bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
 INSTALLSITESCRIPT = $(INSTALLSCRIPT)
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
@@ -277,7 +277,7 @@ DISTVNAME = Win32CORE-0.04
 
 # --- MakeMaker cflags section:
 
-CCFLAGS = -D_WIN32_WINNT=0x0501 -Wno-error -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -O0 -g -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -DPERLDLL -UUSEIMPORTLIB 
+CCFLAGS = -std=gnu99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -DPERLDLL -UUSEIMPORTLIB 
 OPTIMIZE = -Os
 PERLTYPE = 
 
@@ -660,15 +660,15 @@ distmeta : create_distdir metafile
 eval { maniadd({q{META.yml} => q{Module YAML meta-data (added by MakeMaker)}}) }\
     or die \"Could not add META.yml to MANIFEST: $${'^@'}\"" --
 	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "exit unless -f q{META.json};\
-eval { maniadd({q{META.json} =^> q{Module JSON meta-data (added by MakeMaker)}}) }\
-    or die \"Could not add META.json to MANIFEST: $${'@'}\"" --
+eval { maniadd({q{META.json} => q{Module JSON meta-data (added by MakeMaker)}}) }\
+    or die \"Could not add META.json to MANIFEST: $${'^@'}\"" --
 
 
 
 # --- MakeMaker distsignature section:
 distsignature : distmeta
-	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "eval { maniadd({q{SIGNATURE} =^> q{Public-key signature (added by MakeMaker)}}) }\
-    or die \"Could not add SIGNATURE to MANIFEST: $${'@'}\"" --
+	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "eval { maniadd({q{SIGNATURE} => q{Public-key signature (added by MakeMaker)}}) }\
+    or die \"Could not add SIGNATURE to MANIFEST: $${'^@'}\"" --
 	$(NOECHO) cd $(DISTVNAME) && $(TOUCH) SIGNATURE
 	cd $(DISTVNAME) && cpansign -s
 
@@ -973,11 +973,11 @@ testdb_static :: static pure_all $(MAP_TARGET)
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) "<SOFTPKG NAME=\"Win32CORE\" VERSION=\"0.04\"^>" > Win32CORE.ppd
+	$(NOECHO) $(ECHO) "<SOFTPKG NAME=\"Win32CORE\" VERSION=\"0.04\">" > Win32CORE.ppd
 	$(NOECHO) $(ECHO) "    <ABSTRACT></ABSTRACT>" >> Win32CORE.ppd
 	$(NOECHO) $(ECHO) "    <AUTHOR></AUTHOR>" >> Win32CORE.ppd
 	$(NOECHO) $(ECHO) "    <IMPLEMENTATION>" >> Win32CORE.ppd
-	$(NOECHO) $(ECHO) "        ^<ARCHITECTURE NAME=\"MSWin32-x86-multi-5.40\" />" >> Win32CORE.ppd
+	$(NOECHO) $(ECHO) "        <ARCHITECTURE NAME=\"MSWin32-x86-multi-thread-5.40\" />" >> Win32CORE.ppd
 	$(NOECHO) $(ECHO) "        <CODEBASE HREF=\"\" />" >> Win32CORE.ppd
 	$(NOECHO) $(ECHO) "    </IMPLEMENTATION>" >> Win32CORE.ppd
 	$(NOECHO) $(ECHO) ^</SOFTPKG^> >> Win32CORE.ppd

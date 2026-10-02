@@ -40,16 +40,16 @@ DLSRC = dl_win32.xs
 EXE_EXT = .exe
 FULL_AR = 
 LD = g++
-LDDLFLAGS = -shared -s -L"D:/perl-xp/perl-5.40.3/dist\lib\CORE" -L"C:/toolchains/w64devkit\lib" -L"C:/toolchains/w64devkit\i686-w64-mingw32\lib" -L"C:/toolchains/w64devkit\lib\gcc\i686-w64-mingw32\16.2.0"
-LDFLAGS = -s -L"D:/perl-xp/perl-5.40.3/dist\lib\CORE" -L"C:/toolchains/w64devkit\lib" -L"C:/toolchains/w64devkit\i686-w64-mingw32\lib" -L"C:/toolchains/w64devkit\lib\gcc\i686-w64-mingw32\16.2.0"
+LDDLFLAGS = -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0"
+LDFLAGS = -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0"
 LIBC = -lmsvcrt
 LIB_EXT = .a
 OBJ_EXT = .o
 OSNAME = MSWin32
 OSVERS = 10.0.26200.9457
 RANLIB = rem
-SITELIBEXP = D:/perl-xp/perl-5.40.3/dist\site\lib
-SITEARCHEXP = D:/perl-xp/perl-5.40.3/dist\site\lib
+SITELIBEXP = c:\perl\site\lib
+SITEARCHEXP = c:\perl\site\lib
 SO = dll
 VENDORARCHEXP = 
 VENDORLIBEXP = 
@@ -81,28 +81,28 @@ MAN3SECTION = 3
 INSTALLDIRS = perl
 DESTDIR = 
 PREFIX = $(PERLPREFIX)
-PERLPREFIX = D:/perl-xp/perl-5.40.3/dist
-SITEPREFIX = D:/perl-xp/perl-5.40.3/dist\site
+PERLPREFIX = c:\perl
+SITEPREFIX = c:\perl\site
 VENDORPREFIX = 
-INSTALLPRIVLIB = D:/perl-xp/perl-5.40.3/dist\lib
+INSTALLPRIVLIB = c:\perl\lib
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = D:/perl-xp/perl-5.40.3/dist\site\lib
+INSTALLSITELIB = c:\perl\site\lib
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = D:/perl-xp/perl-5.40.3/dist\lib
+INSTALLARCHLIB = c:\perl\lib
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = D:/perl-xp/perl-5.40.3/dist\site\lib
+INSTALLSITEARCH = c:\perl\site\lib
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = D:/perl-xp/perl-5.40.3/dist\bin
+INSTALLBIN = c:\perl\bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = D:/perl-xp/perl-5.40.3/dist\bin
+INSTALLSITEBIN = c:\perl\bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
 INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = D:/perl-xp/perl-5.40.3/dist\bin
+INSTALLSCRIPT = c:\perl\bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
 INSTALLSITESCRIPT = $(INSTALLSCRIPT)
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
@@ -153,7 +153,7 @@ MM_REVISION = 77000
 # BASEEXT = Basename part of FULLEXT. May be just equal FULLEXT. (eg Oracle)
 # PARENT_NAME = NAME without BASEEXT and no trailing :: (eg Foo::Bar)
 # DLBASE  = Basename part of dynamic library. May be just equal BASEEXT.
-MAKE = gmake
+MAKE = make
 FULLEXT = Win32
 BASEEXT = Win32
 PARENT_NAME = 
@@ -280,7 +280,7 @@ DISTVNAME = Win32-0.59
 
 # --- MakeMaker cflags section:
 
-CCFLAGS = -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields
+CCFLAGS = -std=gnu99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields
 OPTIMIZE = -Os
 PERLTYPE = 
 
@@ -290,9 +290,7 @@ PERLTYPE =
 # Win32 might depend on some other libraries:
 # See ExtUtils::Liblist for details
 #
-EXTRALIBS = "C:\toolchains\w64devkit\lib\libuserenv.a" "C:\toolchains\w64devkit\lib\libwinhttp.a" "C:\toolchains\w64devkit\lib\libmoldname.a" "C:\toolchains\w64devkit\lib\libkernel32.a" "C:\toolchains\w64devkit\lib\libuser32.a" "C:\toolchains\w64devkit\lib\libgdi32.a" "C:\toolchains\w64devkit\lib\libwinspool.a" "C:\toolchains\w64devkit\lib\libcomdlg32.a" "C:\toolchains\w64devkit\lib\libadvapi32.a" "C:\toolchains\w64devkit\lib\libshell32.a" "C:\toolchains\w64devkit\lib\libole32.a" "C:\toolchains\w64devkit\lib\liboleaut32.a" "C:\toolchains\w64devkit\lib\libnetapi32.a" "C:\toolchains\w64devkit\lib\libuuid.a" "C:\toolchains\w64devkit\lib\libws2_32.a" "C:\toolchains\w64devkit\lib\libmpr.a" "C:\toolchains\w64devkit\lib\libwinmm.a" "C:\toolchains\w64devkit\lib\libversion.a" "C:\toolchains\w64devkit\lib\libodbc32.a" "C:\toolchains\w64devkit\lib\libodbccp32.a" "C:\toolchains\w64devkit\lib\libcomctl32.a"
-LDLOADLIBS = "C:\toolchains\w64devkit\lib\libuserenv.a" "C:\toolchains\w64devkit\lib\libwinhttp.a" "C:\toolchains\w64devkit\lib\libmoldname.a" "C:\toolchains\w64devkit\lib\libkernel32.a" "C:\toolchains\w64devkit\lib\libuser32.a" "C:\toolchains\w64devkit\lib\libgdi32.a" "C:\toolchains\w64devkit\lib\libwinspool.a" "C:\toolchains\w64devkit\lib\libcomdlg32.a" "C:\toolchains\w64devkit\lib\libadvapi32.a" "C:\toolchains\w64devkit\lib\libshell32.a" "C:\toolchains\w64devkit\lib\libole32.a" "C:\toolchains\w64devkit\lib\liboleaut32.a" "C:\toolchains\w64devkit\lib\libnetapi32.a" "C:\toolchains\w64devkit\lib\libuuid.a" "C:\toolchains\w64devkit\lib\libws2_32.a" "C:\toolchains\w64devkit\lib\libmpr.a" "C:\toolchains\w64devkit\lib\libwinmm.a" "C:\toolchains\w64devkit\lib\libversion.a" "C:\toolchains\w64devkit\lib\libodbc32.a" "C:\toolchains\w64devkit\lib\libodbccp32.a" "C:\toolchains\w64devkit\lib\libcomctl32.a"
-BSLOADLIBS = 
+LDLOADLIBS =  -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32
 
 
 # --- MakeMaker const_cccmd section:
@@ -490,7 +488,6 @@ $(INST_STATIC): $(OBJECT) $(MYEXTLIB) $(INST_ARCHAUTODIR)$(DFSEP).exists
 	$(AR) -ru $@ $(OBJECT)
 	$(CHMOD) $(PERM_RWX) $@
 	$(NOECHO) $(ECHO) "$(EXTRALIBS)" > $(INST_ARCHAUTODIR)$(DFSEP)extralibs.ld
-	$(NOECHO) $(ECHO) "$(EXTRALIBS)" >> $(PERL_SRC)$(DFSEP)ext.libs
 
 
 # --- MakeMaker manifypods section:
@@ -820,6 +817,7 @@ PERL_HDRS = \
         $(PERL_INCDEP)/av.h            \
         $(PERL_INCDEP)/bitcount.h            \
         $(PERL_INCDEP)/charclass_invlists.h            \
+        $(PERL_INCDEP)/config.h            \
         $(PERL_INCDEP)/cop.h            \
         $(PERL_INCDEP)/cv.h            \
         $(PERL_INCDEP)/dosish.h            \

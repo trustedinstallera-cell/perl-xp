@@ -9585,7 +9585,7 @@ SvTRUE_nomg|5.013006|5.003007|p
 SvTRUE_nomg_NN|5.017007|5.017007|
 SvTRUEx|5.003007|5.003007|
 SvTRUEx_nomg|5.017002||Viu
-SVt_IV|5.011000||Viu
+SVt_RV|5.011000||Viu
 SvTYPE|5.003007|5.003007|
 SVTYPEMASK|5.003007||Viu
 SvUID|5.019001||Viu
@@ -16136,7 +16136,7 @@ DPPP_(my_load_module)(U32 flags, SV *name, SV *ver, ...)
 #endif
 #ifndef SvRV_set
 #  define SvRV_set(sv, val)              \
-                STMT_START { assert(SvTYPE(sv) >=  SVt_IV); \
+                STMT_START { assert(SvTYPE(sv) >=  SVt_RV); \
                 (((XRV*) SvANY(sv))->xrv_rv = (val)); } STMT_END
 #endif
 
@@ -16150,7 +16150,7 @@ DPPP_(my_load_module)(U32 flags, SV *name, SV *ver, ...)
 #endif
 #ifndef SvRV_set
 #  define SvRV_set(sv, val)              \
-                STMT_START { assert(SvTYPE(sv) >=  SVt_IV); \
+                STMT_START { assert(SvTYPE(sv) >=  SVt_RV); \
                 ((sv)->sv_u.svu_rv = (val)); } STMT_END
 #endif
 

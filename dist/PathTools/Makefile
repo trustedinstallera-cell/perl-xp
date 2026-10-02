@@ -35,18 +35,18 @@ SHELL = C:\WINDOWS\system32\cmd.exe
 
 # These definitions are from config.sh (via D:\perl-xp\perl-5.40.3\lib/Config.pm).
 # They may have been overridden via Makefile.PL or on the command line.
-AR = i686-w64-mingw32-ar
-CC = i686-w64-mingw32-gcc
+AR = ar
+CC = gcc
 CCCDLFLAGS =  
 CCDLFLAGS =  
-CPPRUN = i686-w64-mingw32-gcc -E
+CPPRUN = gcc -E
 DLEXT = dll
 DLSRC = dl_win32.xs
 EXE_EXT = .exe
 FULL_AR = 
-LD = i686-w64-mingw32-g++
-LDDLFLAGS = -shared -s -L"c:\perl\lib\CORE" -L"C:/toolchains/gcc-win98\i686-w64-mingw32\lib"
-LDFLAGS = -s -L"c:\perl\lib\CORE" -L"C:/toolchains/gcc-win98\i686-w64-mingw32\lib"
+LD = g++
+LDDLFLAGS = -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0"
+LDFLAGS = -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0"
 LIBC = -lmsvcrt
 LIB_EXT = .a
 OBJ_EXT = .o
@@ -89,37 +89,37 @@ PREFIX = $(PERLPREFIX)
 PERLPREFIX = c:\perl
 SITEPREFIX = c:\perl\site
 VENDORPREFIX = 
-INSTALLPRIVLIB = 
+INSTALLPRIVLIB = c:\perl\lib
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = 
+INSTALLSITELIB = c:\perl\site\lib
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
 INSTALLARCHLIB = c:\perl\lib
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = 
+INSTALLSITEARCH = c:\perl\site\lib
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
 INSTALLBIN = c:\perl\bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = $(INSTALLBIN)
+INSTALLSITEBIN = c:\perl\bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
 INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = 
+INSTALLSCRIPT = c:\perl\bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
 INSTALLSITESCRIPT = $(INSTALLSCRIPT)
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
 INSTALLVENDORSCRIPT = 
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = none
+INSTALLMAN1DIR = c:\perl\man\man1
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
 INSTALLSITEMAN1DIR = $(INSTALLMAN1DIR)
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
 INSTALLVENDORMAN1DIR = 
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = none
+INSTALLMAN3DIR = c:\perl\man\man3
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
 INSTALLSITEMAN3DIR = $(INSTALLMAN3DIR)
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
@@ -158,7 +158,7 @@ MM_REVISION = 77000
 # BASEEXT = Basename part of FULLEXT. May be just equal FULLEXT. (eg Oracle)
 # PARENT_NAME = NAME without BASEEXT and no trailing :: (eg Foo::Bar)
 # DLBASE  = Basename part of dynamic library. May be just equal BASEEXT.
-MAKE = gmake
+MAKE = make
 FULLEXT = Cwd
 BASEEXT = Cwd
 PARENT_NAME = 
@@ -176,7 +176,17 @@ C_FILES  = Cwd.c
 O_FILES  = Cwd.o
 H_FILES  = ppport.h
 MAN1PODS = 
-MAN3PODS = 
+MAN3PODS = Cwd.pm \
+	lib/File/Spec.pm \
+	lib/File/Spec/AmigaOS.pm \
+	lib/File/Spec/Cygwin.pm \
+	lib/File/Spec/Epoc.pm \
+	lib/File/Spec/Functions.pm \
+	lib/File/Spec/Mac.pm \
+	lib/File/Spec/OS2.pm \
+	lib/File/Spec/Unix.pm \
+	lib/File/Spec/VMS.pm \
+	lib/File/Spec/Win32.pm
 
 # Where is the Config information that we are using/depend on
 CONFIGDEP = $(PERL_ARCHLIBDEP)$(DFSEP)Config.pm $(PERL_INCDEP)$(DFSEP)config.h
@@ -296,7 +306,7 @@ DISTVNAME = PathTools-3.91
 
 # --- MakeMaker cflags section:
 
-CCFLAGS = -D_WIN32_WINNT=0x0501 -Wno-error -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -O0 -g -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields
+CCFLAGS = -std=gnu99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields
 OPTIMIZE = -Os
 PERLTYPE = 
 
@@ -514,8 +524,30 @@ POD2MAN_EXE = $(PERLRUN) "-MExtUtils::Command::MM" -e pod2man "--"
 POD2MAN = $(POD2MAN_EXE)
 
 
-manifypods : pure_all config 
-	$(NOECHO) $(NOOP)
+manifypods : pure_all config  \
+	Cwd.pm \
+	lib/File/Spec.pm \
+	lib/File/Spec/AmigaOS.pm \
+	lib/File/Spec/Cygwin.pm \
+	lib/File/Spec/Epoc.pm \
+	lib/File/Spec/Functions.pm \
+	lib/File/Spec/Mac.pm \
+	lib/File/Spec/OS2.pm \
+	lib/File/Spec/Unix.pm \
+	lib/File/Spec/VMS.pm \
+	lib/File/Spec/Win32.pm
+	$(NOECHO) $(POD2MAN) --section=$(MAN3SECTION) --perm_rw=$(PERM_RW) -u \
+	  Cwd.pm $(INST_MAN3DIR)\Cwd.$(MAN3EXT) \
+	  lib/File/Spec.pm $(INST_MAN3DIR)\File.Spec.$(MAN3EXT) \
+	  lib/File/Spec/AmigaOS.pm $(INST_MAN3DIR)\File.Spec.AmigaOS.$(MAN3EXT) \
+	  lib/File/Spec/Cygwin.pm $(INST_MAN3DIR)\File.Spec.Cygwin.$(MAN3EXT) \
+	  lib/File/Spec/Epoc.pm $(INST_MAN3DIR)\File.Spec.Epoc.$(MAN3EXT) \
+	  lib/File/Spec/Functions.pm $(INST_MAN3DIR)\File.Spec.Functions.$(MAN3EXT) \
+	  lib/File/Spec/Mac.pm $(INST_MAN3DIR)\File.Spec.Mac.$(MAN3EXT) \
+	  lib/File/Spec/OS2.pm $(INST_MAN3DIR)\File.Spec.OS2.$(MAN3EXT) \
+	  lib/File/Spec/Unix.pm $(INST_MAN3DIR)\File.Spec.Unix.$(MAN3EXT) \
+	  lib/File/Spec/VMS.pm $(INST_MAN3DIR)\File.Spec.VMS.$(MAN3EXT) \
+	  lib/File/Spec/Win32.pm $(INST_MAN3DIR)\File.Spec.Win32.$(MAN3EXT) 
 
 
 
@@ -690,15 +722,15 @@ distmeta : create_distdir metafile
 eval { maniadd({q{META.yml} => q{Module YAML meta-data (added by MakeMaker)}}) }\
     or die \"Could not add META.yml to MANIFEST: $${'^@'}\"" --
 	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "exit unless -f q{META.json};\
-eval { maniadd({q{META.json} =^> q{Module JSON meta-data (added by MakeMaker)}}) }\
-    or die \"Could not add META.json to MANIFEST: $${'@'}\"" --
+eval { maniadd({q{META.json} => q{Module JSON meta-data (added by MakeMaker)}}) }\
+    or die \"Could not add META.json to MANIFEST: $${'^@'}\"" --
 
 
 
 # --- MakeMaker distsignature section:
 distsignature : distmeta
-	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "eval { maniadd({q{SIGNATURE} =^> q{Public-key signature (added by MakeMaker)}}) }\
-    or die \"Could not add SIGNATURE to MANIFEST: $${'@'}\"" --
+	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "eval { maniadd({q{SIGNATURE} => q{Public-key signature (added by MakeMaker)}}) }\
+    or die \"Could not add SIGNATURE to MANIFEST: $${'^@'}\"" --
 	$(NOECHO) cd $(DISTVNAME) && $(TOUCH) SIGNATURE
 	cd $(DISTVNAME) && cpansign -s
 
@@ -1001,7 +1033,7 @@ testdb_static :: static pure_all $(MAP_TARGET)
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) "<SOFTPKG NAME=\"PathTools\" VERSION=\"3.91\"^>" > PathTools.ppd
+	$(NOECHO) $(ECHO) "<SOFTPKG NAME=\"PathTools\" VERSION=\"3.91\">" > PathTools.ppd
 	$(NOECHO) $(ECHO) "    <ABSTRACT>Tools for working with directory and file names</ABSTRACT>" >> PathTools.ppd
 	$(NOECHO) $(ECHO) "    <AUTHOR>Perl 5 Porters</AUTHOR>" >> PathTools.ppd
 	$(NOECHO) $(ECHO) "    <IMPLEMENTATION>" >> PathTools.ppd
@@ -1009,7 +1041,7 @@ ppd :
 	$(NOECHO) $(ECHO) "        <REQUIRE NAME=\"File::Basename\" />" >> PathTools.ppd
 	$(NOECHO) $(ECHO) "        <REQUIRE NAME=\"Scalar::Util\" />" >> PathTools.ppd
 	$(NOECHO) $(ECHO) "        <REQUIRE NAME=\"Test::More\" VERSION=\"0.88\" />" >> PathTools.ppd
-	$(NOECHO) $(ECHO) "        ^<ARCHITECTURE NAME=\"MSWin32-x86-multi-5.40\" />" >> PathTools.ppd
+	$(NOECHO) $(ECHO) "        <ARCHITECTURE NAME=\"MSWin32-x86-multi-thread-5.40\" />" >> PathTools.ppd
 	$(NOECHO) $(ECHO) "        <CODEBASE HREF=\"\" />" >> PathTools.ppd
 	$(NOECHO) $(ECHO) "    </IMPLEMENTATION>" >> PathTools.ppd
 	$(NOECHO) $(ECHO) ^</SOFTPKG^> >> PathTools.ppd

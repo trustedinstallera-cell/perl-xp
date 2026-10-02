@@ -378,7 +378,7 @@ walkoptree(pTHX_ OP *o, const char *method, SV *ref)
 
     /* Check that no-one has changed our reference, or is holding a reference
        to it.  */
-    if (SvREFCNT(ref) == 1 && SvROK(ref) && SvTYPE(ref) == SVt_IV
+    if (SvREFCNT(ref) == 1 && SvROK(ref) && SvTYPE(ref) == SVt_RV
 	&& (object = SvRV(ref)) && SvREFCNT(object) == 1
 	&& SvTYPE(object) == SVt_PVMG && SvIOK_only(object)
 	&& !SvMAGICAL(object) && !SvMAGIC(object) && SvSTASH(object)) {

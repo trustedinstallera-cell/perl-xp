@@ -1,16 +1,14 @@
-/* dirent.h */
+/* dirent.h - provides perl's DIR and struct direct, delegates struct dirent to system */
 
-/* djl
- * Provide UNIX compatibility
- */
+/* First get system dirent.h for struct dirent definition */
+/* But we need to avoid DIR conflict since perl defines its own */
+#define DIR __system_DIR
+#include <../i686-w64-mingw32/include/dirent.h>
+#undef DIR
 
-#ifndef  _INC_DIRENT
-#define  _INC_DIRENT
-
-/*
- * NT versions of readdir(), etc
- * From the MSDOS implementation
- */
+/* Now define perl's own DIR type (struct _dir_struc) */
+#ifndef _INC_DIRENT
+#define _INC_DIRENT
 
 /* Directory entry size */
 #ifdef DIRSIZ
@@ -18,36 +16,24 @@
 #endif
 #define DIRSIZ(rp)  (sizeof(struct direct))
 
-/* needed to compile directory stuff */
-#define DIRENT direct
-
-/* structure of a directory entry */
-typedef struct direct 
+/* structure of a directory entry (MS-DOS compat) */
+struct direct
 {
-        long	d_ino;			/* inode number (not used by MS-DOS)  */
-        long	d_namlen;		/* name length  */
-        char	d_name[257];		/* file name  */
-} _DIRECT;
+    long    d_ino;
+    long    d_namlen;
+    char    d_name[257];
+};
 
-/* structure for dir operations */
+/* structure for dir operations - perl's own DIR */
 typedef struct _dir_struc
 {
-        char	*start;			/* starting position */
-        char	*curr;			/* current position */
-        long	size;			/* allocated size of string table */
-        long	nfiles;			/* number of filenames in table */
-        struct direct dirstr;		/* directory structure to return */
-        void*	handle;			/* system handle */
-        char	*end;			/* position after last filename */
+    char    *start;
+    char    *curr;
+    long    size;
+    long    nfiles;
+    struct direct dirstr;
+    void*   handle;
+    char    *end;
 } DIR;
-
-#if 0		/* these have moved to win32iop.h */
-DIR *		win32_opendir(const char *filename);
-struct direct *	win32_readdir(DIR *dirp);
-long		win32_telldir(DIR *dirp);
-void		win32_seekdir(DIR *dirp,long loc);
-void		win32_rewinddir(DIR *dirp);
-int		win32_closedir(DIR *dirp);
-#endif
 
 #endif /* _INC_DIRENT */

@@ -35,18 +35,18 @@ SHELL = C:\WINDOWS\system32\cmd.exe
 
 # These definitions are from config.sh (via D:\perl-xp\perl-5.40.3\lib/Config.pm).
 # They may have been overridden via Makefile.PL or on the command line.
-AR = i686-w64-mingw32-ar
-CC = i686-w64-mingw32-gcc
+AR = ar
+CC = gcc
 CCCDLFLAGS =  
 CCDLFLAGS =  
-CPPRUN = i686-w64-mingw32-gcc -E
+CPPRUN = gcc -E
 DLEXT = dll
 DLSRC = dl_win32.xs
 EXE_EXT = .exe
 FULL_AR = 
-LD = i686-w64-mingw32-g++
-LDDLFLAGS = -shared -s -L"c:\perl\lib\CORE" -L"C:/toolchains/gcc-win98\i686-w64-mingw32\lib"
-LDFLAGS = -s -L"c:\perl\lib\CORE" -L"C:/toolchains/gcc-win98\i686-w64-mingw32\lib"
+LD = g++
+LDDLFLAGS = -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0"
+LDFLAGS = -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0"
 LIBC = -lmsvcrt
 LIB_EXT = .a
 OBJ_EXT = .o
@@ -89,25 +89,25 @@ PREFIX = $(PERLPREFIX)
 PERLPREFIX = c:\perl
 SITEPREFIX = c:\perl\site
 VENDORPREFIX = 
-INSTALLPRIVLIB = 
+INSTALLPRIVLIB = c:\perl\lib
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = 
+INSTALLSITELIB = c:\perl\site\lib
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
 INSTALLARCHLIB = c:\perl\lib
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = 
+INSTALLSITEARCH = c:\perl\site\lib
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
 INSTALLBIN = c:\perl\bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = $(INSTALLBIN)
+INSTALLSITEBIN = c:\perl\bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
 INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = 
+INSTALLSCRIPT = c:\perl\bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
 INSTALLSITESCRIPT = $(INSTALLSCRIPT)
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
@@ -158,7 +158,7 @@ MM_REVISION = 77000
 # BASEEXT = Basename part of FULLEXT. May be just equal FULLEXT. (eg Oracle)
 # PARENT_NAME = NAME without BASEEXT and no trailing :: (eg Foo::Bar)
 # DLBASE  = Basename part of dynamic library. May be just equal BASEEXT.
-MAKE = gmake
+MAKE = make
 FULLEXT = lib
 BASEEXT = lib
 PARENT_NAME = 
@@ -596,15 +596,15 @@ distmeta : create_distdir metafile
 eval { maniadd({q{META.yml} => q{Module YAML meta-data (added by MakeMaker)}}) }\
     or die \"Could not add META.yml to MANIFEST: $${'^@'}\"" --
 	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "exit unless -f q{META.json};\
-eval { maniadd({q{META.json} =^> q{Module JSON meta-data (added by MakeMaker)}}) }\
-    or die \"Could not add META.json to MANIFEST: $${'@'}\"" --
+eval { maniadd({q{META.json} => q{Module JSON meta-data (added by MakeMaker)}}) }\
+    or die \"Could not add META.json to MANIFEST: $${'^@'}\"" --
 
 
 
 # --- MakeMaker distsignature section:
 distsignature : distmeta
-	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "eval { maniadd({q{SIGNATURE} =^> q{Public-key signature (added by MakeMaker)}}) }\
-    or die \"Could not add SIGNATURE to MANIFEST: $${'@'}\"" --
+	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "eval { maniadd({q{SIGNATURE} => q{Public-key signature (added by MakeMaker)}}) }\
+    or die \"Could not add SIGNATURE to MANIFEST: $${'^@'}\"" --
 	$(NOECHO) cd $(DISTVNAME) && $(TOUCH) SIGNATURE
 	cd $(DISTVNAME) && cpansign -s
 
@@ -819,9 +819,9 @@ testdb_static :: static pure_all
 ppd :
 	$(NOECHO) $(ECHO) "<SOFTPKG NAME=\"lib\" VERSION=\"0.62\">" > lib.ppd
 	$(NOECHO) $(ECHO) "    <ABSTRACT>manipulate @INC at compile time</ABSTRACT>" >> lib.ppd
-	$(NOECHO) $(ECHO) "    ^<AUTHOR^>Steffen Mueller ^&lt;smueller^@cpan.org^&gt;^</AUTHOR^>" >> lib.ppd
+	$(NOECHO) $(ECHO) "    <AUTHOR>Steffen Mueller &lt;smueller@cpan.org&gt;</AUTHOR>" >> lib.ppd
 	$(NOECHO) $(ECHO) "    <IMPLEMENTATION>" >> lib.ppd
-	$(NOECHO) $(ECHO) "        ^<ARCHITECTURE NAME=\"MSWin32-x86-multi-5.40\" />" >> lib.ppd
+	$(NOECHO) $(ECHO) "        <ARCHITECTURE NAME=\"MSWin32-x86-multi-thread-5.40\" />" >> lib.ppd
 	$(NOECHO) $(ECHO) "        <CODEBASE HREF=\"\" />" >> lib.ppd
 	$(NOECHO) $(ECHO) "    </IMPLEMENTATION>" >> lib.ppd
 	$(NOECHO) $(ECHO) ^</SOFTPKG^> >> lib.ppd

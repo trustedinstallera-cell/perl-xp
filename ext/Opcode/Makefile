@@ -39,16 +39,16 @@ DLSRC = dl_win32.xs
 EXE_EXT = .exe
 FULL_AR = 
 LD = g++
-LDDLFLAGS = -shared -s -L"D:/perl-xp/perl-5.40.3/dist\lib\CORE" -L"C:/toolchains/w64devkit\lib" -L"C:/toolchains/w64devkit\i686-w64-mingw32\lib" -L"C:/toolchains/w64devkit\lib\gcc\i686-w64-mingw32\16.2.0"
-LDFLAGS = -s -L"D:/perl-xp/perl-5.40.3/dist\lib\CORE" -L"C:/toolchains/w64devkit\lib" -L"C:/toolchains/w64devkit\i686-w64-mingw32\lib" -L"C:/toolchains/w64devkit\lib\gcc\i686-w64-mingw32\16.2.0"
+LDDLFLAGS = -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0"
+LDFLAGS = -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0"
 LIBC = -lmsvcrt
 LIB_EXT = .a
 OBJ_EXT = .o
 OSNAME = MSWin32
 OSVERS = 10.0.26200.9457
 RANLIB = rem
-SITELIBEXP = D:/perl-xp/perl-5.40.3/dist\site\lib
-SITEARCHEXP = D:/perl-xp/perl-5.40.3/dist\site\lib
+SITELIBEXP = c:\perl\site\lib
+SITEARCHEXP = c:\perl\site\lib
 SO = dll
 VENDORARCHEXP = 
 VENDORLIBEXP = 
@@ -80,28 +80,28 @@ MAN3SECTION = 3
 INSTALLDIRS = perl
 DESTDIR = 
 PREFIX = $(PERLPREFIX)
-PERLPREFIX = D:/perl-xp/perl-5.40.3/dist
-SITEPREFIX = D:/perl-xp/perl-5.40.3/dist\site
+PERLPREFIX = c:\perl
+SITEPREFIX = c:\perl\site
 VENDORPREFIX = 
-INSTALLPRIVLIB = D:/perl-xp/perl-5.40.3/dist\lib
+INSTALLPRIVLIB = c:\perl\lib
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = D:/perl-xp/perl-5.40.3/dist\site\lib
+INSTALLSITELIB = c:\perl\site\lib
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = D:/perl-xp/perl-5.40.3/dist\lib
+INSTALLARCHLIB = c:\perl\lib
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = D:/perl-xp/perl-5.40.3/dist\site\lib
+INSTALLSITEARCH = c:\perl\site\lib
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = D:/perl-xp/perl-5.40.3/dist\bin
+INSTALLBIN = c:\perl\bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = D:/perl-xp/perl-5.40.3/dist\bin
+INSTALLSITEBIN = c:\perl\bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
 INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = D:/perl-xp/perl-5.40.3/dist\bin
+INSTALLSCRIPT = c:\perl\bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
 INSTALLSITESCRIPT = $(INSTALLSCRIPT)
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
@@ -152,7 +152,7 @@ MM_REVISION = 77000
 # BASEEXT = Basename part of FULLEXT. May be just equal FULLEXT. (eg Oracle)
 # PARENT_NAME = NAME without BASEEXT and no trailing :: (eg Foo::Bar)
 # DLBASE  = Basename part of dynamic library. May be just equal BASEEXT.
-MAKE = gmake
+MAKE = make
 FULLEXT = Opcode
 BASEEXT = Opcode
 PARENT_NAME = 
@@ -280,7 +280,7 @@ DISTVNAME = Opcode-1.65
 
 # --- MakeMaker cflags section:
 
-CCFLAGS = -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields
+CCFLAGS = -std=gnu99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields
 OPTIMIZE = -Os
 PERLTYPE = 
 
@@ -818,6 +818,7 @@ PERL_HDRS = \
         $(PERL_INCDEP)/av.h            \
         $(PERL_INCDEP)/bitcount.h            \
         $(PERL_INCDEP)/charclass_invlists.h            \
+        $(PERL_INCDEP)/config.h            \
         $(PERL_INCDEP)/cop.h            \
         $(PERL_INCDEP)/cv.h            \
         $(PERL_INCDEP)/dosish.h            \

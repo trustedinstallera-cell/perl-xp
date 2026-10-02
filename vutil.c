@@ -1,5 +1,7 @@
 /* This file is part of the "version" CPAN distribution.  Please avoid
    editing it in the perl core. */
+#include "EXTERN.h"
+#include "perl.h"
 
 #ifdef PERL_CORE
 #  include "vutil.h"

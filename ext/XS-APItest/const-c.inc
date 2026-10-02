@@ -35,7 +35,7 @@ constant_add_symbol(pTHX_  HV *hash, const char *name, I32 namelen, SV *value) {
 	/* Someone has been here before us - have to make a real sub.  */
 	newCONSTSUB(hash, name, value);
     } else {
-	SvUPGRADE(sv, SVt_IV);
+	SvUPGRADE(sv, SVt_RV);
 	SvRV_set(sv, value);
 	SvROK_on(sv);
 	SvREADONLY_on(value);
@@ -69,7 +69,7 @@ get_missing_hash(pTHX) {
 	return (HV*) SvRV(*ref);
 
     new_hv = newHV();
-    SvUPGRADE(*ref, SVt_IV);
+    SvUPGRADE(*ref, SVt_RV);
     SvRV_set(*ref, (SV *)new_hv);
     SvROK_on(*ref);
     return new_hv;

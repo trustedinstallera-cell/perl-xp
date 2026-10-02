@@ -1,0 +1,788 @@
+In file included from perl.h:6166,
+                 from pp_sys.c:31:
+pp.h:62:20: warning: 'Perl_pp_backtick' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: warning: 'Perl_pp_glob' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: warning: 'Perl_pp_rcatline' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:60:18: warning: 'Perl_pp_warn' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:537:1: note: in expansion of macro 'PP_wrapped'
+  537 | PP_wrapped(pp_warn, 0, 1)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_die' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:586:1: note: in expansion of macro 'PP_wrapped'
+  586 | PP_wrapped(pp_die, 0, 1)
+      | ^~~~~~~~~~
+pp_sys.c:672:1: warning: 'Perl_tied_method' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+  672 | Perl_tied_method(pTHX_ SV *methname, SV **mark, SV *const sv,
+      | ^~~~~~~~~~~~~~~~
+In file included from perl.h:6166,
+                 from pp_sys.c:31:
+pp.h:60:18: warning: 'Perl_pp_open' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:811:1: note: in expansion of macro 'PP_wrapped'
+  811 | PP_wrapped(pp_open, 0, 1)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_close' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:864:1: note: in expansion of macro 'PP_wrapped'
+  864 | PP_wrapped(pp_close, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_pipe_op' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:888:1: note: in expansion of macro 'PP_wrapped'
+  888 | PP_wrapped(pp_pipe_op, 2, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_fileno' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:937:1: note: in expansion of macro 'PP_wrapped'
+  937 | PP_wrapped(pp_fileno, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_umask' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:985:1: note: in expansion of macro 'PP_wrapped'
+  985 | PP_wrapped(pp_umask, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_binmode' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:1015:1: note: in expansion of macro 'PP_wrapped'
+ 1015 | PP_wrapped(pp_binmode, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_tie' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:1076:1: note: in expansion of macro 'PP_wrapped'
+ 1076 | PP_wrapped(pp_tie, 0, 1)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_untie' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:1217:1: note: in expansion of macro 'PP_wrapped'
+ 1217 | PP_wrapped(pp_untie, 1, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_tied' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:1269:1: note: in expansion of macro 'PP_wrapped'
+ 1269 | PP_wrapped(pp_tied, 1, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_dbmopen' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:1292:1: note: in expansion of macro 'PP_wrapped'
+ 1292 | PP_wrapped(pp_dbmopen, 3, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_sselect' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:1350:1: note: in expansion of macro 'PP_wrapped'
+ 1350 | PP_wrapped(pp_sselect, 4, 0)
+      | ^~~~~~~~~~
+In file included from perl.h:4496,
+                 from pp_sys.c:31:
+pp_sys.c: In function 'Perl_pp_sselect':
+config.h:4504:25: error: 'Perl_fd_set' undeclared (first use in this function); did you mean 'Perl_mg_set'?
+ 4504 | #define Select_fd_set_t Perl_fd_set *   /**/
+      |                         ^~~~~~~~~~~
+iperlsys.h:1398:52: note: in definition of macro 'PerlSock_select'
+ 1398 | #  define PerlSock_select(n, r, w, e, t) select(n, r, w, e, t)
+      |                                                    ^
+pp_sys.c:1493:10: note: in expansion of macro 'Select_fd_set_t'
+ 1493 |         (Select_fd_set_t) fd_sets[1],
+      |          ^~~~~~~~~~~~~~~
+config.h:4504:25: note: each undeclared identifier is reported only once for each function it appears in
+ 4504 | #define Select_fd_set_t Perl_fd_set *   /**/
+      |                         ^~~~~~~~~~~
+iperlsys.h:1398:52: note: in definition of macro 'PerlSock_select'
+ 1398 | #  define PerlSock_select(n, r, w, e, t) select(n, r, w, e, t)
+      |                                                    ^
+pp_sys.c:1493:10: note: in expansion of macro 'Select_fd_set_t'
+ 1493 |         (Select_fd_set_t) fd_sets[1],
+      |          ^~~~~~~~~~~~~~~
+pp_sys.c:1493:25: error: expected expression before ')' token
+ 1493 |         (Select_fd_set_t) fd_sets[1],
+      |                         ^
+iperlsys.h:1398:52: note: in definition of macro 'PerlSock_select'
+ 1398 | #  define PerlSock_select(n, r, w, e, t) select(n, r, w, e, t)
+      |                                                    ^
+iperlsys.h:1398:42: error: too few arguments to function 'select'
+ 1398 | #  define PerlSock_select(n, r, w, e, t) select(n, r, w, e, t)
+      |                                          ^~~~~~
+iperlsys.h:1398:42: note: in definition of macro 'PerlSock_select'
+ 1398 | #  define PerlSock_select(n, r, w, e, t) select(n, r, w, e, t)
+      |                                          ^~~~~~
+In file included from c:\toolchains\gcc-win98\i686-w64-mingw32\include\sys\socket.h:7,
+                 from win32/win32.h:446,
+                 from perl.h:3785,
+                 from pp_sys.c:31:
+c:\toolchains\gcc-win98\i686-w64-mingw32\include\winsock2.h:995:34: note: declared here
+  995 |   WINSOCK_API_LINKAGE int WSAAPI select(int nfds,fd_set *readfds,fd_set *writefds,fd_set *exceptfds,const PTIMEVAL timeout);
+      |                                  ^~~~~~
+pp_sys.c: At top level:
+pp_sys.c:1547:1: warning: 'Perl_setdefout' redeclared without dllimport attribute after being referenced with dll linkage
+ 1547 | Perl_setdefout(pTHX_ GV *gv)
+      | ^~~~~~~~~~~~~~
+In file included from perl.h:6166,
+                 from pp_sys.c:31:
+pp.h:60:18: warning: 'Perl_pp_select' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:1558:1: note: in expansion of macro 'PP_wrapped'
+ 1558 | PP_wrapped(pp_select, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_getc' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:1589:1: note: in expansion of macro 'PP_wrapped'
+ 1589 | PP_wrapped(pp_getc, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:62:20: warning: 'Perl_pp_enterwrite' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: warning: 'Perl_pp_leavewrite' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: warning: 'Perl_pp_prtf' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:60:18: warning: 'Perl_pp_sysopen' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:1898:1: note: in expansion of macro 'PP_wrapped'
+ 1898 | PP_wrapped(pp_sysopen, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_sysread' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:1922:1: note: in expansion of macro 'PP_wrapped'
+ 1922 | PP_wrapped(pp_sysread, 0, 1)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_syswrite' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2185:1: note: in expansion of macro 'PP_wrapped'
+ 2185 | PP_wrapped(pp_syswrite, 0, 1)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_eof' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2339:1: note: in expansion of macro 'PP_wrapped'
+ 2339 | PP_wrapped(pp_eof, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_tell' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2406:1: note: in expansion of macro 'PP_wrapped'
+ 2406 | PP_wrapped(pp_tell, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_sysseek' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2443:1: note: in expansion of macro 'PP_wrapped'
+ 2443 | PP_wrapped(pp_sysseek, 3, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_truncate' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2490:1: note: in expansion of macro 'PP_wrapped'
+ 2490 | PP_wrapped(pp_truncate, 2, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_ioctl' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2600:1: note: in expansion of macro 'PP_wrapped'
+ 2600 | PP_wrapped(pp_ioctl, 3, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_flock' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2673:1: note: in expansion of macro 'PP_wrapped'
+ 2673 | PP_wrapped(pp_flock, 2, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_socket' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2704:1: note: in expansion of macro 'PP_wrapped'
+ 2704 | PP_wrapped(pp_socket, 4, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_sockpair' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2736:1: note: in expansion of macro 'PP_wrapped'
+ 2736 | PP_wrapped(pp_sockpair, 5, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_bind' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2784:1: note: in expansion of macro 'PP_wrapped'
+ 2784 | PP_wrapped(pp_bind, 2, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_listen' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2819:1: note: in expansion of macro 'PP_wrapped'
+ 2819 | PP_wrapped(pp_listen, 2, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_accept' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2840:1: note: in expansion of macro 'PP_wrapped'
+ 2840 | PP_wrapped(pp_accept, 2, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_shutdown' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2901:1: note: in expansion of macro 'PP_wrapped'
+ 2901 | PP_wrapped(pp_shutdown, 2, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_ssockopt' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2926:1: note: in expansion of macro 'PP_wrapped'
+ 2926 | PP_wrapped(pp_ssockopt,(PL_op->op_type == OP_GSOCKOPT) ? 3 : 4 , 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_getpeername' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:2996:1: note: in expansion of macro 'PP_wrapped'
+ 2996 | PP_wrapped(pp_getpeername, 1, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_stat' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:3066:1: note: in expansion of macro 'PP_wrapped'
+ 3066 | PP_wrapped(pp_stat, !(PL_op->op_flags & OPf_REF), 0)
+      | ^~~~~~~~~~
+pp.h:62:20: warning: 'Perl_pp_ftrread' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: warning: 'Perl_pp_ftis' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: warning: 'Perl_pp_ftrowned' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: warning: 'Perl_pp_ftlink' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: warning: 'Perl_pp_fttty' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: warning: 'Perl_pp_fttext' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:60:18: warning: 'Perl_pp_chdir' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:3903:1: note: in expansion of macro 'PP_wrapped'
+ 3903 | PP_wrapped(pp_chdir, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_chown' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:3995:1: note: in expansion of macro 'PP_wrapped'
+ 3995 | PP_wrapped(pp_chown, 0, 1)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_chroot' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4005:1: note: in expansion of macro 'PP_wrapped'
+ 4005 | PP_wrapped(pp_chroot, 1, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_rename' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4018:1: note: in expansion of macro 'PP_wrapped'
+ 4018 | PP_wrapped(pp_rename, 2, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_link' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4050:1: note: in expansion of macro 'PP_wrapped'
+ 4050 | PP_wrapped(pp_link, 2, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_readlink' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4097:1: note: in expansion of macro 'PP_wrapped'
+ 4097 | PP_wrapped(pp_readlink, 1, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_mkdir' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4228:1: note: in expansion of macro 'PP_wrapped'
+ 4228 | PP_wrapped(pp_mkdir, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_rmdir' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4255:1: note: in expansion of macro 'PP_wrapped'
+ 4255 | PP_wrapped(pp_rmdir, 1, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_open_dir' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4276:1: note: in expansion of macro 'PP_wrapped'
+ 4276 | PP_wrapped(pp_open_dir, 2, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_readdir' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4302:1: note: in expansion of macro 'PP_wrapped'
+ 4302 | PP_wrapped(pp_readdir, 1, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_telldir' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4354:1: note: in expansion of macro 'PP_wrapped'
+ 4354 | PP_wrapped(pp_telldir, 1, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_seekdir' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4386:1: note: in expansion of macro 'PP_wrapped'
+ 4386 | PP_wrapped(pp_seekdir, 2, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_rewinddir' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4412:1: note: in expansion of macro 'PP_wrapped'
+ 4412 | PP_wrapped(pp_rewinddir, 1, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_closedir' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4436:1: note: in expansion of macro 'PP_wrapped'
+ 4436 | PP_wrapped(pp_closedir, 1, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_fork' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4471:1: note: in expansion of macro 'PP_wrapped'
+ 4471 | PP_wrapped(pp_fork, 0, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_wait' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4543:1: note: in expansion of macro 'PP_wrapped'
+ 4543 | PP_wrapped(pp_wait, 0, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_waitpid' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4571:1: note: in expansion of macro 'PP_wrapped'
+ 4571 | PP_wrapped(pp_waitpid, 2, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_system' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4608:1: note: in expansion of macro 'PP_wrapped'
+ 4608 | PP_wrapped(pp_system, 0, 1)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_exec' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4818:1: note: in expansion of macro 'PP_wrapped'
+ 4818 | PP_wrapped(pp_exec, 0, 1)
+      | ^~~~~~~~~~
+pp.h:62:20: warning: 'Perl_pp_getppid' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:60:18: warning: 'Perl_pp_getpgrp' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4869:1: note: in expansion of macro 'PP_wrapped'
+ 4869 | PP_wrapped(pp_getpgrp, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_setpgrp' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4891:1: note: in expansion of macro 'PP_wrapped'
+ 4891 | PP_wrapped(pp_setpgrp, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_getpriority' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4933:1: note: in expansion of macro 'PP_wrapped'
+ 4933 | PP_wrapped(pp_getpriority, 2, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_setpriority' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4946:1: note: in expansion of macro 'PP_wrapped'
+ 4946 | PP_wrapped(pp_setpriority, 3, 0)
+      | ^~~~~~~~~~
+pp.h:62:20: warning: 'Perl_pp_time' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:60:18: warning: 'Perl_pp_tms' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:4977:1: note: in expansion of macro 'PP_wrapped'
+ 4977 | PP_wrapped(pp_tms, 0, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_gmtime' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:5010:1: note: in expansion of macro 'PP_wrapped'
+ 5010 | PP_wrapped(pp_gmtime, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_alarm' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:5106:1: note: in expansion of macro 'PP_wrapped'
+ 5106 | PP_wrapped(pp_alarm, 1, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_sleep' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:5139:1: note: in expansion of macro 'PP_wrapped'
+ 5139 | PP_wrapped(pp_sleep, MAXARG, 0)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_shmwrite' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:5171:1: note: in expansion of macro 'PP_wrapped'
+ 5171 | PP_wrapped(pp_shmwrite, 0, 1)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_semget' redeclared without dllimport attribute after being referenced with dll linkage
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:5205:1: note: in expansion of macro 'PP_wrapped'
+ 5205 | PP_wrapped(pp_semget, 0, 1)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_semctl' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:5222:1: note: in expansion of macro 'PP_wrapped'
+ 5222 | PP_wrapped(pp_semctl, 0, 1)
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_ghostent' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:5267:1: note: in expansion of macro 'PP_wrapped'
+ 5267 | PP_wrapped(pp_ghostent,
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_gnetent' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:5364:1: note: in expansion of macro 'PP_wrapped'
+ 5364 | PP_wrapped(pp_gnetent,
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_gprotoent' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:5443:1: note: in expansion of macro 'PP_wrapped'
+ 5443 | PP_wrapped(pp_gprotoent,
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_gservent' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:5509:1: note: in expansion of macro 'PP_wrapped'
+ 5509 | PP_wrapped(pp_gservent,
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_shostent' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:5580:1: note: in expansion of macro 'PP_wrapped'
+ 5580 | PP_wrapped(pp_shostent, 1, 0)
+      | ^~~~~~~~~~
+pp.h:62:20: warning: 'Perl_pp_ehostent' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:60:18: warning: 'Perl_pp_gpwent' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:5688:1: note: in expansion of macro 'PP_wrapped'
+ 5688 | PP_wrapped(pp_gpwent,
+      | ^~~~~~~~~~
+pp.h:60:18: warning: 'Perl_pp_ggrent' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:5918:1: note: in expansion of macro 'PP_wrapped'
+ 5918 | PP_wrapped(pp_ggrent,
+      | ^~~~~~~~~~
+pp.h:62:20: warning: 'Perl_pp_getlogin' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:62:20: note: in definition of macro 'PP'
+   62 | #define PP(s) OP * Perl_##s(pTHX)
+      |                    ^~~~~
+pp.h:60:18: warning: 'Perl_pp_syscall' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+   60 |     XSPP_wrapped(Perl_##ppw_name, ppw_nargs, ppw_nlists)
+      |                  ^~~~~
+pp.h:56:14: note: in definition of macro 'XSPP_wrapped'
+   56 |         OP * xsppw_name(pTHX)
+      |              ^~~~~~~~~~
+pp_sys.c:6013:1: note: in expansion of macro 'PP_wrapped'
+ 6013 | PP_wrapped(pp_syscall, 0, 1)
+      | ^~~~~~~~~~

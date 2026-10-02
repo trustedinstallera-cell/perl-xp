@@ -4209,7 +4209,7 @@ static int sv_type(pTHX_ SV *sv)
         return svis_SCALAR;
     case SVt_PV:
 #if PERL_VERSION_LT(5,11,0)
-    case SVt_IV:
+    case SVt_RV:
 #else
     case SVt_IV:
 #endif
@@ -4218,7 +4218,7 @@ static int sv_type(pTHX_ SV *sv)
         /*
          * Starting from SVt_PV, it is possible to have the ROK flag
          * set, the pointer to the other SV being either stored in
-         * the xrv_rv (in the case of a pure SVt_IV), or as the
+         * the xrv_rv (in the case of a pure SVt_RV), or as the
          * xpv_pv field of an SVt_PV and its heirs.
          *
          * However, those SV cannot be magical or they would be an
@@ -5354,9 +5354,9 @@ static SV *retrieve_ref(pTHX_ stcxt_t *cxt, const char *cname)
 
     if (cname) {
         /* No need to do anything, as rv will already be PVMG.  */
-        assert (SvTYPE(rv) == SVt_IV || SvTYPE(rv) >= SVt_PV);
+        assert (SvTYPE(rv) == SVt_RV || SvTYPE(rv) >= SVt_PV);
     } else {
-        sv_upgrade(rv, SVt_IV);
+        sv_upgrade(rv, SVt_RV);
     }
 
     SvRV_set(rv, sv);		/* $rv = \$sv */
@@ -5424,7 +5424,7 @@ static SV *retrieve_overloaded(pTHX_ stcxt_t *cxt, const char *cname)
      * WARNING: breaks RV encapsulation.
      */
 
-    SvUPGRADE(rv, SVt_IV);
+    SvUPGRADE(rv, SVt_RV);
     SvRV_set(rv, sv);		/* $rv = \$sv */
     SvROK_on(rv);
 
