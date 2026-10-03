@@ -1,0 +1,110 @@
+Perl 5.40.3 for Windows XP (Static Build)
+                    =========================================
+
+1. OVERVIEW
+-----------
+This distribution contains a fully static build of Perl 5.40.3,
+specifically targeting Windows XP (32-bit, x86). It was built from
+unmodified Perl 5.40.3 source with a custom MinGW-w64 toolchain.
+
+No external C runtime (MSVCRT, MSVCP) or MinGW DLLs are required.
+The only runtime dependencies are Windows system DLLs present on
+a standard XP installation.
+
+2. BUILD CONFIGURATION
+----------------------
+  Perl version:     5.40.3 (subversion 3, patchlevel 40)
+  Platform tag:     MSWin32-x86-multi-thread
+  Compiler:         gcc 11.1.0 (MinGW-w64 i686-w64-mingw32)
+  C flags:          -m32 -std=gnu99 -DWIN32 -DMULTIPLICITY
+                    -DPERL_IMPLICIT_SYS -DUSE_PERLIO -DPERLDLL
+                    -fwrapv -fno-strict-aliasing -Os
+  Link flags:       -static-libgcc -static-libstdc++ -s
+  Threading:        iThreads enabled (USE_ITHREADS)
+  PerlIO:           enabled (USE_PERLIO)
+
+3. FILES
+--------
+  bin\perl.exe          Interpreter frontend (thin launcher)
+  bin\perl540.dll       Core runtime (contains Perl + built-in XS)
+  lib\                  Standard library (.pm / .pl files)
+  lib\CORE\             Headers + import library (for XS development)
+  README.txt            This file
+
+4. BUILT-IN XS MODULES (statically linked)
+------------------------------------------
+  POSIX        System calls, signals, math, times(), pause(), etc.
+  Win32        Windows-specific API (registry, login, etc.)
+  Fcntl        File control (fcntl/ioctl constants and calls)
+  DynaLoader   Dynamic library loading (for future XS modules)
+  Win32CORE    Core glue for Win32 platform
+
+  These are compiled directly into perl540.dll. No separate
+  POSIX.dll / Win32.dll / Fcntl.dll files are needed or produced.
+
+5. SYSTEM REQUIREMENTS
+----------------------
+  OS:        Windows XP (32-bit), Service Pack 3 recommended
+  CPU:       x86 (i686 or later)
+  RAM:       32 MB minimum
+  Disk:      ~15 MB extracted
+
+  XP RTM (no SP): winhttp.dll is absent from the base OS.
+    Workaround: copy winhttp.dll from XP SP3 or Windows Server 2003
+    into the bin\ directory. All other dependencies are present.
+
+6. KNOWN ISSUES / LIMITATIONS
+-----------------------------
+  - cmd.exe does not support single-quoted strings:
+      perl -e 'print "hi"'     # FAILS on cmd.exe
+      perl -e "print 'hi'"    # OK
+
+  - Win32 module exports a NULL constant that may conflict with
+    scripts defining their own NULL. Use 'use Win32 ();' to suppress.
+
+  - XS modules from CPAN can be installed but require a matching
+    MinGW-w64 11.1.0 (i686) toolchain and libperl540.a (included
+    in lib\CORE\).
+
+  - ODBC modules (DBD::ODBC) require odbc32.dll / odbccp32.dll
+    which may be incomplete on XP RTM. Pure-Perl DBI drivers
+    (DBD::SQLite) work without issue.
+
+7. INSTALLATION
+---------------
+  Extract to any path (no installer needed):
+
+    C:\perl-5.40.3\
+
+  Add to PATH (permanent or per-session):
+
+    set PATH=C:\perl-5.40.3\bin;%PATH%
+
+  Test:
+
+    perl -v
+    perl -e "use POSIX; use Win32; print 'All OK\n';"
+
+8. BUILDING FROM SOURCE
+-----------------------
+  Full build instructions and the patch set are available at:
+  [your repository or documentation URL]
+
+  Key insight: XS modules compiled into the DLL must use
+  -DPERL_EXT (not -DPERL_CORE) to avoid dllimport symbol
+  mismatches (_imp__PL_locale_mutex etc.).
+
+9. LICENSE
+----------
+  Perl is free software; you can redistribute it and/or modify
+  it under the terms of either the GNU General Public License
+  or the Artistic License. See: https://www.perl.org/license.html
+
+10. ACKNOWLEDGMENTS
+-------------------
+  Built by the Perl XP Static Build project (2026).
+  Thanks to the Perl 5 Porters for maintaining Perl on legacy
+  platforms, and to the MinGW-w64 project for the toolchain.
+
+  "A Perl program is correct if it gets the job done before
+   your boss changes the requirements." -- Anonymous
