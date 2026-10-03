@@ -1,0 +1,148 @@
+# CCTYPE=GCC
+# GCCBIN=gcc
+# GCCVER=11.1.0
+# GCCTARGET=i686-w64-mingw32
+# GCCCROSS=
+# WIN64=undef
+# ARCHITECTURE=x86
+# ARCHNAME=MSWin32-x86-multi-thread
+# MAKE=make
+..\miniperl.exe -I..\lib config_sh.PL -o ..\config.sh "INST_TOP=c:\perl" "INST_VER=" "INST_ARCH=" "archname=MSWin32-x86-multi-thread" "cc=gcc" "ld=g++" "ccflags=-std=gnu99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields" "usecplusplus=" "cf_email=" "d_mymalloc=undef" "i_quadmath=undef" "libs= -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32" "incpath=C:\MinGW\include" "libperl=libperl540.a" "libpth=C:\MinGW\lib;C:\MinGW\i686-w64-mingw32\lib;C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0;" "libc=" "make=make" "_o=.o" "obj_ext=.o" "_a=.a" "lib_ext=.a" "static_ext=Win32CORE" "usethreads=define" "useithreads=define" "usemultiplicity=define" "useperlio=define" "use64bitint=undef" "uselongdouble=undef" "usequadmath=undef" "usesitecustomize=undef" "default_inc_excludes_dot=define" "LINK_FLAGS=-s -L\"c:\perl\lib\CORE\" -L\"C:\MinGW\lib\" -L\"C:\MinGW\i686-w64-mingw32\lib\" -L\"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0\"" "optimize=-Os" "ARCHPREFIX=" "WIN64=undef" "SKIP_CCHOME_CHECK=1" config.gc
+config_sh.PL: No changes for ..\config.sh
+..\miniperl.exe -I..\lib ..\make_patchnum.pl
+fatal: No names found, cannot describe anything.
+Reusing 'git_version.h' and 'lib/Config_git.pl'
+..\miniperl.exe -I..\lib ..\make_ext.pl "MAKE=make" --dir=..\cpan --dir=..\dist --dir=..\ext lib
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/lib'
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/lib'
+..\miniperl.exe -I..\lib ..\mkppport
+ppport.h in cpan/DB_File is up-to-date
+ppport.h in cpan/IPC-SysV is up-to-date
+ppport.h in cpan/Win32API-File is up-to-date
+ppport.h in dist/Data-Dumper is up-to-date
+ppport.h in dist/Devel-PPPort is up-to-date
+ppport.h in dist/ExtUtils-ParseXS is up-to-date
+ppport.h in dist/IO is up-to-date
+ppport.h in dist/PathTools is up-to-date
+ppport.h in dist/Storable is up-to-date
+ppport.h in dist/threads is up-to-date
+ppport.h in dist/threads-shared is up-to-date
+ppport.h in dist/Time-HiRes is up-to-date
+ppport.h in dist/Unicode-Normalize is up-to-date
+..\miniperl.exe -I..\lib ..\make_ext.pl "MAKE=make" --dir=..\cpan --dir=..\dist --dir=..\ext --dynamic !Unicode/Normalize
+Skipping extension Unicode/Normalize, not ported to current platform at ..\make_ext.pl line 194.
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/PathTools'
+D:\perl-xp\perl-5.40.3\miniperl.exe "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Cwd.bs ..\..\lib\auto\Cwd\Cwd.bs 644
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/PathTools'
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/B'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- B.bs ..\..\lib\auto\B\B.bs 644
+g++ B.def -o ..\..\lib\auto\B\B.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" B.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\B\B.dll
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/B'
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Bzip2'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Bzip2.bs ..\..\lib\auto\Compress\Raw\Bzip2\Bzip2.bs 644
+g++ Bzip2.def -o ..\..\lib\auto\Compress\Raw\Bzip2\Bzip2.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" Bzip2.o blocksort.o bzlib.o compress.o crctable.o decompress.o huffman.o randtable.o    "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Compress\Raw\Bzip2\Bzip2.dll
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Bzip2'
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Zlib'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Zlib.bs ..\..\lib\auto\Compress\Raw\Zlib\Zlib.bs 644
+g++ Zlib.def -o ..\..\lib\auto\Compress\Raw\Zlib\Zlib.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" Zlib.o adler32.o compress.o crc32.o deflate.o infback.o inffast.o inflate.o inftrees.o trees.o uncompr.o zutil.o    "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Compress\Raw\Zlib\Zlib.dll
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Zlib'
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Data-Dumper'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Dumper.bs ..\..\lib\auto\Data\Dumper\Dumper.bs 644
+gcc -c   -std=gnu99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.189\" -DXS_VERSION=\"2.189\"  "-I..\..\lib\CORE"   Dumper.c
+g++ Dumper.def -o ..\..\lib\auto\Data\Dumper\Dumper.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" Dumper.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Data\Dumper\Dumper.dll
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Data-Dumper'
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Devel-PPPort'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- PPPort.bs ..\..\lib\auto\Devel\PPPort\PPPort.bs 644
+g++ PPPort.def -o ..\..\lib\auto\Devel\PPPort\PPPort.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" RealPPPort.o module2.o module3.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Devel\PPPort\PPPort.dll
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Devel-PPPort'
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Devel-Peek'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Peek.bs ..\..\lib\auto\Devel\Peek\Peek.bs 644
+g++ Peek.def -o ..\..\lib\auto\Devel\Peek\Peek.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" Peek.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Devel\Peek\Peek.dll
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Devel-Peek'
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-MD5'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- MD5.bs ..\..\lib\auto\Digest\MD5\MD5.bs 644
+g++ MD5.def -o ..\..\lib\auto\Digest\MD5\MD5.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" MD5.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Digest\MD5\MD5.dll
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-MD5'
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-SHA'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- SHA.bs ..\..\lib\auto\Digest\SHA\SHA.bs 644
+g++ SHA.def -o ..\..\lib\auto\Digest\SHA\SHA.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" SHA.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Digest\SHA\SHA.dll
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-SHA'
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode'
+make[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Byte'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Byte.bs ..\..\..\lib\auto\Encode\Byte\Byte.bs 644
+g++ Byte.def -o ..\..\..\lib\auto\Encode\Byte\Byte.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" Byte.o byte_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\Byte\Byte.dll
+make[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Byte'
+make[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/CN'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- CN.bs ..\..\..\lib\auto\Encode\CN\CN.bs 644
+g++ CN.def -o ..\..\..\lib\auto\Encode\CN\CN.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" CN.o cp_00_t.o eu_01_t.o gb_02_t.o gb_03_t.o ir_04_t.o ma_05_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\CN\CN.dll
+make[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/CN'
+make[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/EBCDIC'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- EBCDIC.bs ..\..\..\lib\auto\Encode\EBCDIC\EBCDIC.bs 644
+g++ EBCDIC.def -o ..\..\..\lib\auto\Encode\EBCDIC\EBCDIC.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" EBCDIC.o ebcdic_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\EBCDIC\EBCDIC.dll
+make[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/EBCDIC'
+make[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/JP'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- JP.bs ..\..\..\lib\auto\Encode\JP\JP.bs 644
+g++ JP.def -o ..\..\..\lib\auto\Encode\JP\JP.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" JP.o cp_00_t.o eu_01_t.o ji_02_t.o ji_03_t.o ji_04_t.o ma_05_t.o sh_06_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\JP\JP.dll
+make[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/JP'
+make[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/KR'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- KR.bs ..\..\..\lib\auto\Encode\KR\KR.bs 644
+g++ KR.def -o ..\..\..\lib\auto\Encode\KR\KR.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" KR.o cp_00_t.o eu_01_t.o jo_02_t.o ks_03_t.o ma_04_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\KR\KR.dll
+make[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/KR'
+make[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Symbol'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Symbol.bs ..\..\..\lib\auto\Encode\Symbol\Symbol.bs 644
+g++ Symbol.def -o ..\..\..\lib\auto\Encode\Symbol\Symbol.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" Symbol.o symbol_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\Symbol\Symbol.dll
+make[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Symbol'
+make[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/TW'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- TW.bs ..\..\..\lib\auto\Encode\TW\TW.bs 644
+g++ TW.def -o ..\..\..\lib\auto\Encode\TW\TW.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" TW.o bi_00_t.o bi_01_t.o cp_02_t.o ma_03_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\TW\TW.dll
+make[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/TW'
+make[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Unicode'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Unicode.bs ..\..\..\lib\auto\Encode\Unicode\Unicode.bs 644
+g++ Unicode.def -o ..\..\..\lib\auto\Encode\Unicode\Unicode.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" Unicode.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\Unicode\Unicode.dll
+make[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Unicode'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Encode.bs ..\..\lib\auto\Encode\Encode.bs 644
+g++ Encode.def -o ..\..\lib\auto\Encode\Encode.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" Encode.o def_t.o encengine.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Encode\Encode.dll
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode'
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Fcntl'
+D:\perl-xp\perl-5.40.3\miniperl.exe "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Fcntl.bs ..\..\lib\auto\Fcntl\Fcntl.bs 644
+g++ Fcntl.def -o ..\..\lib\auto\Fcntl\Fcntl.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" Fcntl.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+D:\perl-xp\perl-5.40.3\miniperl.exe "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Fcntl\Fcntl.dll
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Fcntl'
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/File-DosGlob'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- DosGlob.bs ..\..\lib\auto\File\DosGlob\DosGlob.bs 644
+g++ DosGlob.def -o ..\..\lib\auto\File\DosGlob\DosGlob.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" DosGlob.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\File\DosGlob\DosGlob.dll
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/File-DosGlob'
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/File-Glob'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Glob.bs ..\..\lib\auto\File\Glob\Glob.bs 644
+g++ Glob.def -o ..\..\lib\auto\File\Glob\Glob.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" bsd_glob.o Glob.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+c:/toolchains/gcc-win98/bin/../lib/gcc/i686-w64-mingw32/11.1.0/../../../../i686-w64-mingw32/bin/ld.exe: Glob.o:Glob.c:(.text+0x29a): undefined reference to `Perl_sv_dup_inc'
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [Makefile:475: ..\..\lib\auto\File\Glob\Glob.dll] Error 1
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/File-Glob'
+make[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/File-Glob'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Glob.bs ..\..\lib\auto\File\Glob\Glob.bs 644
+g++ Glob.def -o ..\..\lib\auto\File\Glob\Glob.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\MinGW\lib" -L"C:\MinGW\i686-w64-mingw32\lib" -L"C:\MinGW\lib\gcc\i686-w64-mingw32\11.1.0" bsd_glob.o Glob.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+c:/toolchains/gcc-win98/bin/../lib/gcc/i686-w64-mingw32/11.1.0/../../../../i686-w64-mingw32/bin/ld.exe: Glob.o:Glob.c:(.text+0x29a): undefined reference to `Perl_sv_dup_inc'
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [Makefile:475: ..\..\lib\auto\File\Glob\Glob.dll] Error 1
+make[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/File-Glob'
+Unsuccessful make(ext/File-Glob): code=512 at ..\make_ext.pl line 584.
+make: *** [GNUmakefile:1561: Extensions] Error 2

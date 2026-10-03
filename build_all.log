@@ -1,0 +1,513 @@
+# CCTYPE=GCC
+# GCCBIN=gcc
+# GCCVER=16.2.0
+# GCCTARGET=i686-w64-mingw32
+# GCCCROSS=
+# WIN64=undef
+# ARCHITECTURE=x86
+# ARCHNAME=MSWin32-x86-multi-thread
+# MAKE=gmake
+..\miniperl.exe -I..\lib ..\make_ext.pl "MAKE=gmake" --dir=..\cpan --dir=..\dist --dir=..\ext lib
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/lib'
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/lib'
+..\miniperl.exe -I..\lib ..\mkppport
+ppport.h in cpan/DB_File is up-to-date
+ppport.h in cpan/IPC-SysV is up-to-date
+ppport.h in cpan/Win32API-File is up-to-date
+ppport.h in dist/Data-Dumper is up-to-date
+ppport.h in dist/Devel-PPPort is up-to-date
+ppport.h in dist/ExtUtils-ParseXS is up-to-date
+ppport.h in dist/IO is up-to-date
+ppport.h in dist/PathTools is up-to-date
+ppport.h in dist/Storable is up-to-date
+ppport.h in dist/threads is up-to-date
+ppport.h in dist/threads-shared is up-to-date
+ppport.h in dist/Time-HiRes is up-to-date
+ppport.h in dist/Unicode-Normalize is up-to-date
+..\miniperl.exe -I..\lib ..\make_ext.pl "MAKE=gmake" --dir=..\cpan --dir=..\dist --dir=..\ext --dynamic !Unicode/Normalize
+Skipping extension Unicode/Normalize, not ported to current platform at ..\make_ext.pl line 194.
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/PathTools'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Cwd.bs ..\..\lib\auto\Cwd\Cwd.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/PathTools'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/B'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- B.bs ..\..\lib\auto\B\B.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/B'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Bzip2'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Bzip2.bs ..\..\lib\auto\Compress\Raw\Bzip2\Bzip2.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Bzip2'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Zlib'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Zlib.bs ..\..\lib\auto\Compress\Raw\Zlib\Zlib.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Zlib'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Data-Dumper'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Dumper.bs ..\..\lib\auto\Data\Dumper\Dumper.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Data-Dumper'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Devel-PPPort'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- PPPort.bs ..\..\lib\auto\Devel\PPPort\PPPort.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Devel-PPPort'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Devel-Peek'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Peek.bs ..\..\lib\auto\Devel\Peek\Peek.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Devel-Peek'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-MD5'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- MD5.bs ..\..\lib\auto\Digest\MD5\MD5.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-MD5'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-SHA'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- SHA.bs ..\..\lib\auto\Digest\SHA\SHA.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-SHA'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Byte'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Byte.bs ..\..\..\lib\auto\Encode\Byte\Byte.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Byte'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/CN'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- CN.bs ..\..\..\lib\auto\Encode\CN\CN.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/CN'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/EBCDIC'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- EBCDIC.bs ..\..\..\lib\auto\Encode\EBCDIC\EBCDIC.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/EBCDIC'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/JP'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- JP.bs ..\..\..\lib\auto\Encode\JP\JP.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/JP'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/KR'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- KR.bs ..\..\..\lib\auto\Encode\KR\KR.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/KR'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Symbol'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Symbol.bs ..\..\..\lib\auto\Encode\Symbol\Symbol.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Symbol'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/TW'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- TW.bs ..\..\..\lib\auto\Encode\TW\TW.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/TW'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Unicode'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Unicode.bs ..\..\..\lib\auto\Encode\Unicode\Unicode.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Unicode'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Encode.bs ..\..\lib\auto\Encode\Encode.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Fcntl'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Fcntl.bs ..\..\lib\auto\Fcntl\Fcntl.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Fcntl'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/File-DosGlob'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- DosGlob.bs ..\..\lib\auto\File\DosGlob\DosGlob.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/File-DosGlob'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/File-Glob'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Glob.bs ..\..\lib\auto\File\Glob\Glob.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/File-Glob'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Filter-Util-Call'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Call.bs ..\..\lib\auto\Filter\Util\Call\Call.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Filter-Util-Call'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Util.bs ..\..\lib\auto\Hash\Util\Util.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util-FieldHash'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- FieldHash.bs ..\..\lib\auto\Hash\Util\FieldHash\FieldHash.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util-FieldHash'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/I18N-Langinfo'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Langinfo.bs ..\..\lib\auto\I18N\Langinfo\Langinfo.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/I18N-Langinfo'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/IO'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- IO.bs ..\..\lib\auto\IO\IO.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/IO'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Scalar-List-Utils'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Util.bs ..\..\lib\auto\List\Util\Util.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Scalar-List-Utils'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/MIME-Base64'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Base64.bs ..\..\lib\auto\MIME\Base64\Base64.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/MIME-Base64'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Math-BigInt-FastCalc'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- FastCalc.bs ..\..\lib\auto\Math\BigInt\FastCalc\FastCalc.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Math-BigInt-FastCalc'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Opcode'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Opcode.bs ..\..\lib\auto\Opcode\Opcode.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Opcode'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/POSIX'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- POSIX.bs ..\..\lib\auto\POSIX\POSIX.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/POSIX'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/PerlIO-encoding'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- encoding.bs ..\..\lib\auto\PerlIO\encoding\encoding.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/PerlIO-encoding'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/PerlIO-mmap'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- mmap.bs ..\..\lib\auto\PerlIO\mmap\mmap.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/PerlIO-mmap'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/PerlIO-via'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- via.bs ..\..\lib\auto\PerlIO\via\via.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/PerlIO-via'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/SDBM_File'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- SDBM_File.bs ..\..\lib\auto\SDBM_File\SDBM_File.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/SDBM_File'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Socket'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Socket.bs ..\..\lib\auto\Socket\Socket.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Socket'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Storable'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Storable.bs ..\..\lib\auto\Storable\Storable.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Storable'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Sys-Hostname'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Hostname.bs ..\..\lib\auto\Sys\Hostname\Hostname.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Sys-Hostname'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Time-HiRes'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- HiRes.bs ..\..\lib\auto\Time\HiRes\HiRes.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Time-HiRes'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Time-Piece'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Piece.bs ..\..\lib\auto\Time\Piece\Piece.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Time-Piece'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Unicode-Collate'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Collate.bs ..\..\lib\auto\Unicode\Collate\Collate.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Unicode-Collate'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Win32'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Win32.bs ..\..\lib\auto\Win32\Win32.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Win32'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Win32API-File'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- File.bs ..\..\lib\auto\Win32API\File\File.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Win32API-File'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/XS-APItest'
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/XS-APItest'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/XS-Typemap'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Typemap.bs ..\..\lib\auto\XS\Typemap\Typemap.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/XS-Typemap'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/attributes'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- attributes.bs ..\..\lib\auto\attributes\attributes.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/attributes'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/mro'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- mro.bs ..\..\lib\auto\mro\mro.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/mro'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/re'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- re.bs ..\..\lib\auto\re\re.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/re'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/threads'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- threads.bs ..\..\lib\auto\threads\threads.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/threads'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/threads-shared'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- shared.bs ..\..\lib\auto\threads\shared\shared.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/threads-shared'
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\toke.o  ..\toke.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\regcomp.o  ..\regcomp.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\regcomp_trie.o  ..\regcomp_trie.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\regcomp_debug.o  ..\regcomp_debug.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\regcomp_invlist.o  ..\regcomp_invlist.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\regcomp_study.o  ..\regcomp_study.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\regexec.o  ..\regexec.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\op.o  ..\op.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\sv.o  ..\sv.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\pp.o  ..\pp.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\pp_ctl.o  ..\pp_ctl.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\pp_sys.o  ..\pp_sys.c
+..\pp_sys.c: In function 'Perl_pp_shostent':
+..\pp_sys.c:5583:15: warning: unused variable 'stayopen' [-Wunused-variable]
+ 5583 |     const int stayopen = TOPi;
+      |               ^~~~~~~~
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\pp_pack.o  ..\pp_pack.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\pp_hot.o  ..\pp_hot.c
+..\pp_hot.c: In function 'Perl_pp_aelemfastlex_store':
+..\pp_hot.c:363:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+  363 |         targ = AvARRAY(av)[key];
+      |                           ^
+..\pp_hot.c: In function 'Perl_pp_aelemfast':
+..\pp_hot.c:2050:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2050 |         sv = AvARRAY(av)[key];
+      |                         ^
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\gv.o  ..\gv.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\perl.o  ..\perl.c
+perl.c: In function 'Perl_doing_taint':
+perl.c:4374:48: warning: unused parameter 'envp' [-Wunused-parameter]
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\utf8.o  ..\utf8.c
+In file included from ..\perl.h:6225,
+                 from ..\utf8.c:33:
+..\utf8.c: In function 'S__to_utf8_case':
+..\embed.h:794:49: warning: 'remaining_list' may be used uninitialized [-Wmaybe-uninitialized]
+  794 | # define uvoffuni_to_utf8_flags_msgs(a,b,c,d)   Perl_uvoffuni_to_utf8_flags_msgs(aTHX_ a,b,c,d)
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\utf8.h:154:17: note: in expansion of macro 'uvoffuni_to_utf8_flags_msgs'
+  154 |                 uvoffuni_to_utf8_flags_msgs(d,NATIVE_TO_UNI(uv),flags, msgs)
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\utf8.h:152:37: note: in expansion of macro 'uvchr_to_utf8_flags_msgs'
+  152 |                                     uvchr_to_utf8_flags_msgs(d,uv,flags, 0)
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~
+..\utf8.h:150:37: note: in expansion of macro 'uvchr_to_utf8_flags'
+  150 | #define uvchr_to_utf8(a,b)          uvchr_to_utf8_flags(a,b,0)
+      |                                     ^~~~~~~~~~~~~~~~~~~
+..\utf8.c:3537:17: note: in expansion of macro 'uvchr_to_utf8'
+ 3537 |             d = uvchr_to_utf8(d, remaining_list[i]);
+      |                 ^~~~~~~~~~~~~
+..\utf8.c:3511:17: note: 'remaining_list' was declared here
+ 3511 |     const U32 * remaining_list;
+      |                 ^~~~~~~~~~~~~~
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\dump.o  ..\dump.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\hv.o  ..\hv.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\av.o  ..\av.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\builtin.o  ..\builtin.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\caretx.o  ..\caretx.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\class.o  ..\class.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\deb.o  ..\deb.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\doio.o  ..\doio.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\doop.o  ..\doop.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\dquote.o  ..\dquote.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\globals.o  ..\globals.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\mro_core.o  ..\mro_core.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\locale.o  ..\locale.c
+..\locale.c: In function 'S_ints_to_tm':
+..\locale.c:8216:33: warning: unused parameter 'locale' [-Wunused-parameter]
+ 8216 |                    const char * locale,
+      |                    ~~~~~~~~~~~~~^~~~~~
+..\locale.c: At top level:
+..\locale.c:867:19: warning: 'category_available' defined but not used [-Wunused-const-variable=]
+  867 | STATIC const bool category_available[] = {
+      |                   ^~~~~~~~~~~~~~~~~~
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\keywords.o  ..\keywords.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\mathoms.o  ..\mathoms.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\mg.o  ..\mg.c
+..\mg.c: In function 'Perl_perly_sighandler':
+..\mg.c:3664:54: warning: unused parameter 'safe' [-Wunused-parameter]
+ 3664 |                     void *uap PERL_UNUSED_DECL, bool safe)
+      |                                                      ^
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\numeric.o  ..\numeric.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\pad.o  ..\pad.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\peep.o  ..\peep.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\perly.o  ..\perly.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\pp_sort.o  ..\pp_sort.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\reentr.o  ..\reentr.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\run.o  ..\run.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\scope.o  ..\scope.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\taint.o  ..\taint.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\time64.o  ..\time64.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\universal.o  ..\universal.c
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\util.o  ..\util.c
+..\util.c: In function 'sig_trap':
+..\util.c:3075:14: warning: unused parameter 'signo' [-Wunused-parameter]
+ 3075 | sig_trap(int signo)
+      |          ~~~~^~~~~
+..\util.c: In function 'Perl_find_script':
+..\util.c:3521:39: warning: comparison of integer expressions of different signedness: 'long int' and 'unsigned int' [-Wsign-compare]
+ 3521 |                 if (len+MAX_EXT_LEN+1 >= sizeof(tmpbuf))
+      |                                       ^~
+..\util.c:3546:25: warning: comparison of integer expressions of different signedness: 'I32' {aka 'long int'} and 'unsigned int' [-Wsign-compare]
+ 3546 |                 if (len < sizeof tmpbuf)
+      |                         ^
+..\util.c:3549:21: warning: comparison of integer expressions of different signedness: 'I32' {aka 'long int'} and 'unsigned int' [-Wsign-compare]
+ 3549 |             if (len < sizeof tmpbuf)
+      |                     ^
+..\miniperl.exe -I..\lib create_perllibst_h.pl
+gcc -c -Ifull -I. -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -xc++ -operllib.o  perllib.c
+cc1plus.exe: warning: command-line option '-std=c99' is valid for C/ObjC but not for C++
+In file included from ../perl.h:1693,
+                 from perllib.c:10:
+perlhost.h: In function 'CPerlHost* IPerlMem2Host(IPerlMem*)':
+perlhost.h:227:63: warning: 'offsetof' within non-standard-layout type 'CPerlHost' is conditionally-supported [-Winvalid-offsetof]
+  227 | #define STRUCT2RAWPTR(x, y) (CPerlHost*)(((LPBYTE)x)-offsetof(CPerlHost, y))
+      |                                                               ^
+perlhost.h:241:12: note: in expansion of macro 'STRUCT2RAWPTR'
+  241 |     return STRUCT2RAWPTR(piPerl, m_hostperlMem);
+      |            ^~~~~~~~~~~~~
+perlhost.h: In function 'CPerlHost* IPerlMemShared2Host(IPerlMem*)':
+perlhost.h:227:63: warning: 'offsetof' within non-standard-layout type 'CPerlHost' is conditionally-supported [-Winvalid-offsetof]
+  227 | #define STRUCT2RAWPTR(x, y) (CPerlHost*)(((LPBYTE)x)-offsetof(CPerlHost, y))
+      |                                                               ^
+perlhost.h:246:12: note: in expansion of macro 'STRUCT2RAWPTR'
+  246 |     return STRUCT2RAWPTR(piPerl, m_hostperlMemShared);
+      |            ^~~~~~~~~~~~~
+perlhost.h: In function 'CPerlHost* IPerlMemParse2Host(IPerlMem*)':
+perlhost.h:227:63: warning: 'offsetof' within non-standard-layout type 'CPerlHost' is conditionally-supported [-Winvalid-offsetof]
+  227 | #define STRUCT2RAWPTR(x, y) (CPerlHost*)(((LPBYTE)x)-offsetof(CPerlHost, y))
+      |                                                               ^
+perlhost.h:251:12: note: in expansion of macro 'STRUCT2RAWPTR'
+  251 |     return STRUCT2RAWPTR(piPerl, m_hostperlMemParse);
+      |            ^~~~~~~~~~~~~
+perlhost.h: In function 'CPerlHost* IPerlEnv2Host(IPerlEnv*)':
+perlhost.h:227:63: warning: 'offsetof' within non-standard-layout type 'CPerlHost' is conditionally-supported [-Winvalid-offsetof]
+  227 | #define STRUCT2RAWPTR(x, y) (CPerlHost*)(((LPBYTE)x)-offsetof(CPerlHost, y))
+      |                                                               ^
+perlhost.h:234:38: note: in expansion of macro 'STRUCT2RAWPTR'
+  234 | #define STRUCT2PTR(x, y) CheckInterp(STRUCT2RAWPTR(x, y))
+      |                                      ^~~~~~~~~~~~~
+perlhost.h:256:12: note: in expansion of macro 'STRUCT2PTR'
+  256 |     return STRUCT2PTR(piPerl, m_hostperlEnv);
+      |            ^~~~~~~~~~
+perlhost.h: In function 'CPerlHost* IPerlStdIO2Host(IPerlStdIO*)':
+perlhost.h:227:63: warning: 'offsetof' within non-standard-layout type 'CPerlHost' is conditionally-supported [-Winvalid-offsetof]
+  227 | #define STRUCT2RAWPTR(x, y) (CPerlHost*)(((LPBYTE)x)-offsetof(CPerlHost, y))
+      |                                                               ^
+perlhost.h:234:38: note: in expansion of macro 'STRUCT2RAWPTR'
+  234 | #define STRUCT2PTR(x, y) CheckInterp(STRUCT2RAWPTR(x, y))
+      |                                      ^~~~~~~~~~~~~
+perlhost.h:261:12: note: in expansion of macro 'STRUCT2PTR'
+  261 |     return STRUCT2PTR(piPerl, m_hostperlStdIO);
+      |            ^~~~~~~~~~
+perlhost.h: In function 'CPerlHost* IPerlLIO2Host(IPerlLIO*)':
+perlhost.h:227:63: warning: 'offsetof' within non-standard-layout type 'CPerlHost' is conditionally-supported [-Winvalid-offsetof]
+  227 | #define STRUCT2RAWPTR(x, y) (CPerlHost*)(((LPBYTE)x)-offsetof(CPerlHost, y))
+      |                                                               ^
+perlhost.h:234:38: note: in expansion of macro 'STRUCT2RAWPTR'
+  234 | #define STRUCT2PTR(x, y) CheckInterp(STRUCT2RAWPTR(x, y))
+      |                                      ^~~~~~~~~~~~~
+perlhost.h:266:12: note: in expansion of macro 'STRUCT2PTR'
+  266 |     return STRUCT2PTR(piPerl, m_hostperlLIO);
+      |            ^~~~~~~~~~
+perlhost.h: In function 'CPerlHost* IPerlDir2Host(IPerlDir*)':
+perlhost.h:227:63: warning: 'offsetof' within non-standard-layout type 'CPerlHost' is conditionally-supported [-Winvalid-offsetof]
+  227 | #define STRUCT2RAWPTR(x, y) (CPerlHost*)(((LPBYTE)x)-offsetof(CPerlHost, y))
+      |                                                               ^
+perlhost.h:234:38: note: in expansion of macro 'STRUCT2RAWPTR'
+  234 | #define STRUCT2PTR(x, y) CheckInterp(STRUCT2RAWPTR(x, y))
+      |                                      ^~~~~~~~~~~~~
+perlhost.h:271:12: note: in expansion of macro 'STRUCT2PTR'
+  271 |     return STRUCT2PTR(piPerl, m_hostperlDir);
+      |            ^~~~~~~~~~
+perlhost.h: In function 'CPerlHost* IPerlSock2Host(IPerlSock*)':
+perlhost.h:227:63: warning: 'offsetof' within non-standard-layout type 'CPerlHost' is conditionally-supported [-Winvalid-offsetof]
+  227 | #define STRUCT2RAWPTR(x, y) (CPerlHost*)(((LPBYTE)x)-offsetof(CPerlHost, y))
+      |                                                               ^
+perlhost.h:234:38: note: in expansion of macro 'STRUCT2RAWPTR'
+  234 | #define STRUCT2PTR(x, y) CheckInterp(STRUCT2RAWPTR(x, y))
+      |                                      ^~~~~~~~~~~~~
+perlhost.h:276:12: note: in expansion of macro 'STRUCT2PTR'
+  276 |     return STRUCT2PTR(piPerl, m_hostperlSock);
+      |            ^~~~~~~~~~
+perlhost.h: In function 'CPerlHost* IPerlProc2Host(IPerlProc*)':
+perlhost.h:227:63: warning: 'offsetof' within non-standard-layout type 'CPerlHost' is conditionally-supported [-Winvalid-offsetof]
+  227 | #define STRUCT2RAWPTR(x, y) (CPerlHost*)(((LPBYTE)x)-offsetof(CPerlHost, y))
+      |                                                               ^
+perlhost.h:234:38: note: in expansion of macro 'STRUCT2RAWPTR'
+  234 | #define STRUCT2PTR(x, y) CheckInterp(STRUCT2RAWPTR(x, y))
+      |                                      ^~~~~~~~~~~~~
+perlhost.h:281:12: note: in expansion of macro 'STRUCT2PTR'
+  281 |     return STRUCT2PTR(piPerl, m_hostperlProc);
+      |            ^~~~~~~~~~
+perllib.c: In function 'void win32_checkTLS(PerlInterpreter*)':
+perllib.c:54:14: warning: unused variable 'nowhere' [-Wunused-variable]
+   54 |         int *nowhere = NULL;
+      |              ^~~~~~~
+perllib.c: In function 'void win32_delete_internal_host(void*)':
+perllib.c:164:5: warning: deleting object of polymorphic class type 'CPerlHost' which has non-virtual destructor might cause undefined behavior [-Wdelete-non-virtual-dtor]
+  164 |     delete host;
+      |     ^~~~~~~~~~~
+perllib.c: In function 'BOOL DllMain(HINSTANCE, DWORD, LPVOID)':
+perllib.c:234:16: warning: unused parameter 'lpvReserved' [-Wunused-parameter]
+  234 |         LPVOID lpvReserved)     /* reserved */
+      |         ~~~~~~~^~~~~~~~~~~
+In file included from perlhost.h:19,
+                 from perllib.c:47:
+vdir.h: In member function 'char* VDir::MapPathA(const char*)':
+vdir.h:458:1: warning: function may return address of local variable [-Wreturn-local-addr]
+  458 | }
+      | ^
+vdir.h:391:10: note: declared here
+  391 |     char szlBuf[MAX_PATH+1];
+      |          ^~~~~~
+vdir.h:391:10: note: declared here
+vdir.h: In member function 'WCHAR* VDir::MapPathW(const WCHAR*)':
+vdir.h:689:1: warning: function may return address of local variable [-Wreturn-local-addr]
+  689 | }
+      | ^
+vdir.h:623:11: note: declared here
+  623 |     WCHAR szlBuf[MAX_PATH+1];
+      |           ^~~~~~
+vdir.h:623:11: note: declared here
+gcc -c -I.. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\perlio.o  ..\perlio.c
+gcc -c -I. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o.\win32.o  win32.c
+gcc -c -I. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o.\win32sck.o  win32sck.c
+win32sck.c: In function 'win32_getnetbyname':
+win32sck.c:781:26: warning: unused parameter 'name' [-Wunused-parameter]
+  781 | win32_getnetbyname(char *name)
+      |                    ~~~~~~^~~~
+win32sck.c: In function 'win32_getnetbyaddr':
+win32sck.c:788:25: warning: unused parameter 'net' [-Wunused-parameter]
+  788 | win32_getnetbyaddr(long net, int type)
+      |                    ~~~~~^~~
+win32sck.c:788:34: warning: unused parameter 'type' [-Wunused-parameter]
+  788 | win32_getnetbyaddr(long net, int type)
+      |                              ~~~~^~~~
+win32sck.c: In function 'win32_sethostent':
+win32sck.c:809:22: warning: unused parameter 'stayopen' [-Wunused-parameter]
+  809 | win32_sethostent(int stayopen)
+      |                  ~~~~^~~~~~~~
+win32sck.c: In function 'win32_setnetent':
+win32sck.c:816:21: warning: unused parameter 'stayopen' [-Wunused-parameter]
+  816 | win32_setnetent(int stayopen)
+      |                 ~~~~^~~~~~~~
+win32sck.c: In function 'win32_setprotoent':
+win32sck.c:823:23: warning: unused parameter 'stayopen' [-Wunused-parameter]
+  823 | win32_setprotoent(int stayopen)
+      |                   ~~~~^~~~~~~~
+win32sck.c: In function 'win32_setservent':
+win32sck.c:830:22: warning: unused parameter 'stayopen' [-Wunused-parameter]
+  830 | win32_setservent(int stayopen)
+      |                  ~~~~^~~~~~~~
+gcc -c -I. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o.\win32thread.o  win32thread.c
+gcc -c -I. -Ifull -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o.\fcrypt.o  fcrypt.c
+fcrypt.c: In function 'des_fcrypt':
+fcrypt.c:473:17: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  473 |     ((c) >= '.' && (c) <= '9' || (c) >= 'A' && (c) <= 'Z' ||  \
+      |      ~~~~~~~~~~~^~~~~~~~~~~~~
+fcrypt.c:488:14: note: in expansion of macro 'good_for_salt'
+  488 |         if (!good_for_salt(salt[0]) || !good_for_salt(salt[1])) {
+      |              ^~~~~~~~~~~~~
+fcrypt.c:474:17: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  474 |      (c) >= 'a' && (c) <= 'z')
+      |      ~~~~~~~~~~~^~~~~~~~~~~~~
+fcrypt.c:488:14: note: in expansion of macro 'good_for_salt'
+  488 |         if (!good_for_salt(salt[0]) || !good_for_salt(salt[1])) {
+      |              ^~~~~~~~~~~~~
+fcrypt.c:473:17: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  473 |     ((c) >= '.' && (c) <= '9' || (c) >= 'A' && (c) <= 'Z' ||  \
+      |      ~~~~~~~~~~~^~~~~~~~~~~~~
+fcrypt.c:488:41: note: in expansion of macro 'good_for_salt'
+  488 |         if (!good_for_salt(salt[0]) || !good_for_salt(salt[1])) {
+      |                                         ^~~~~~~~~~~~~
+fcrypt.c:474:17: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  474 |      (c) >= 'a' && (c) <= 'z')
+      |      ~~~~~~~~~~~^~~~~~~~~~~~~
+fcrypt.c:488:41: note: in expansion of macro 'good_for_salt'
+  488 |         if (!good_for_salt(salt[0]) || !good_for_salt(salt[1])) {
+      |                                         ^~~~~~~~~~~~~
+..\miniperl.exe -I..\lib ..\make_ext.pl "MAKE=gmake" --dir=..\cpan --dir=..\dist --dir=..\ext --static !Unicode/Normalize
+Generating a gmake-style Makefile
+Writing Makefile for Win32CORE
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Win32CORE'
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -DPERLDLL -UUSEIMPORTLIB  -Os   -DVERSION=\"0.04\" -DXS_VERSION=\"0.04\"  "-I..\..\lib\CORE"   Win32CORE.c
+In file included from Win32CORE.c:21:
+..\..\lib\CORE/inline.h: In function 'Perl_is_utf8_invariant_string_loc':
+..\..\lib\CORE/perl.h:2524:25: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+ 2524 | #define PTR2nat(p)      (PTRV)(p)       /* pointer to integer of PTRSIZE */
+      |                         ^
+..\..\lib\CORE/inline.h:1370:48: note: in expansion of macro 'PTR2nat'
+ 1370 | #  define PERL_IS_SUBWORD_ADDR(x) (1 & (       PTR2nat(x)                     \
+      |                                                ^~~~~~~
+..\..\lib\CORE/inline.h:1384:45: note: in expansion of macro 'PERL_IS_SUBWORD_ADDR'
+ 1384 |                           + PERL_WORDSIZE * PERL_IS_SUBWORD_ADDR(x)
+      |                                             ^~~~~~~~~~~~~~~~~~~~
+..\..\lib\CORE/perl.h:2524:25: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+ 2524 | #define PTR2nat(p)      (PTRV)(p)       /* pointer to integer of PTRSIZE */
+      |                         ^
+..\..\lib\CORE/inline.h:1371:46: note: in expansion of macro 'PTR2nat'
+ 1371 |                                       |   (  PTR2nat(x) >> 1)                 \
+      |                                              ^~~~~~~
+..\..\lib\CORE/inline.h:1384:45: note: in expansion of macro 'PERL_IS_SUBWORD_ADDR'
+ 1384 |                           + PERL_WORDSIZE * PERL_IS_SUBWORD_ADDR(x)
+      |                                             ^~~~~~~~~~~~~~~~~~~~
+..\..\lib\CORE/perl.h:2524:25: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+ 2524 | #define PTR2nat(p)      (PTRV)(p)       /* pointer to integer of PTRSIZE */
+      |                         ^
+..\..\lib\CORE/inline.h:1372:46: note: in expansion of macro 'PTR2nat'
+ 1372 |                                       | ( ( (PTR2nat(x)                       \
+      |                                              ^~~~~~~
+..\..\lib\CORE/inline.h:1384:45: note: in expansion of macro 'PERL_IS_SUBWORD_ADDR'
+ 1384 |                           + PERL_WORDSIZE * PERL_IS_SUBWORD_ADDR(x)
+      |                                             ^~~~~~~~~~~~~~~~~~~~
+..\..\lib\CORE/perl.h:2524:25: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+ 2524 | #define PTR2nat(p)      (PTRV)(p)       /* pointer to integer of PTRSIZE */
+      |                         ^
+..\..\lib\CORE/inline.h:1387:30: note: in expansion of macro 'PTR2nat'
+ 1387 |                           - (PTR2nat(x) & PERL_WORD_BOUNDARY_MASK))
+      |                              ^~~~~~~
+..\..\lib\CORE/perl.h:2524:25: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+ 2524 | #define PTR2nat(p)      (PTRV)(p)       /* pointer to integer of PTRSIZE */
+      |                         ^
+..\..\lib\CORE/inline.h:1392:16: note: in expansion of macro 'PTR2nat'
+ 1392 |         while (PTR2nat(x) & PERL_WORD_BOUNDARY_MASK) {
+      |                ^~~~~~~
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e rm_f -- "..\..\lib\auto\Win32CORE\Win32CORE.a"
+ar -ru ..\..\lib\auto\Win32CORE\Win32CORE.a Win32CORE.o
+ar: creating ..\..\lib\auto\Win32CORE\Win32CORE.a
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Win32CORE\Win32CORE.a
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Win32CORE'
+..\miniperl.exe -I..\lib list_static_libs.pl -o Extensions_static
+g++ -shared -o ..\perl540.dll  -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" \
+   ..\toke.o ..\regcomp.o ..\regcomp_trie.o ..\regcomp_debug.o ..\regcomp_invlist.o ..\regcomp_study.o ..\regexec.o ..\op.o ..\sv.o ..\pp.o ..\pp_ctl.o ..\pp_sys.o ..\pp_pack.o ..\pp_hot.o ..\gv.o ..\perl.o ..\utf8.o ..\dump.o ..\hv.o ..\av.o ..\builtin.o ..\caretx.o ..\class.o ..\deb.o ..\doio.o ..\doop.o ..\dquote.o ..\globals.o ..\mro_core.o ..\locale.o ..\keywords.o ..\mathoms.o ..\mg.o ..\numeric.o ..\pad.o ..\peep.o ..\perly.o ..\pp_sort.o ..\reentr.o ..\run.o ..\scope.o ..\taint.o ..\time64.o ..\universal.o ..\util.o perllib.o ..\perlio.o .\win32.o .\win32sck.o .\win32thread.o .\fcrypt.o ..\DynaLoader.o ..\lib\auto\Win32CORE\Win32CORE.a  -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 ..\lib\CORE\perl540.exp
+C:\toolchains\w64devkit\bin/ld.exe: cannot find ..\lib\CORE\perl540.exp: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+make: *** [GNUmakefile:1476: ..\perl540.dll] Error 1

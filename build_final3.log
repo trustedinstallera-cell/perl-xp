@@ -1,0 +1,13 @@
+# CCTYPE=GCC
+# GCCBIN=gcc
+# GCCVER=16.2.0
+# GCCTARGET=i686-w64-mingw32
+# GCCCROSS=
+# WIN64=undef
+# ARCHITECTURE=x86
+# ARCHNAME=MSWin32-x86-multi-thread
+# MAKE=gmake
+..\miniperl.exe -I..\lib ..\make_ext.pl "MAKE=gmake" --dir=..\ext --dir=..\dist --dynaloader
+'..\miniperl.exe' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+make: *** [GNUmakefile:1586: ..\DynaLoader.o] Error 1

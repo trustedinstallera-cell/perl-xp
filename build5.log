@@ -1,0 +1,232 @@
+# CCTYPE=GCC
+# GCCBIN=gcc
+# GCCVER=16.2.0
+# GCCTARGET=i686-w64-mingw32
+# GCCCROSS=
+# WIN64=undef
+# ARCHITECTURE=x86
+# ARCHNAME=MSWin32-x86-multi-thread
+# MAKE=gmake
+..\miniperl.exe -I..\lib ..\make_ext.pl "MAKE=gmake" --dir=..\cpan --dir=..\dist --dir=..\ext lib
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/lib'
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/lib'
+..\miniperl.exe -I..\lib ..\mkppport
+ppport.h in cpan/DB_File is up-to-date
+ppport.h in cpan/IPC-SysV is up-to-date
+ppport.h in cpan/Win32API-File is up-to-date
+ppport.h in dist/Data-Dumper is up-to-date
+ppport.h in dist/Devel-PPPort is up-to-date
+ppport.h in dist/ExtUtils-ParseXS is up-to-date
+ppport.h in dist/IO is up-to-date
+ppport.h in dist/PathTools is up-to-date
+ppport.h in dist/Storable is up-to-date
+ppport.h in dist/threads is up-to-date
+ppport.h in dist/threads-shared is up-to-date
+ppport.h in dist/Time-HiRes is up-to-date
+ppport.h in dist/Unicode-Normalize is up-to-date
+..\miniperl.exe -I..\lib ..\make_ext.pl "MAKE=gmake" --dir=..\cpan --dir=..\dist --dir=..\ext --dynamic !Unicode/Normalize
+Skipping extension Unicode/Normalize, not ported to current platform at ..\make_ext.pl line 194.
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/PathTools'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Cwd.bs ..\..\lib\auto\Cwd\Cwd.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/PathTools'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/B'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- B.bs ..\..\lib\auto\B\B.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/B'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Bzip2'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Bzip2.bs ..\..\lib\auto\Compress\Raw\Bzip2\Bzip2.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Bzip2'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Zlib'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Zlib.bs ..\..\lib\auto\Compress\Raw\Zlib\Zlib.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Zlib'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Data-Dumper'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Dumper.bs ..\..\lib\auto\Data\Dumper\Dumper.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Data-Dumper'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Devel-PPPort'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- PPPort.bs ..\..\lib\auto\Devel\PPPort\PPPort.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Devel-PPPort'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Devel-Peek'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Peek.bs ..\..\lib\auto\Devel\Peek\Peek.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Devel-Peek'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-MD5'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- MD5.bs ..\..\lib\auto\Digest\MD5\MD5.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-MD5'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-SHA'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- SHA.bs ..\..\lib\auto\Digest\SHA\SHA.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-SHA'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Byte'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Byte.bs ..\..\..\lib\auto\Encode\Byte\Byte.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Byte'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/CN'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- CN.bs ..\..\..\lib\auto\Encode\CN\CN.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/CN'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/EBCDIC'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- EBCDIC.bs ..\..\..\lib\auto\Encode\EBCDIC\EBCDIC.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/EBCDIC'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/JP'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- JP.bs ..\..\..\lib\auto\Encode\JP\JP.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/JP'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/KR'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- KR.bs ..\..\..\lib\auto\Encode\KR\KR.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/KR'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Symbol'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Symbol.bs ..\..\..\lib\auto\Encode\Symbol\Symbol.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Symbol'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/TW'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- TW.bs ..\..\..\lib\auto\Encode\TW\TW.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/TW'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Unicode'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Unicode.bs ..\..\..\lib\auto\Encode\Unicode\Unicode.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Unicode'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Encode.bs ..\..\lib\auto\Encode\Encode.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Fcntl'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Fcntl.bs ..\..\lib\auto\Fcntl\Fcntl.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Fcntl'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/File-DosGlob'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- DosGlob.bs ..\..\lib\auto\File\DosGlob\DosGlob.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/File-DosGlob'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/File-Glob'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Glob.bs ..\..\lib\auto\File\Glob\Glob.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/File-Glob'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Filter-Util-Call'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Call.bs ..\..\lib\auto\Filter\Util\Call\Call.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Filter-Util-Call'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Util.bs ..\..\lib\auto\Hash\Util\Util.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util-FieldHash'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- FieldHash.bs ..\..\lib\auto\Hash\Util\FieldHash\FieldHash.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util-FieldHash'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/I18N-Langinfo'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Langinfo.bs ..\..\lib\auto\I18N\Langinfo\Langinfo.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/I18N-Langinfo'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/IO'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- IO.bs ..\..\lib\auto\IO\IO.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/IO'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Scalar-List-Utils'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Util.bs ..\..\lib\auto\List\Util\Util.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Scalar-List-Utils'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/MIME-Base64'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Base64.bs ..\..\lib\auto\MIME\Base64\Base64.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/MIME-Base64'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Math-BigInt-FastCalc'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- FastCalc.bs ..\..\lib\auto\Math\BigInt\FastCalc\FastCalc.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Math-BigInt-FastCalc'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Opcode'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Opcode.bs ..\..\lib\auto\Opcode\Opcode.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Opcode'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/POSIX'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- POSIX.bs ..\..\lib\auto\POSIX\POSIX.bs 644
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.20\" -DXS_VERSION=\"2.20\"  "-I..\..\lib\CORE"   POSIX.c
+POSIX.xs: In function 'fix_win32_tzenv':
+POSIX.xs:1725:13: error: implicit declaration of function 'putenv'; did you mean '_putenv'? [-Wimplicit-function-declaration]
+ 1725 |             putenv(newenv);
+      |             ^~~~~~
+      |             _putenv
+POSIX.xs: In function 'XS_POSIX_acos':
+POSIX.xs:604:23: error: implicit declaration of function 'j0'; did you mean '_j0'? [-Wimplicit-function-declaration]
+  604 | #    define bessel_j0 j0
+      |                       ^~
+POSIX.xs:2196:22: note: in expansion of macro 'bessel_j0'
+ 2196 |             RETVAL = bessel_j0(x);
+      |                      ^~~~~~~~~
+POSIX.xs:605:23: error: implicit declaration of function 'j1'; did you mean '_j1'? [-Wimplicit-function-declaration]
+  605 | #    define bessel_j1 j1
+      |                       ^~
+POSIX.xs:2203:22: note: in expansion of macro 'bessel_j1'
+ 2203 |             RETVAL = bessel_j1(x);
+      |                      ^~~~~~~~~
+POSIX.xs:607:23: error: implicit declaration of function 'y0'; did you mean '_y0'? [-Wimplicit-function-declaration]
+  607 | #    define bessel_y0 y0
+      |                       ^~
+POSIX.xs:2290:22: note: in expansion of macro 'bessel_y0'
+ 2290 |             RETVAL = bessel_y0(x);
+      |                      ^~~~~~~~~
+POSIX.xs:608:23: error: implicit declaration of function 'y1'; did you mean '_y1'? [-Wimplicit-function-declaration]
+  608 | #    define bessel_y1 y1
+      |                       ^~
+POSIX.xs:2298:22: note: in expansion of macro 'bessel_y1'
+ 2298 |             RETVAL = bessel_y1(x);
+      |                      ^~~~~~~~~
+In file included from POSIX.xs:11:
+POSIX.xs: In function 'XS_POSIX_fpclassify':
+..\..\lib\CORE/perl.h:2794:33: error: implicit declaration of function 'finite'; did you mean '_finite'? [-Wimplicit-function-declaration]
+ 2794 | #       define Perl_isfinite(x) finite(x)
+      |                                 ^~~~~~
+POSIX.xs:2413:22: note: in expansion of macro 'Perl_isfinite'
+ 2413 |             RETVAL = Perl_isfinite(x);
+      |                      ^~~~~~~~~~~~~
+POSIX.xs: In function 'XS_POSIX_jn':
+POSIX.xs:606:23: error: implicit declaration of function 'jn'; did you mean '_jn'? [-Wimplicit-function-declaration]
+  606 | #    define bessel_jn jn
+      |                       ^~
+POSIX.xs:2766:20: note: in expansion of macro 'bessel_jn'
+ 2766 |           RETVAL = bessel_jn(x, y);
+      |                    ^~~~~~~~~
+POSIX.xs:609:23: error: implicit declaration of function 'yn'; did you mean '_yn'? [-Wimplicit-function-declaration]
+  609 | #    define bessel_yn yn
+      |                       ^~
+POSIX.xs:2776:20: note: in expansion of macro 'bessel_yn'
+ 2776 |           RETVAL = bessel_yn(x, y);
+      |                    ^~~~~~~~~
+gmake[1]: *** [Makefile:335: POSIX.o] Error 1
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/POSIX'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/POSIX'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- POSIX.bs ..\..\lib\auto\POSIX\POSIX.bs 644
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.20\" -DXS_VERSION=\"2.20\"  "-I..\..\lib\CORE"   POSIX.c
+POSIX.xs: In function 'fix_win32_tzenv':
+POSIX.xs:1725:13: error: implicit declaration of function 'putenv'; did you mean '_putenv'? [-Wimplicit-function-declaration]
+ 1725 |             putenv(newenv);
+      |             ^~~~~~
+      |             _putenv
+POSIX.xs: In function 'XS_POSIX_acos':
+POSIX.xs:604:23: error: implicit declaration of function 'j0'; did you mean '_j0'? [-Wimplicit-function-declaration]
+  604 | #    define bessel_j0 j0
+      |                       ^~
+POSIX.xs:2196:22: note: in expansion of macro 'bessel_j0'
+ 2196 |             RETVAL = bessel_j0(x);
+      |                      ^~~~~~~~~
+POSIX.xs:605:23: error: implicit declaration of function 'j1'; did you mean '_j1'? [-Wimplicit-function-declaration]
+  605 | #    define bessel_j1 j1
+      |                       ^~
+POSIX.xs:2203:22: note: in expansion of macro 'bessel_j1'
+ 2203 |             RETVAL = bessel_j1(x);
+      |                      ^~~~~~~~~
+POSIX.xs:607:23: error: implicit declaration of function 'y0'; did you mean '_y0'? [-Wimplicit-function-declaration]
+  607 | #    define bessel_y0 y0
+      |                       ^~
+POSIX.xs:2290:22: note: in expansion of macro 'bessel_y0'
+ 2290 |             RETVAL = bessel_y0(x);
+      |                      ^~~~~~~~~
+POSIX.xs:608:23: error: implicit declaration of function 'y1'; did you mean '_y1'? [-Wimplicit-function-declaration]
+  608 | #    define bessel_y1 y1
+      |                       ^~
+POSIX.xs:2298:22: note: in expansion of macro 'bessel_y1'
+ 2298 |             RETVAL = bessel_y1(x);
+      |                      ^~~~~~~~~
+In file included from POSIX.xs:11:
+POSIX.xs: In function 'XS_POSIX_fpclassify':
+..\..\lib\CORE/perl.h:2794:33: error: implicit declaration of function 'finite'; did you mean '_finite'? [-Wimplicit-function-declaration]
+ 2794 | #       define Perl_isfinite(x) finite(x)
+      |                                 ^~~~~~
+POSIX.xs:2413:22: note: in expansion of macro 'Perl_isfinite'
+ 2413 |             RETVAL = Perl_isfinite(x);
+      |                      ^~~~~~~~~~~~~
+POSIX.xs: In function 'XS_POSIX_jn':
+POSIX.xs:606:23: error: implicit declaration of function 'jn'; did you mean '_jn'? [-Wimplicit-function-declaration]
+  606 | #    define bessel_jn jn
+      |                       ^~
+POSIX.xs:2766:20: note: in expansion of macro 'bessel_jn'
+ 2766 |           RETVAL = bessel_jn(x, y);
+      |                    ^~~~~~~~~
+POSIX.xs:609:23: error: implicit declaration of function 'yn'; did you mean '_yn'? [-Wimplicit-function-declaration]
+  609 | #    define bessel_yn yn
+      |                       ^~
+POSIX.xs:2776:20: note: in expansion of macro 'bessel_yn'
+ 2776 |           RETVAL = bessel_yn(x, y);
+      |                    ^~~~~~~~~
+gmake[1]: *** [Makefile:335: POSIX.o] Error 1
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/POSIX'
+Unsuccessful make(ext/POSIX): code=512 at ..\make_ext.pl line 584.
+make: *** [GNUmakefile:1561: Extensions] Error 2

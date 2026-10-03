@@ -1,0 +1,168 @@
+..\miniperl.exe -I..\lib ..\make_ext.pl "MAKE=gmake" --dir=..\cpan --dir=..\dist --dir=..\ext lib
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/lib'
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/lib'
+..\miniperl.exe -I..\lib ..\mkppport
+ppport.h in cpan/DB_File is up-to-date
+ppport.h in cpan/IPC-SysV is up-to-date
+ppport.h in cpan/Win32API-File is up-to-date
+ppport.h in dist/Data-Dumper is up-to-date
+ppport.h in dist/Devel-PPPort is up-to-date
+ppport.h in dist/ExtUtils-ParseXS is up-to-date
+ppport.h in dist/IO is up-to-date
+ppport.h in dist/PathTools is up-to-date
+ppport.h in dist/Storable is up-to-date
+ppport.h in dist/threads is up-to-date
+ppport.h in dist/threads-shared is up-to-date
+ppport.h in dist/Time-HiRes is up-to-date
+ppport.h in dist/Unicode-Normalize is up-to-date
+..\miniperl.exe -I..\lib ..\make_ext.pl "MAKE=gmake" --dir=..\cpan --dir=..\dist --dir=..\ext --dynamic !Unicode/Normalize
+Skipping extension Unicode/Normalize, not ported to current platform at ..\make_ext.pl line 194.
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/PathTools'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Cwd.bs ..\..\lib\auto\Cwd\Cwd.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/PathTools'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/B'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- B.bs ..\..\lib\auto\B\B.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/B'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Bzip2'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Bzip2.bs ..\..\lib\auto\Compress\Raw\Bzip2\Bzip2.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Bzip2'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Zlib'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Zlib.bs ..\..\lib\auto\Compress\Raw\Zlib\Zlib.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Zlib'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Data-Dumper'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Dumper.bs ..\..\lib\auto\Data\Dumper\Dumper.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Data-Dumper'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Devel-PPPort'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- PPPort.bs ..\..\lib\auto\Devel\PPPort\PPPort.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Devel-PPPort'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Devel-Peek'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Peek.bs ..\..\lib\auto\Devel\Peek\Peek.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Devel-Peek'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-MD5'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- MD5.bs ..\..\lib\auto\Digest\MD5\MD5.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-MD5'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-SHA'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- SHA.bs ..\..\lib\auto\Digest\SHA\SHA.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-SHA'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Byte'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Byte.bs ..\..\..\lib\auto\Encode\Byte\Byte.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Byte'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/CN'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- CN.bs ..\..\..\lib\auto\Encode\CN\CN.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/CN'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/EBCDIC'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- EBCDIC.bs ..\..\..\lib\auto\Encode\EBCDIC\EBCDIC.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/EBCDIC'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/JP'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- JP.bs ..\..\..\lib\auto\Encode\JP\JP.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/JP'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/KR'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- KR.bs ..\..\..\lib\auto\Encode\KR\KR.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/KR'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Symbol'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Symbol.bs ..\..\..\lib\auto\Encode\Symbol\Symbol.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Symbol'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/TW'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- TW.bs ..\..\..\lib\auto\Encode\TW\TW.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/TW'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Unicode'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Unicode.bs ..\..\..\lib\auto\Encode\Unicode\Unicode.bs 644
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Unicode'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Encode.bs ..\..\lib\auto\Encode\Encode.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Fcntl'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Fcntl.bs ..\..\lib\auto\Fcntl\Fcntl.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Fcntl'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/File-DosGlob'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- DosGlob.bs ..\..\lib\auto\File\DosGlob\DosGlob.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/File-DosGlob'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/File-Glob'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Glob.bs ..\..\lib\auto\File\Glob\Glob.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/File-Glob'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Filter-Util-Call'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Call.bs ..\..\lib\auto\Filter\Util\Call\Call.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Filter-Util-Call'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Util.bs ..\..\lib\auto\Hash\Util\Util.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util-FieldHash'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- FieldHash.bs ..\..\lib\auto\Hash\Util\FieldHash\FieldHash.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util-FieldHash'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/I18N-Langinfo'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Langinfo.bs ..\..\lib\auto\I18N\Langinfo\Langinfo.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/I18N-Langinfo'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/IO'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- IO.bs ..\..\lib\auto\IO\IO.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/IO'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Scalar-List-Utils'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Util.bs ..\..\lib\auto\List\Util\Util.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Scalar-List-Utils'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/MIME-Base64'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Base64.bs ..\..\lib\auto\MIME\Base64\Base64.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/MIME-Base64'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Math-BigInt-FastCalc'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- FastCalc.bs ..\..\lib\auto\Math\BigInt\FastCalc\FastCalc.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Math-BigInt-FastCalc'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Opcode'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Opcode.bs ..\..\lib\auto\Opcode\Opcode.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Opcode'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/POSIX'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- POSIX.bs ..\..\lib\auto\POSIX\POSIX.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/POSIX'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/PerlIO-encoding'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- encoding.bs ..\..\lib\auto\PerlIO\encoding\encoding.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/PerlIO-encoding'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/PerlIO-mmap'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- mmap.bs ..\..\lib\auto\PerlIO\mmap\mmap.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/PerlIO-mmap'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/PerlIO-via'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- via.bs ..\..\lib\auto\PerlIO\via\via.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/PerlIO-via'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/SDBM_File'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- SDBM_File.bs ..\..\lib\auto\SDBM_File\SDBM_File.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/SDBM_File'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Socket'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Socket.bs ..\..\lib\auto\Socket\Socket.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Socket'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Storable'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Storable.bs ..\..\lib\auto\Storable\Storable.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Storable'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Sys-Hostname'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Hostname.bs ..\..\lib\auto\Sys\Hostname\Hostname.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Sys-Hostname'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Time-HiRes'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- HiRes.bs ..\..\lib\auto\Time\HiRes\HiRes.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Time-HiRes'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Time-Piece'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Piece.bs ..\..\lib\auto\Time\Piece\Piece.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Time-Piece'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Unicode-Collate'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Collate.bs ..\..\lib\auto\Unicode\Collate\Collate.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Unicode-Collate'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Win32'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Win32.bs ..\..\lib\auto\Win32\Win32.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Win32'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Win32API-File'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- File.bs ..\..\lib\auto\Win32API\File\File.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Win32API-File'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/XS-APItest'
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/XS-APItest'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/XS-Typemap'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Typemap.bs ..\..\lib\auto\XS\Typemap\Typemap.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/XS-Typemap'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/attributes'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- attributes.bs ..\..\lib\auto\attributes\attributes.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/attributes'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/mro'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- mro.bs ..\..\lib\auto\mro\mro.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/mro'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/re'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- re.bs ..\..\lib\auto\re\re.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/re'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/threads'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- threads.bs ..\..\lib\auto\threads\threads.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/threads'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/threads-shared'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- shared.bs ..\..\lib\auto\threads\shared\shared.bs 644
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/threads-shared'

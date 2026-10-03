@@ -1,0 +1,56 @@
+/*    globals.c
+ *
+ *    Copyright (C) 1995, 1999, 2000, 2001, 2008 by Larry Wall and others
+ *
+ *    You may distribute under the terms of either the GNU General Public
+ *    License or the Artistic License, as specified in the README file.
+ */
+
+#include "INTERN.h"
+#define PERL_IN_GLOBALS_C
+#include "perl.h"
+
+/* regcomp.h isn't #included in perl.h */
+#include "regcomp.h"
+
+/* ========== perlvars.h: non-I-prefix globals ========== */
+/* perl.h already included intrpvar.h (as extern), now redefine macros
+ * and re-include perlvars.h to emit DEFINITIONS */
+
+#undef PERLVAR
+#undef PERLVARI
+#undef PERLVARIC
+
+#define PERLVAR(name, type)        type PL_##name;
+#define PERLVARI(name, type, init) type PL_##name;
+#define PERLVARIC(name,type,init,cond) type PL_##name;
+
+#include "perlvars.h"
+
+/* ========== intrpvar.h: I-prefix globals ========== */
+/* intrpvar.h has no include guard, so we can re-include it directly.
+ * perl.h already included it once (as extern declarations).
+ * Now redefine macros to emit DEFINITIONS. */
+
+#undef PERLVAR
+#undef PERLVARI
+#undef PERLVARIC
+
+#define PERLVAR(name, type)        type PL_##name;
+#define PERLVARI(name, type, init) type PL_##name;
+#define PERLVARIC(name,type,init,cond) type PL_##name;
+
+#include "intrpvar.h"
+
+/* ========== regnodes.h / regcomp.h globals (EXTCONST) ========== */
+/* These are already defined in regnodes.h and regcomp.h when included,
+ * and the warnings about 'initialized and declared extern' are harmless.
+ * No extra work needed here. */
+
+#if defined(USE_ITHREADS) && defined(PERL_THREAD_LOCAL)
+PERL_THREAD_LOCAL void *PL_current_context;
+#endif
+
+/*
+ * ex: set ts=8 sts=4 sw=4 et:
+ */

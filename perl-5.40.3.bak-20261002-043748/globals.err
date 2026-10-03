@@ -1,0 +1,2827 @@
+globals.c:2:9: warning: 'PERL_CORE' redefined
+    2 | #define PERL_CORE
+      |         ^~~~~~~~~
+<command-line>: note: this is the location of the previous definition
+In file included from op.h:41,
+                 from globals.c:5:
+op_reg_common.h:60:19: error: expected ';' before 'void'
+   60 | PERL_STATIC_INLINE void
+      |                   ^~~~~
+      |                   ;
+op_reg_common.h:61:19: error: unknown type name 'U32'
+   61 | set_regex_charset(U32 * const flags, const regex_charset cs)
+      |                   ^~~
+op_reg_common.h:64:19: error: expected ';' before 'void'
+   64 | PERL_STATIC_INLINE void
+      |                   ^~~~~
+      |                   ;
+op_reg_common.h:65:19: error: unknown type name 'U32'
+   65 | set_regex_charset(U32 * const flags, const regex_charset cs)
+      |                   ^~~
+op_reg_common.h:74:1: error: unknown type name 'PERL_STATIC_INLINE'; did you mean 'PERL_STATIC_SYMS'?
+   74 | PERL_STATIC_INLINE regex_charset
+      | ^~~~~~~~~~~~~~~~~~
+      | PERL_STATIC_SYMS
+op_reg_common.h:75:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'get_regex_charset'
+   75 | get_regex_charset(const U32 flags)
+      | ^~~~~~~~~~~~~~~~~
+op_reg_common.h:78:1: error: unknown type name 'PERL_STATIC_INLINE'; did you mean 'PERL_STATIC_SYMS'?
+   78 | PERL_STATIC_INLINE regex_charset
+      | ^~~~~~~~~~~~~~~~~~
+      | PERL_STATIC_SYMS
+op_reg_common.h:79:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'get_regex_charset'
+   79 | get_regex_charset(const U32 flags)
+      | ^~~~~~~~~~~~~~~~~
+op_reg_common.h:152:39: error: missing binary operator before token '('
+  152 | #if RXf_PMf_COMPILETIME != ((nBIT_MASK(_RXf_PMf_SHIFT_COMPILETIME)) \
+      |                                       ^
+op.h:45:9: error: unknown type name 'PERL_BITFIELD16'
+   45 | typedef PERL_BITFIELD16 Optype;
+      |         ^~~~~~~~~~~~~~~
+op.h:202:5: error: unknown type name 'PADOFFSET'
+  202 |     PADOFFSET pad_offset;
+      |     ^~~~~~~~~
+op.h:203:5: error: unknown type name 'SV'
+  203 |     SV        *sv;
+      |     ^~
+op.h:204:5: error: unknown type name 'IV'
+  204 |     IV        iv;
+      |     ^~
+op.h:205:5: error: unknown type name 'UV'
+  205 |     UV        uv;
+      |     ^~
+op.h:207:5: error: unknown type name 'SSize_t'
+  207 |     SSize_t   ssize;
+      |     ^~~~~~~
+op.h:51:5: error: unknown type name 'OP'
+   51 |     OP*         op_next;                \
+      |     ^~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:52:5: error: unknown type name 'OP'
+   52 |     OP*         op_sibparent;           \
+      |     ^~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:53:5: error: unknown type name 'OP'
+   53 |     OP*         (*op_ppaddr)(pTHX);     \
+      |     ^~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:220:5: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:54:5: error: unknown type name 'PADOFFSET'
+   54 |     PADOFFSET   op_targ;                \
+      |     ^~~~~~~~~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:55:5: error: unknown type name 'PERL_BITFIELD16'
+   55 |     PERL_BITFIELD16 op_type:9;          \
+      |     ^~~~~~~~~~~~~~~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:56:5: error: unknown type name 'PERL_BITFIELD16'
+   56 |     PERL_BITFIELD16 op_opt:1;           \
+      |     ^~~~~~~~~~~~~~~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:57:5: error: unknown type name 'PERL_BITFIELD16'
+   57 |     PERL_BITFIELD16 op_slabbed:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:58:5: error: unknown type name 'PERL_BITFIELD16'
+   58 |     PERL_BITFIELD16 op_savefree:1;      \
+      |     ^~~~~~~~~~~~~~~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:59:5: error: unknown type name 'PERL_BITFIELD16'
+   59 |     PERL_BITFIELD16 op_static:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:60:5: error: unknown type name 'PERL_BITFIELD16'
+   60 |     PERL_BITFIELD16 op_folded:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:61:5: error: unknown type name 'PERL_BITFIELD16'
+   61 |     PERL_BITFIELD16 op_moresib:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:62:5: error: unknown type name 'PERL_BITFIELD16'
+   62 |     PERL_BITFIELD16 op_spare:1;         \
+      |     ^~~~~~~~~~~~~~~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:63:5: error: unknown type name 'U8'
+   63 |     U8          op_flags;               \
+      |     ^~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:64:5: error: unknown type name 'U8'
+   64 |     U8          op_private;
+      |     ^~
+op.h:220:5: note: in expansion of macro 'BASEOP'
+  220 |     BASEOP
+      |     ^~~~~~
+op.h:51:5: error: unknown type name 'OP'
+   51 |     OP*         op_next;                \
+      |     ^~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:52:5: error: unknown type name 'OP'
+   52 |     OP*         op_sibparent;           \
+      |     ^~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:53:5: error: unknown type name 'OP'
+   53 |     OP*         (*op_ppaddr)(pTHX);     \
+      |     ^~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:224:5: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:54:5: error: unknown type name 'PADOFFSET'
+   54 |     PADOFFSET   op_targ;                \
+      |     ^~~~~~~~~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:55:5: error: unknown type name 'PERL_BITFIELD16'
+   55 |     PERL_BITFIELD16 op_type:9;          \
+      |     ^~~~~~~~~~~~~~~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:56:5: error: unknown type name 'PERL_BITFIELD16'
+   56 |     PERL_BITFIELD16 op_opt:1;           \
+      |     ^~~~~~~~~~~~~~~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:57:5: error: unknown type name 'PERL_BITFIELD16'
+   57 |     PERL_BITFIELD16 op_slabbed:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:58:5: error: unknown type name 'PERL_BITFIELD16'
+   58 |     PERL_BITFIELD16 op_savefree:1;      \
+      |     ^~~~~~~~~~~~~~~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:59:5: error: unknown type name 'PERL_BITFIELD16'
+   59 |     PERL_BITFIELD16 op_static:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:60:5: error: unknown type name 'PERL_BITFIELD16'
+   60 |     PERL_BITFIELD16 op_folded:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:61:5: error: unknown type name 'PERL_BITFIELD16'
+   61 |     PERL_BITFIELD16 op_moresib:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:62:5: error: unknown type name 'PERL_BITFIELD16'
+   62 |     PERL_BITFIELD16 op_spare:1;         \
+      |     ^~~~~~~~~~~~~~~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:63:5: error: unknown type name 'U8'
+   63 |     U8          op_flags;               \
+      |     ^~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:64:5: error: unknown type name 'U8'
+   64 |     U8          op_private;
+      |     ^~
+op.h:224:5: note: in expansion of macro 'BASEOP'
+  224 |     BASEOP
+      |     ^~~~~~
+op.h:225:5: error: unknown type name 'OP'
+  225 |     OP *        op_first;
+      |     ^~
+op.h:51:5: error: unknown type name 'OP'
+   51 |     OP*         op_next;                \
+      |     ^~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:52:5: error: unknown type name 'OP'
+   52 |     OP*         op_sibparent;           \
+      |     ^~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:53:5: error: unknown type name 'OP'
+   53 |     OP*         (*op_ppaddr)(pTHX);     \
+      |     ^~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:229:5: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:54:5: error: unknown type name 'PADOFFSET'
+   54 |     PADOFFSET   op_targ;                \
+      |     ^~~~~~~~~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:55:5: error: unknown type name 'PERL_BITFIELD16'
+   55 |     PERL_BITFIELD16 op_type:9;          \
+      |     ^~~~~~~~~~~~~~~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:56:5: error: unknown type name 'PERL_BITFIELD16'
+   56 |     PERL_BITFIELD16 op_opt:1;           \
+      |     ^~~~~~~~~~~~~~~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:57:5: error: unknown type name 'PERL_BITFIELD16'
+   57 |     PERL_BITFIELD16 op_slabbed:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:58:5: error: unknown type name 'PERL_BITFIELD16'
+   58 |     PERL_BITFIELD16 op_savefree:1;      \
+      |     ^~~~~~~~~~~~~~~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:59:5: error: unknown type name 'PERL_BITFIELD16'
+   59 |     PERL_BITFIELD16 op_static:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:60:5: error: unknown type name 'PERL_BITFIELD16'
+   60 |     PERL_BITFIELD16 op_folded:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:61:5: error: unknown type name 'PERL_BITFIELD16'
+   61 |     PERL_BITFIELD16 op_moresib:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:62:5: error: unknown type name 'PERL_BITFIELD16'
+   62 |     PERL_BITFIELD16 op_spare:1;         \
+      |     ^~~~~~~~~~~~~~~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:63:5: error: unknown type name 'U8'
+   63 |     U8          op_flags;               \
+      |     ^~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:64:5: error: unknown type name 'U8'
+   64 |     U8          op_private;
+      |     ^~
+op.h:229:5: note: in expansion of macro 'BASEOP'
+  229 |     BASEOP
+      |     ^~~~~~
+op.h:230:5: error: unknown type name 'OP'
+  230 |     OP            *op_first;
+      |     ^~
+op.h:51:5: error: unknown type name 'OP'
+   51 |     OP*         op_next;                \
+      |     ^~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:52:5: error: unknown type name 'OP'
+   52 |     OP*         op_sibparent;           \
+      |     ^~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:53:5: error: unknown type name 'OP'
+   53 |     OP*         (*op_ppaddr)(pTHX);     \
+      |     ^~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:235:5: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:54:5: error: unknown type name 'PADOFFSET'
+   54 |     PADOFFSET   op_targ;                \
+      |     ^~~~~~~~~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:55:5: error: unknown type name 'PERL_BITFIELD16'
+   55 |     PERL_BITFIELD16 op_type:9;          \
+      |     ^~~~~~~~~~~~~~~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:56:5: error: unknown type name 'PERL_BITFIELD16'
+   56 |     PERL_BITFIELD16 op_opt:1;           \
+      |     ^~~~~~~~~~~~~~~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:57:5: error: unknown type name 'PERL_BITFIELD16'
+   57 |     PERL_BITFIELD16 op_slabbed:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:58:5: error: unknown type name 'PERL_BITFIELD16'
+   58 |     PERL_BITFIELD16 op_savefree:1;      \
+      |     ^~~~~~~~~~~~~~~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:59:5: error: unknown type name 'PERL_BITFIELD16'
+   59 |     PERL_BITFIELD16 op_static:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:60:5: error: unknown type name 'PERL_BITFIELD16'
+   60 |     PERL_BITFIELD16 op_folded:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:61:5: error: unknown type name 'PERL_BITFIELD16'
+   61 |     PERL_BITFIELD16 op_moresib:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:62:5: error: unknown type name 'PERL_BITFIELD16'
+   62 |     PERL_BITFIELD16 op_spare:1;         \
+      |     ^~~~~~~~~~~~~~~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:63:5: error: unknown type name 'U8'
+   63 |     U8          op_flags;               \
+      |     ^~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:64:5: error: unknown type name 'U8'
+   64 |     U8          op_private;
+      |     ^~
+op.h:235:5: note: in expansion of macro 'BASEOP'
+  235 |     BASEOP
+      |     ^~~~~~
+op.h:236:5: error: unknown type name 'OP'
+  236 |     OP *        op_first;
+      |     ^~
+op.h:237:5: error: unknown type name 'OP'
+  237 |     OP *        op_last;
+      |     ^~
+op.h:51:5: error: unknown type name 'OP'
+   51 |     OP*         op_next;                \
+      |     ^~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:52:5: error: unknown type name 'OP'
+   52 |     OP*         op_sibparent;           \
+      |     ^~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:53:5: error: unknown type name 'OP'
+   53 |     OP*         (*op_ppaddr)(pTHX);     \
+      |     ^~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:241:5: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:54:5: error: unknown type name 'PADOFFSET'
+   54 |     PADOFFSET   op_targ;                \
+      |     ^~~~~~~~~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:55:5: error: unknown type name 'PERL_BITFIELD16'
+   55 |     PERL_BITFIELD16 op_type:9;          \
+      |     ^~~~~~~~~~~~~~~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:56:5: error: unknown type name 'PERL_BITFIELD16'
+   56 |     PERL_BITFIELD16 op_opt:1;           \
+      |     ^~~~~~~~~~~~~~~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:57:5: error: unknown type name 'PERL_BITFIELD16'
+   57 |     PERL_BITFIELD16 op_slabbed:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:58:5: error: unknown type name 'PERL_BITFIELD16'
+   58 |     PERL_BITFIELD16 op_savefree:1;      \
+      |     ^~~~~~~~~~~~~~~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:59:5: error: unknown type name 'PERL_BITFIELD16'
+   59 |     PERL_BITFIELD16 op_static:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:60:5: error: unknown type name 'PERL_BITFIELD16'
+   60 |     PERL_BITFIELD16 op_folded:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:61:5: error: unknown type name 'PERL_BITFIELD16'
+   61 |     PERL_BITFIELD16 op_moresib:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:62:5: error: unknown type name 'PERL_BITFIELD16'
+   62 |     PERL_BITFIELD16 op_spare:1;         \
+      |     ^~~~~~~~~~~~~~~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:63:5: error: unknown type name 'U8'
+   63 |     U8          op_flags;               \
+      |     ^~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:64:5: error: unknown type name 'U8'
+   64 |     U8          op_private;
+      |     ^~
+op.h:241:5: note: in expansion of macro 'BASEOP'
+  241 |     BASEOP
+      |     ^~~~~~
+op.h:242:5: error: unknown type name 'OP'
+  242 |     OP *        op_first;
+      |     ^~
+op.h:249:5: error: unknown type name 'OP'
+  249 |     OP *        op_other;
+      |     ^~
+op.h:51:5: error: unknown type name 'OP'
+   51 |     OP*         op_next;                \
+      |     ^~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:52:5: error: unknown type name 'OP'
+   52 |     OP*         op_sibparent;           \
+      |     ^~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:53:5: error: unknown type name 'OP'
+   53 |     OP*         (*op_ppaddr)(pTHX);     \
+      |     ^~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:253:5: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:54:5: error: unknown type name 'PADOFFSET'
+   54 |     PADOFFSET   op_targ;                \
+      |     ^~~~~~~~~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:55:5: error: unknown type name 'PERL_BITFIELD16'
+   55 |     PERL_BITFIELD16 op_type:9;          \
+      |     ^~~~~~~~~~~~~~~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:56:5: error: unknown type name 'PERL_BITFIELD16'
+   56 |     PERL_BITFIELD16 op_opt:1;           \
+      |     ^~~~~~~~~~~~~~~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:57:5: error: unknown type name 'PERL_BITFIELD16'
+   57 |     PERL_BITFIELD16 op_slabbed:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:58:5: error: unknown type name 'PERL_BITFIELD16'
+   58 |     PERL_BITFIELD16 op_savefree:1;      \
+      |     ^~~~~~~~~~~~~~~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:59:5: error: unknown type name 'PERL_BITFIELD16'
+   59 |     PERL_BITFIELD16 op_static:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:60:5: error: unknown type name 'PERL_BITFIELD16'
+   60 |     PERL_BITFIELD16 op_folded:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:61:5: error: unknown type name 'PERL_BITFIELD16'
+   61 |     PERL_BITFIELD16 op_moresib:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:62:5: error: unknown type name 'PERL_BITFIELD16'
+   62 |     PERL_BITFIELD16 op_spare:1;         \
+      |     ^~~~~~~~~~~~~~~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:63:5: error: unknown type name 'U8'
+   63 |     U8          op_flags;               \
+      |     ^~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:64:5: error: unknown type name 'U8'
+   64 |     U8          op_private;
+      |     ^~
+op.h:253:5: note: in expansion of macro 'BASEOP'
+  253 |     BASEOP
+      |     ^~~~~~
+op.h:254:5: error: unknown type name 'OP'
+  254 |     OP *        op_first;
+      |     ^~
+op.h:255:5: error: unknown type name 'OP'
+  255 |     OP *        op_last;
+      |     ^~
+op.h:51:5: error: unknown type name 'OP'
+   51 |     OP*         op_next;                \
+      |     ^~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:52:5: error: unknown type name 'OP'
+   52 |     OP*         op_sibparent;           \
+      |     ^~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:53:5: error: unknown type name 'OP'
+   53 |     OP*         (*op_ppaddr)(pTHX);     \
+      |     ^~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:259:5: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:54:5: error: unknown type name 'PADOFFSET'
+   54 |     PADOFFSET   op_targ;                \
+      |     ^~~~~~~~~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:55:5: error: unknown type name 'PERL_BITFIELD16'
+   55 |     PERL_BITFIELD16 op_type:9;          \
+      |     ^~~~~~~~~~~~~~~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:56:5: error: unknown type name 'PERL_BITFIELD16'
+   56 |     PERL_BITFIELD16 op_opt:1;           \
+      |     ^~~~~~~~~~~~~~~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:57:5: error: unknown type name 'PERL_BITFIELD16'
+   57 |     PERL_BITFIELD16 op_slabbed:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:58:5: error: unknown type name 'PERL_BITFIELD16'
+   58 |     PERL_BITFIELD16 op_savefree:1;      \
+      |     ^~~~~~~~~~~~~~~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:59:5: error: unknown type name 'PERL_BITFIELD16'
+   59 |     PERL_BITFIELD16 op_static:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:60:5: error: unknown type name 'PERL_BITFIELD16'
+   60 |     PERL_BITFIELD16 op_folded:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:61:5: error: unknown type name 'PERL_BITFIELD16'
+   61 |     PERL_BITFIELD16 op_moresib:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:62:5: error: unknown type name 'PERL_BITFIELD16'
+   62 |     PERL_BITFIELD16 op_spare:1;         \
+      |     ^~~~~~~~~~~~~~~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:63:5: error: unknown type name 'U8'
+   63 |     U8          op_flags;               \
+      |     ^~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:64:5: error: unknown type name 'U8'
+   64 |     U8          op_private;
+      |     ^~
+op.h:259:5: note: in expansion of macro 'BASEOP'
+  259 |     BASEOP
+      |     ^~~~~~
+op.h:263:9: error: unknown type name 'OP'
+  263 |         OP* op_first;   /* optree for method name */
+      |         ^~
+op.h:264:9: error: unknown type name 'SV'
+  264 |         SV* op_meth_sv; /* static method name */
+      |         ^~
+op.h:269:5: error: unknown type name 'SV'
+  269 |     SV*       op_rclass_sv;   /* static redirect class $o->A::meth() */
+      |     ^~
+op.h:51:5: error: unknown type name 'OP'
+   51 |     OP*         op_next;                \
+      |     ^~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:52:5: error: unknown type name 'OP'
+   52 |     OP*         op_sibparent;           \
+      |     ^~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:53:5: error: unknown type name 'OP'
+   53 |     OP*         (*op_ppaddr)(pTHX);     \
+      |     ^~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:274:5: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:54:5: error: unknown type name 'PADOFFSET'
+   54 |     PADOFFSET   op_targ;                \
+      |     ^~~~~~~~~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:55:5: error: unknown type name 'PERL_BITFIELD16'
+   55 |     PERL_BITFIELD16 op_type:9;          \
+      |     ^~~~~~~~~~~~~~~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:56:5: error: unknown type name 'PERL_BITFIELD16'
+   56 |     PERL_BITFIELD16 op_opt:1;           \
+      |     ^~~~~~~~~~~~~~~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:57:5: error: unknown type name 'PERL_BITFIELD16'
+   57 |     PERL_BITFIELD16 op_slabbed:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:58:5: error: unknown type name 'PERL_BITFIELD16'
+   58 |     PERL_BITFIELD16 op_savefree:1;      \
+      |     ^~~~~~~~~~~~~~~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:59:5: error: unknown type name 'PERL_BITFIELD16'
+   59 |     PERL_BITFIELD16 op_static:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:60:5: error: unknown type name 'PERL_BITFIELD16'
+   60 |     PERL_BITFIELD16 op_folded:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:61:5: error: unknown type name 'PERL_BITFIELD16'
+   61 |     PERL_BITFIELD16 op_moresib:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:62:5: error: unknown type name 'PERL_BITFIELD16'
+   62 |     PERL_BITFIELD16 op_spare:1;         \
+      |     ^~~~~~~~~~~~~~~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:63:5: error: unknown type name 'U8'
+   63 |     U8          op_flags;               \
+      |     ^~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:64:5: error: unknown type name 'U8'
+   64 |     U8          op_private;
+      |     ^~
+op.h:274:5: note: in expansion of macro 'BASEOP'
+  274 |     BASEOP
+      |     ^~~~~~
+op.h:275:5: error: unknown type name 'OP'
+  275 |     OP *        op_first;
+      |     ^~
+op.h:276:5: error: unknown type name 'OP'
+  276 |     OP *        op_last;
+      |     ^~
+op.h:280:5: error: unknown type name 'REGEXP'
+  280 |     REGEXP *    op_pmregexp;            /* compiled expression */
+      |     ^~~~~~
+op.h:282:5: error: unknown type name 'U32'
+  282 |     U32         op_pmflags;
+      |     ^~~
+op.h:284:9: error: unknown type name 'OP'
+  284 |         OP *    op_pmreplroot;          /* For OP_SUBST */
+      |         ^~
+op.h:285:9: error: unknown type name 'PADOFFSET'
+  285 |         PADOFFSET op_pmtargetoff;       /* For OP_SPLIT lex ary or thr GV */
+      |         ^~~~~~~~~
+op.h:286:9: error: unknown type name 'GV'
+  286 |         GV *    op_pmtargetgv;          /* For OP_SPLIT non-threaded GV */
+      |         ^~
+op.h:289:9: error: unknown type name 'OP'
+  289 |         OP *    op_pmreplstart; /* Only used in OP_SUBST */
+      |         ^~
+op.h:293:9: error: unknown type name 'HV'
+  293 |         HV *    op_pmstash;
+      |         ^~
+op.h:296:5: error: unknown type name 'OP'
+  296 |     OP *        op_code_list;   /* list of (?{}) code blocks */
+      |     ^~
+op.h:51:5: error: unknown type name 'OP'
+   51 |     OP*         op_next;                \
+      |     ^~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:52:5: error: unknown type name 'OP'
+   52 |     OP*         op_sibparent;           \
+      |     ^~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:53:5: error: unknown type name 'OP'
+   53 |     OP*         (*op_ppaddr)(pTHX);     \
+      |     ^~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:435:5: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:54:5: error: unknown type name 'PADOFFSET'
+   54 |     PADOFFSET   op_targ;                \
+      |     ^~~~~~~~~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:55:5: error: unknown type name 'PERL_BITFIELD16'
+   55 |     PERL_BITFIELD16 op_type:9;          \
+      |     ^~~~~~~~~~~~~~~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:56:5: error: unknown type name 'PERL_BITFIELD16'
+   56 |     PERL_BITFIELD16 op_opt:1;           \
+      |     ^~~~~~~~~~~~~~~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:57:5: error: unknown type name 'PERL_BITFIELD16'
+   57 |     PERL_BITFIELD16 op_slabbed:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:58:5: error: unknown type name 'PERL_BITFIELD16'
+   58 |     PERL_BITFIELD16 op_savefree:1;      \
+      |     ^~~~~~~~~~~~~~~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:59:5: error: unknown type name 'PERL_BITFIELD16'
+   59 |     PERL_BITFIELD16 op_static:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:60:5: error: unknown type name 'PERL_BITFIELD16'
+   60 |     PERL_BITFIELD16 op_folded:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:61:5: error: unknown type name 'PERL_BITFIELD16'
+   61 |     PERL_BITFIELD16 op_moresib:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:62:5: error: unknown type name 'PERL_BITFIELD16'
+   62 |     PERL_BITFIELD16 op_spare:1;         \
+      |     ^~~~~~~~~~~~~~~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:63:5: error: unknown type name 'U8'
+   63 |     U8          op_flags;               \
+      |     ^~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:64:5: error: unknown type name 'U8'
+   64 |     U8          op_private;
+      |     ^~
+op.h:435:5: note: in expansion of macro 'BASEOP'
+  435 |     BASEOP
+      |     ^~~~~~
+op.h:436:5: error: unknown type name 'SV'
+  436 |     SV *        op_sv;
+      |     ^~
+op.h:51:5: error: unknown type name 'OP'
+   51 |     OP*         op_next;                \
+      |     ^~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:52:5: error: unknown type name 'OP'
+   52 |     OP*         op_sibparent;           \
+      |     ^~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:53:5: error: unknown type name 'OP'
+   53 |     OP*         (*op_ppaddr)(pTHX);     \
+      |     ^~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:440:5: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:54:5: error: unknown type name 'PADOFFSET'
+   54 |     PADOFFSET   op_targ;                \
+      |     ^~~~~~~~~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:55:5: error: unknown type name 'PERL_BITFIELD16'
+   55 |     PERL_BITFIELD16 op_type:9;          \
+      |     ^~~~~~~~~~~~~~~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:56:5: error: unknown type name 'PERL_BITFIELD16'
+   56 |     PERL_BITFIELD16 op_opt:1;           \
+      |     ^~~~~~~~~~~~~~~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:57:5: error: unknown type name 'PERL_BITFIELD16'
+   57 |     PERL_BITFIELD16 op_slabbed:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:58:5: error: unknown type name 'PERL_BITFIELD16'
+   58 |     PERL_BITFIELD16 op_savefree:1;      \
+      |     ^~~~~~~~~~~~~~~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:59:5: error: unknown type name 'PERL_BITFIELD16'
+   59 |     PERL_BITFIELD16 op_static:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:60:5: error: unknown type name 'PERL_BITFIELD16'
+   60 |     PERL_BITFIELD16 op_folded:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:61:5: error: unknown type name 'PERL_BITFIELD16'
+   61 |     PERL_BITFIELD16 op_moresib:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:62:5: error: unknown type name 'PERL_BITFIELD16'
+   62 |     PERL_BITFIELD16 op_spare:1;         \
+      |     ^~~~~~~~~~~~~~~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:63:5: error: unknown type name 'U8'
+   63 |     U8          op_flags;               \
+      |     ^~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:64:5: error: unknown type name 'U8'
+   64 |     U8          op_private;
+      |     ^~
+op.h:440:5: note: in expansion of macro 'BASEOP'
+  440 |     BASEOP
+      |     ^~~~~~
+op.h:441:5: error: unknown type name 'PADOFFSET'
+  441 |     PADOFFSET   op_padix;
+      |     ^~~~~~~~~
+op.h:51:5: error: unknown type name 'OP'
+   51 |     OP*         op_next;                \
+      |     ^~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:52:5: error: unknown type name 'OP'
+   52 |     OP*         op_sibparent;           \
+      |     ^~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:53:5: error: unknown type name 'OP'
+   53 |     OP*         (*op_ppaddr)(pTHX);     \
+      |     ^~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:445:5: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:54:5: error: unknown type name 'PADOFFSET'
+   54 |     PADOFFSET   op_targ;                \
+      |     ^~~~~~~~~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:55:5: error: unknown type name 'PERL_BITFIELD16'
+   55 |     PERL_BITFIELD16 op_type:9;          \
+      |     ^~~~~~~~~~~~~~~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:56:5: error: unknown type name 'PERL_BITFIELD16'
+   56 |     PERL_BITFIELD16 op_opt:1;           \
+      |     ^~~~~~~~~~~~~~~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:57:5: error: unknown type name 'PERL_BITFIELD16'
+   57 |     PERL_BITFIELD16 op_slabbed:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:58:5: error: unknown type name 'PERL_BITFIELD16'
+   58 |     PERL_BITFIELD16 op_savefree:1;      \
+      |     ^~~~~~~~~~~~~~~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:59:5: error: unknown type name 'PERL_BITFIELD16'
+   59 |     PERL_BITFIELD16 op_static:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:60:5: error: unknown type name 'PERL_BITFIELD16'
+   60 |     PERL_BITFIELD16 op_folded:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:61:5: error: unknown type name 'PERL_BITFIELD16'
+   61 |     PERL_BITFIELD16 op_moresib:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:62:5: error: unknown type name 'PERL_BITFIELD16'
+   62 |     PERL_BITFIELD16 op_spare:1;         \
+      |     ^~~~~~~~~~~~~~~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:63:5: error: unknown type name 'U8'
+   63 |     U8          op_flags;               \
+      |     ^~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:64:5: error: unknown type name 'U8'
+   64 |     U8          op_private;
+      |     ^~
+op.h:445:5: note: in expansion of macro 'BASEOP'
+  445 |     BASEOP
+      |     ^~~~~~
+op.h:51:5: error: unknown type name 'OP'
+   51 |     OP*         op_next;                \
+      |     ^~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:52:5: error: unknown type name 'OP'
+   52 |     OP*         op_sibparent;           \
+      |     ^~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:53:5: error: unknown type name 'OP'
+   53 |     OP*         (*op_ppaddr)(pTHX);     \
+      |     ^~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:450:5: error: parameter names (without types) in function declaration [-Wdeclaration-missing-parameter-type]
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:54:5: error: unknown type name 'PADOFFSET'
+   54 |     PADOFFSET   op_targ;                \
+      |     ^~~~~~~~~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:55:5: error: unknown type name 'PERL_BITFIELD16'
+   55 |     PERL_BITFIELD16 op_type:9;          \
+      |     ^~~~~~~~~~~~~~~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:56:5: error: unknown type name 'PERL_BITFIELD16'
+   56 |     PERL_BITFIELD16 op_opt:1;           \
+      |     ^~~~~~~~~~~~~~~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:57:5: error: unknown type name 'PERL_BITFIELD16'
+   57 |     PERL_BITFIELD16 op_slabbed:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:58:5: error: unknown type name 'PERL_BITFIELD16'
+   58 |     PERL_BITFIELD16 op_savefree:1;      \
+      |     ^~~~~~~~~~~~~~~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:59:5: error: unknown type name 'PERL_BITFIELD16'
+   59 |     PERL_BITFIELD16 op_static:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:60:5: error: unknown type name 'PERL_BITFIELD16'
+   60 |     PERL_BITFIELD16 op_folded:1;        \
+      |     ^~~~~~~~~~~~~~~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:61:5: error: unknown type name 'PERL_BITFIELD16'
+   61 |     PERL_BITFIELD16 op_moresib:1;       \
+      |     ^~~~~~~~~~~~~~~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:62:5: error: unknown type name 'PERL_BITFIELD16'
+   62 |     PERL_BITFIELD16 op_spare:1;         \
+      |     ^~~~~~~~~~~~~~~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:63:5: error: unknown type name 'U8'
+   63 |     U8          op_flags;               \
+      |     ^~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:64:5: error: unknown type name 'U8'
+   64 |     U8          op_private;
+      |     ^~
+op.h:450:5: note: in expansion of macro 'BASEOP'
+  450 |     BASEOP
+      |     ^~~~~~
+op.h:451:5: error: unknown type name 'OP'
+  451 |     OP *        op_first;
+      |     ^~
+op.h:452:5: error: unknown type name 'OP'
+  452 |     OP *        op_last;
+      |     ^~
+op.h:453:5: error: unknown type name 'OP'
+  453 |     OP *        op_redoop;
+      |     ^~
+op.h:454:5: error: unknown type name 'OP'
+  454 |     OP *        op_nextop;
+      |     ^~
+op.h:455:5: error: unknown type name 'OP'
+  455 |     OP *        op_lastop;
+      |     ^~
+op.h:669:5: error: unknown type name 'Size_t'
+  669 |     Size_t size; /* number of entries in map[], not including final slot */
+      |     ^~~~~~
+op.h:731:5: error: unknown type name 'U16'
+  731 |     U16         opslot_size;        /* size of this slot (in pointers) */
+      |     ^~~
+op.h:732:5: error: unknown type name 'U16'
+  732 |     U16         opslot_offset;      /* offset from start of slab (in ptr units) */
+      |     ^~~
+op.h:733:5: error: unknown type name 'OP'; did you mean 'kCOP'?
+  733 |     OP          opslot_op;              /* the op itself */
+      |     ^~
+      |     kCOP
+op.h:737:5: error: unknown type name 'OPSLAB'
+  737 |     OPSLAB *    opslab_next;            /* next slab */
+      |     ^~~~~~
+op.h:738:5: error: unknown type name 'OPSLAB'
+  738 |     OPSLAB *    opslab_head;            /* first slab in chain */
+      |     ^~~~~~
+op.h:739:5: error: unknown type name 'OP'; did you mean 'kCOP'?
+  739 |     OP **       opslab_freed;           /* array of sized chains of freed ops (head only)*/
+      |     ^~
+      |     kCOP
+op.h:740:5: error: unknown type name 'size_t'
+  740 |     size_t      opslab_refcnt;          /* number of ops (head slab only) */
+      |     ^~~~~~
+op.h:42:1: note: 'size_t' is defined in header '<stddef.h>'; this is probably fixable by adding '#include <stddef.h>'
+   41 | #include "op_reg_common.h"
+  +++ |+#include <stddef.h>
+   42 | 
+op.h:741:5: error: unknown type name 'U16'
+  741 |     U16         opslab_freed_size;      /* allocated size of opslab_freed */
+      |     ^~~
+op.h:742:5: error: unknown type name 'U16'
+  742 |     U16         opslab_size;            /* size of slab in pointers,
+      |     ^~~
+op.h:744:5: error: unknown type name 'U16'
+  744 |     U16         opslab_free_space;      /* space available in this slab
+      |     ^~~
+op.h:750:5: error: unknown type name 'OPSLOT'
+  750 |     OPSLOT      opslab_slots;           /* slots begin here */
+      |     ^~~~~~
+op.h:779:5: error: unknown type name 'U32'
+  779 |     U32     bhk_flags;
+      |     ^~~
+op.h:780:34: error: unknown type name 'pTHX_'
+  780 |     void    (*bhk_start)        (pTHX_ int full);
+      |                                  ^~~~~
+op.h:781:34: error: unknown type name 'pTHX_'
+  781 |     void    (*bhk_pre_end)      (pTHX_ OP **seq);
+      |                                  ^~~~~
+op.h:782:34: error: unknown type name 'pTHX_'
+  782 |     void    (*bhk_post_end)     (pTHX_ OP **seq);
+      |                                  ^~~~~
+op.h:783:34: error: unknown type name 'pTHX_'
+  783 |     void    (*bhk_eval)         (pTHX_ OP *const saveop);
+      |                                  ^~~~~
+op.h:784:1: warning: no semicolon at end of struct or union
+  784 | };
+      | ^
+op.h:919:5: error: unknown type name 'U32'
+  919 |     U32             xop_flags;
+      |     ^~~
+op.h:922:5: error: unknown type name 'U32'
+  922 |     U32             xop_class;
+      |     ^~~
+op.h:923:31: error: unknown type name 'pTHX_'
+  923 |     void          (*xop_peep)(pTHX_ OP *o, OP *oldop);
+      |                               ^~~~~
+op.h:923:44: error: unknown type name 'OP'; did you mean 'kCOP'?
+  923 |     void          (*xop_peep)(pTHX_ OP *o, OP *oldop);
+      |                                            ^~
+      |                                            kCOP
+op.h:924:1: warning: no semicolon at end of struct or union
+  924 | };
+      | ^
+op.h:932:5: error: unknown type name 'U32'
+  932 |     U32             xop_class;
+      |     ^~~
+op.h:933:31: error: unknown type name 'pTHX_'
+  933 |     void          (*xop_peep)(pTHX_ OP *o, OP *oldop);
+      |                               ^~~~~
+op.h:933:44: error: unknown type name 'OP'; did you mean 'kCOP'?
+  933 |     void          (*xop_peep)(pTHX_ OP *o, OP *oldop);
+      |                                            ^~
+      |                                            kCOP
+op.h:934:5: error: expected ';' before 'XOP'
+  934 |     XOP            *xop_ptr;
+      |     ^~~
+op.h:1168:5: error: unknown type name 'UV'
+ 1168 |     UV   params;     /* number of positional parameters */
+      |     ^~
+op.h:1169:5: error: unknown type name 'UV'
+ 1169 |     UV   opt_params; /* number of optional positional parameters */
+      |     ^~
+globals.c:8:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+    8 | OP *Perl_ck_null(OP *o);
+      | ^~
+      | kCOP
+globals.c:8:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+    8 | OP *Perl_ck_null(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:9:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+    9 | OP *Perl_ck_fun(OP *o);
+      | ^~
+      | kCOP
+globals.c:9:17: error: unknown type name 'OP'; did you mean 'kCOP'?
+    9 | OP *Perl_ck_fun(OP *o);
+      |                 ^~
+      |                 kCOP
+globals.c:10:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   10 | OP *Perl_ck_svconst(OP *o);
+      | ^~
+      | kCOP
+globals.c:10:21: error: unknown type name 'OP'; did you mean 'kCOP'?
+   10 | OP *Perl_ck_svconst(OP *o);
+      |                     ^~
+      |                     kCOP
+globals.c:11:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   11 | OP *Perl_ck_sassign(OP *o);
+      | ^~
+      | kCOP
+globals.c:11:21: error: unknown type name 'OP'; did you mean 'kCOP'?
+   11 | OP *Perl_ck_sassign(OP *o);
+      |                     ^~
+      |                     kCOP
+globals.c:12:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   12 | OP *Perl_ck_rvconst(OP *o);
+      | ^~
+      | kCOP
+globals.c:12:21: error: unknown type name 'OP'; did you mean 'kCOP'?
+   12 | OP *Perl_ck_rvconst(OP *o);
+      |                     ^~
+      |                     kCOP
+globals.c:13:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   13 | OP *Perl_ck_anoncode(OP *o);
+      | ^~
+      | kCOP
+globals.c:13:22: error: unknown type name 'OP'; did you mean 'kCOP'?
+   13 | OP *Perl_ck_anoncode(OP *o);
+      |                      ^~
+      |                      kCOP
+globals.c:14:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   14 | OP *Perl_ck_prototype(OP *o);
+      | ^~
+      | kCOP
+globals.c:14:23: error: unknown type name 'OP'; did you mean 'kCOP'?
+   14 | OP *Perl_ck_prototype(OP *o);
+      |                       ^~
+      |                       kCOP
+globals.c:15:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   15 | OP *Perl_ck_spair(OP *o);
+      | ^~
+      | kCOP
+globals.c:15:19: error: unknown type name 'OP'; did you mean 'kCOP'?
+   15 | OP *Perl_ck_spair(OP *o);
+      |                   ^~
+      |                   kCOP
+globals.c:16:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   16 | OP *Perl_ck_backtick(OP *o);
+      | ^~
+      | kCOP
+globals.c:16:22: error: unknown type name 'OP'; did you mean 'kCOP'?
+   16 | OP *Perl_ck_backtick(OP *o);
+      |                      ^~
+      |                      kCOP
+globals.c:17:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   17 | OP *Perl_ck_glob(OP *o);
+      | ^~
+      | kCOP
+globals.c:17:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+   17 | OP *Perl_ck_glob(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:18:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   18 | OP *Perl_ck_readline(OP *o);
+      | ^~
+      | kCOP
+globals.c:18:22: error: unknown type name 'OP'; did you mean 'kCOP'?
+   18 | OP *Perl_ck_readline(OP *o);
+      |                      ^~
+      |                      kCOP
+globals.c:19:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   19 | OP *Perl_ck_match(OP *o);
+      | ^~
+      | kCOP
+globals.c:19:19: error: unknown type name 'OP'; did you mean 'kCOP'?
+   19 | OP *Perl_ck_match(OP *o);
+      |                   ^~
+      |                   kCOP
+globals.c:20:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   20 | OP *Perl_ck_defined(OP *o);
+      | ^~
+      | kCOP
+globals.c:20:21: error: unknown type name 'OP'; did you mean 'kCOP'?
+   20 | OP *Perl_ck_defined(OP *o);
+      |                     ^~
+      |                     kCOP
+globals.c:21:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   21 | OP *Perl_ck_lfun(OP *o);
+      | ^~
+      | kCOP
+globals.c:21:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+   21 | OP *Perl_ck_lfun(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:22:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   22 | OP *Perl_ck_repeat(OP *o);
+      | ^~
+      | kCOP
+globals.c:22:20: error: unknown type name 'OP'; did you mean 'kCOP'?
+   22 | OP *Perl_ck_repeat(OP *o);
+      |                    ^~
+      |                    kCOP
+globals.c:23:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   23 | OP *Perl_ck_concat(OP *o);
+      | ^~
+      | kCOP
+globals.c:23:20: error: unknown type name 'OP'; did you mean 'kCOP'?
+   23 | OP *Perl_ck_concat(OP *o);
+      |                    ^~
+      |                    kCOP
+globals.c:24:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   24 | OP *Perl_ck_stringify(OP *o);
+      | ^~
+      | kCOP
+globals.c:24:23: error: unknown type name 'OP'; did you mean 'kCOP'?
+   24 | OP *Perl_ck_stringify(OP *o);
+      |                       ^~
+      |                       kCOP
+globals.c:25:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   25 | OP *Perl_ck_bitop(OP *o);
+      | ^~
+      | kCOP
+globals.c:25:19: error: unknown type name 'OP'; did you mean 'kCOP'?
+   25 | OP *Perl_ck_bitop(OP *o);
+      |                   ^~
+      |                   kCOP
+globals.c:26:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   26 | OP *Perl_ck_cmp(OP *o);
+      | ^~
+      | kCOP
+globals.c:26:17: error: unknown type name 'OP'; did you mean 'kCOP'?
+   26 | OP *Perl_ck_cmp(OP *o);
+      |                 ^~
+      |                 kCOP
+globals.c:27:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   27 | OP *Perl_ck_smartmatch(OP *o);
+      | ^~
+      | kCOP
+globals.c:27:24: error: unknown type name 'OP'; did you mean 'kCOP'?
+   27 | OP *Perl_ck_smartmatch(OP *o);
+      |                        ^~
+      |                        kCOP
+globals.c:28:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   28 | OP *Perl_ck_length(OP *o);
+      | ^~
+      | kCOP
+globals.c:28:20: error: unknown type name 'OP'; did you mean 'kCOP'?
+   28 | OP *Perl_ck_length(OP *o);
+      |                    ^~
+      |                    kCOP
+globals.c:29:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   29 | OP *Perl_ck_substr(OP *o);
+      | ^~
+      | kCOP
+globals.c:29:20: error: unknown type name 'OP'; did you mean 'kCOP'?
+   29 | OP *Perl_ck_substr(OP *o);
+      |                    ^~
+      |                    kCOP
+globals.c:30:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   30 | OP *Perl_ck_index(OP *o);
+      | ^~
+      | kCOP
+globals.c:30:19: error: unknown type name 'OP'; did you mean 'kCOP'?
+   30 | OP *Perl_ck_index(OP *o);
+      |                   ^~
+      |                   kCOP
+globals.c:31:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   31 | OP *Perl_ck_each(OP *o);
+      | ^~
+      | kCOP
+globals.c:31:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+   31 | OP *Perl_ck_each(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:32:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   32 | OP *Perl_ck_delete(OP *o);
+      | ^~
+      | kCOP
+globals.c:32:20: error: unknown type name 'OP'; did you mean 'kCOP'?
+   32 | OP *Perl_ck_delete(OP *o);
+      |                    ^~
+      |                    kCOP
+globals.c:33:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   33 | OP *Perl_ck_exists(OP *o);
+      | ^~
+      | kCOP
+globals.c:33:20: error: unknown type name 'OP'; did you mean 'kCOP'?
+   33 | OP *Perl_ck_exists(OP *o);
+      |                    ^~
+      |                    kCOP
+globals.c:34:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   34 | OP *Perl_ck_split(OP *o);
+      | ^~
+      | kCOP
+globals.c:34:19: error: unknown type name 'OP'; did you mean 'kCOP'?
+   34 | OP *Perl_ck_split(OP *o);
+      |                   ^~
+      |                   kCOP
+globals.c:35:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   35 | OP *Perl_ck_join(OP *o);
+      | ^~
+      | kCOP
+globals.c:35:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+   35 | OP *Perl_ck_join(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:36:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   36 | OP *Perl_ck_shift(OP *o);
+      | ^~
+      | kCOP
+globals.c:36:19: error: unknown type name 'OP'; did you mean 'kCOP'?
+   36 | OP *Perl_ck_shift(OP *o);
+      |                   ^~
+      |                   kCOP
+globals.c:37:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   37 | OP *Perl_ck_sort(OP *o);
+      | ^~
+      | kCOP
+globals.c:37:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+   37 | OP *Perl_ck_sort(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:38:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   38 | OP *Perl_ck_grep(OP *o);
+      | ^~
+      | kCOP
+globals.c:38:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+   38 | OP *Perl_ck_grep(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:39:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   39 | OP *Perl_ck_subr(OP *o);
+      | ^~
+      | kCOP
+globals.c:39:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+   39 | OP *Perl_ck_subr(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:40:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   40 | OP *Perl_ck_return(OP *o);
+      | ^~
+      | kCOP
+globals.c:40:20: error: unknown type name 'OP'; did you mean 'kCOP'?
+   40 | OP *Perl_ck_return(OP *o);
+      |                    ^~
+      |                    kCOP
+globals.c:41:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   41 | OP *Perl_ck_method(OP *o);
+      | ^~
+      | kCOP
+globals.c:41:20: error: unknown type name 'OP'; did you mean 'kCOP'?
+   41 | OP *Perl_ck_method(OP *o);
+      |                    ^~
+      |                    kCOP
+globals.c:42:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   42 | OP *Perl_ck_open(OP *o);
+      | ^~
+      | kCOP
+globals.c:42:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+   42 | OP *Perl_ck_open(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:43:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   43 | OP *Perl_ck_select(OP *o);
+      | ^~
+      | kCOP
+globals.c:43:20: error: unknown type name 'OP'; did you mean 'kCOP'?
+   43 | OP *Perl_ck_select(OP *o);
+      |                    ^~
+      |                    kCOP
+globals.c:44:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   44 | OP *Perl_ck_eof(OP *o);
+      | ^~
+      | kCOP
+globals.c:44:17: error: unknown type name 'OP'; did you mean 'kCOP'?
+   44 | OP *Perl_ck_eof(OP *o);
+      |                 ^~
+      |                 kCOP
+globals.c:45:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   45 | OP *Perl_ck_listiob(OP *o);
+      | ^~
+      | kCOP
+globals.c:45:21: error: unknown type name 'OP'; did you mean 'kCOP'?
+   45 | OP *Perl_ck_listiob(OP *o);
+      |                     ^~
+      |                     kCOP
+globals.c:46:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   46 | OP *Perl_ck_tell(OP *o);
+      | ^~
+      | kCOP
+globals.c:46:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+   46 | OP *Perl_ck_tell(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:47:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   47 | OP *Perl_ck_trunc(OP *o);
+      | ^~
+      | kCOP
+globals.c:47:19: error: unknown type name 'OP'; did you mean 'kCOP'?
+   47 | OP *Perl_ck_trunc(OP *o);
+      |                   ^~
+      |                   kCOP
+globals.c:48:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   48 | OP *Perl_ck_ftst(OP *o);
+      | ^~
+      | kCOP
+globals.c:48:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+   48 | OP *Perl_ck_ftst(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:49:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   49 | OP *Perl_ck_exec(OP *o);
+      | ^~
+      | kCOP
+globals.c:49:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+   49 | OP *Perl_ck_exec(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:50:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   50 | OP *Perl_ck_require(OP *o);
+      | ^~
+      | kCOP
+globals.c:50:21: error: unknown type name 'OP'; did you mean 'kCOP'?
+   50 | OP *Perl_ck_require(OP *o);
+      |                     ^~
+      |                     kCOP
+globals.c:51:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   51 | OP *Perl_ck_eval(OP *o);
+      | ^~
+      | kCOP
+globals.c:51:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+   51 | OP *Perl_ck_eval(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:52:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   52 | OP *Perl_ck_rfun(OP *o);
+      | ^~
+      | kCOP
+globals.c:52:18: error: unknown type name 'OP'; did you mean 'kCOP'?
+   52 | OP *Perl_ck_rfun(OP *o);
+      |                  ^~
+      |                  kCOP
+globals.c:53:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   53 | OP *Perl_ck_refassign(OP *o);
+      | ^~
+      | kCOP
+globals.c:53:23: error: unknown type name 'OP'; did you mean 'kCOP'?
+   53 | OP *Perl_ck_refassign(OP *o);
+      |                       ^~
+      |                       kCOP
+globals.c:54:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   54 | OP *Perl_ck_isa(OP *o);
+      | ^~
+      | kCOP
+globals.c:54:17: error: unknown type name 'OP'; did you mean 'kCOP'?
+   54 | OP *Perl_ck_isa(OP *o);
+      |                 ^~
+      |                 kCOP
+globals.c:55:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   55 | OP *Perl_ck_trycatch(OP *o);
+      | ^~
+      | kCOP
+globals.c:55:22: error: unknown type name 'OP'; did you mean 'kCOP'?
+   55 | OP *Perl_ck_trycatch(OP *o);
+      |                      ^~
+      |                      kCOP
+globals.c:56:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   56 | OP *Perl_ck_helemexistsor(OP *o);
+      | ^~
+      | kCOP
+globals.c:56:27: error: unknown type name 'OP'; did you mean 'kCOP'?
+   56 | OP *Perl_ck_helemexistsor(OP *o);
+      |                           ^~
+      |                           kCOP
+globals.c:57:1: error: unknown type name 'OP'; did you mean 'kCOP'?
+   57 | OP *Perl_ck_classname(OP *o);
+      | ^~
+      | kCOP
+globals.c:57:23: error: unknown type name 'OP'; did you mean 'kCOP'?
+   57 | OP *Perl_ck_classname(OP *o);
+      |                       ^~
+      |                       kCOP
+In file included from perl.h:4549,
+                 from globals.c:60:
+op.h:45:25: error: conflicting types for 'Optype'; have 'U16' {aka 'short unsigned int'}
+   45 | typedef PERL_BITFIELD16 Optype;
+      |                         ^~~~~~
+op.h:45:25: note: previous declaration of 'Optype' with type 'Optype' {aka 'int'}
+   45 | typedef PERL_BITFIELD16 Optype;
+      |                         ^~~~~~
+op.h:208:3: error: conflicting types for 'UNOP_AUX_item'; have 'union <anonymous>'
+  208 | } UNOP_AUX_item;
+      |   ^~~~~~~~~~~~~
+op.h:208:3: note: previous declaration of 'UNOP_AUX_item' with type 'UNOP_AUX_item'
+  208 | } UNOP_AUX_item;
+      |   ^~~~~~~~~~~~~
+op.h:221:1: error: redefinition of struct or union 'struct op'
+  221 | };
+      | ^
+op.h:219:8: note: originally defined here
+  219 | struct op {
+      |        ^~
+op.h:226:1: error: redefinition of struct or union 'struct unop'
+  226 | };
+      | ^
+op.h:223:8: note: originally defined here
+  223 | struct unop {
+      |        ^~~~
+op.h:232:1: error: redefinition of struct or union 'struct unop_aux'
+  232 | };
+      | ^
+op.h:228:8: note: originally defined here
+  228 | struct unop_aux {
+      |        ^~~~~~~~
+op.h:238:1: error: redefinition of struct or union 'struct binop'
+  238 | };
+      | ^
+op.h:234:8: note: originally defined here
+  234 | struct binop {
+      |        ^~~~~
+op.h:250:1: error: redefinition of struct or union 'struct logop'
+  250 | };
+      | ^
+op.h:240:8: note: originally defined here
+  240 | struct logop {
+      |        ^~~~~
+op.h:256:1: error: redefinition of struct or union 'struct listop'
+  256 | };
+      | ^
+op.h:252:8: note: originally defined here
+  252 | struct listop {
+      |        ^~~~~~
+op.h:271:1: error: redefinition of struct or union 'struct methop'
+  271 | };
+      | ^
+op.h:258:8: note: originally defined here
+  258 | struct methop {
+      |        ^~~~~~
+op.h:297:1: error: redefinition of struct or union 'struct pmop'
+  297 | };
+      | ^
+op.h:273:8: note: originally defined here
+  273 | struct pmop {
+      |        ^~~~
+op.h:437:1: error: redefinition of struct or union 'struct svop'
+  437 | };
+      | ^
+op.h:434:8: note: originally defined here
+  434 | struct svop {
+      |        ^~~~
+op.h:442:1: error: redefinition of struct or union 'struct padop'
+  442 | };
+      | ^
+op.h:439:8: note: originally defined here
+  439 | struct padop {
+      |        ^~~~~
+op.h:447:1: error: redefinition of struct or union 'struct pvop'
+  447 | };
+      | ^
+op.h:444:8: note: originally defined here
+  444 | struct pvop {
+      |        ^~~~
+op.h:456:1: error: redefinition of struct or union 'struct loop'
+  456 | };
+      | ^
+op.h:449:8: note: originally defined here
+  449 | struct loop {
+      |        ^~~~
+op.h:512:5: error: redeclaration of enumerator 'OPclass_NULL'
+  512 |     OPclass_NULL,     /*  0 */
+      |     ^~~~~~~~~~~~
+op.h:512:5: note: previous definition of 'OPclass_NULL' with type 'enum <anonymous>'
+  512 |     OPclass_NULL,     /*  0 */
+      |     ^~~~~~~~~~~~
+op.h:513:5: error: redeclaration of enumerator 'OPclass_BASEOP'
+  513 |     OPclass_BASEOP,   /*  1 */
+      |     ^~~~~~~~~~~~~~
+op.h:513:5: note: previous definition of 'OPclass_BASEOP' with type 'enum <anonymous>'
+  513 |     OPclass_BASEOP,   /*  1 */
+      |     ^~~~~~~~~~~~~~
+op.h:514:5: error: redeclaration of enumerator 'OPclass_UNOP'
+  514 |     OPclass_UNOP,     /*  2 */
+      |     ^~~~~~~~~~~~
+op.h:514:5: note: previous definition of 'OPclass_UNOP' with type 'enum <anonymous>'
+  514 |     OPclass_UNOP,     /*  2 */
+      |     ^~~~~~~~~~~~
+op.h:515:5: error: redeclaration of enumerator 'OPclass_BINOP'
+  515 |     OPclass_BINOP,    /*  3 */
+      |     ^~~~~~~~~~~~~
+op.h:515:5: note: previous definition of 'OPclass_BINOP' with type 'enum <anonymous>'
+  515 |     OPclass_BINOP,    /*  3 */
+      |     ^~~~~~~~~~~~~
+op.h:516:5: error: redeclaration of enumerator 'OPclass_LOGOP'
+  516 |     OPclass_LOGOP,    /*  4 */
+      |     ^~~~~~~~~~~~~
+op.h:516:5: note: previous definition of 'OPclass_LOGOP' with type 'enum <anonymous>'
+  516 |     OPclass_LOGOP,    /*  4 */
+      |     ^~~~~~~~~~~~~
+op.h:517:5: error: redeclaration of enumerator 'OPclass_LISTOP'
+  517 |     OPclass_LISTOP,   /*  5 */
+      |     ^~~~~~~~~~~~~~
+op.h:517:5: note: previous definition of 'OPclass_LISTOP' with type 'enum <anonymous>'
+  517 |     OPclass_LISTOP,   /*  5 */
+      |     ^~~~~~~~~~~~~~
+op.h:518:5: error: redeclaration of enumerator 'OPclass_PMOP'
+  518 |     OPclass_PMOP,     /*  6 */
+      |     ^~~~~~~~~~~~
+op.h:518:5: note: previous definition of 'OPclass_PMOP' with type 'enum <anonymous>'
+  518 |     OPclass_PMOP,     /*  6 */
+      |     ^~~~~~~~~~~~
+op.h:519:5: error: redeclaration of enumerator 'OPclass_SVOP'
+  519 |     OPclass_SVOP,     /*  7 */
+      |     ^~~~~~~~~~~~
+op.h:519:5: note: previous definition of 'OPclass_SVOP' with type 'enum <anonymous>'
+  519 |     OPclass_SVOP,     /*  7 */
+      |     ^~~~~~~~~~~~
+op.h:520:5: error: redeclaration of enumerator 'OPclass_PADOP'
+  520 |     OPclass_PADOP,    /*  8 */
+      |     ^~~~~~~~~~~~~
+op.h:520:5: note: previous definition of 'OPclass_PADOP' with type 'enum <anonymous>'
+  520 |     OPclass_PADOP,    /*  8 */
+      |     ^~~~~~~~~~~~~
+op.h:521:5: error: redeclaration of enumerator 'OPclass_PVOP'
+  521 |     OPclass_PVOP,     /*  9 */
+      |     ^~~~~~~~~~~~
+op.h:521:5: note: previous definition of 'OPclass_PVOP' with type 'enum <anonymous>'
+  521 |     OPclass_PVOP,     /*  9 */
+      |     ^~~~~~~~~~~~
+op.h:522:5: error: redeclaration of enumerator 'OPclass_LOOP'
+  522 |     OPclass_LOOP,     /* 10 */
+      |     ^~~~~~~~~~~~
+op.h:522:5: note: previous definition of 'OPclass_LOOP' with type 'enum <anonymous>'
+  522 |     OPclass_LOOP,     /* 10 */
+      |     ^~~~~~~~~~~~
+op.h:523:5: error: redeclaration of enumerator 'OPclass_COP'
+  523 |     OPclass_COP,      /* 11 */
+      |     ^~~~~~~~~~~
+op.h:523:5: note: previous definition of 'OPclass_COP' with type 'enum <anonymous>'
+  523 |     OPclass_COP,      /* 11 */
+      |     ^~~~~~~~~~~
+op.h:524:5: error: redeclaration of enumerator 'OPclass_METHOP'
+  524 |     OPclass_METHOP,   /* 12 */
+      |     ^~~~~~~~~~~~~~
+op.h:524:5: note: previous definition of 'OPclass_METHOP' with type 'enum <anonymous>'
+  524 |     OPclass_METHOP,   /* 12 */
+      |     ^~~~~~~~~~~~~~
+op.h:525:5: error: redeclaration of enumerator 'OPclass_UNOP_AUX'
+  525 |     OPclass_UNOP_AUX  /* 13 */
+      |     ^~~~~~~~~~~~~~~~
+op.h:525:5: note: previous definition of 'OPclass_UNOP_AUX' with type 'enum <anonymous>'
+  525 |     OPclass_UNOP_AUX  /* 13 */
+      |     ^~~~~~~~~~~~~~~~
+op.h:526:3: error: conflicting types for 'OPclass'; have 'enum <anonymous>'
+  526 | } OPclass;
+      |   ^~~~~~~
+op.h:526:3: note: previous declaration of 'OPclass' with type 'OPclass'
+  526 | } OPclass;
+      |   ^~~~~~~
+op.h:671:3: error: conflicting types for 'OPtrans_map'; have 'struct <anonymous>'
+  671 | } OPtrans_map;
+      |   ^~~~~~~~~~~
+op.h:671:3: note: previous declaration of 'OPtrans_map' with type 'OPtrans_map'
+  671 | } OPtrans_map;
+      |   ^~~~~~~~~~~
+op.h:734:1: error: redefinition of struct or union 'struct opslot'
+  734 | };
+      | ^
+op.h:730:8: note: originally defined here
+  730 | struct opslot {
+      |        ^~~~~~
+op.h:751:1: error: redefinition of struct or union 'struct opslab'
+  751 | };
+      | ^
+op.h:736:8: note: originally defined here
+  736 | struct opslab {
+      |        ^~~~~~
+op.h:784:1: error: redefinition of struct or union 'struct block_hooks'
+  784 | };
+      | ^
+op.h:778:8: note: originally defined here
+  778 | struct block_hooks {
+      |        ^~~~~~~~~~~
+op.h:924:1: error: redefinition of struct or union 'struct custom_op'
+  924 | };
+      | ^
+op.h:918:8: note: originally defined here
+  918 | struct custom_op {
+      |        ^~~~~~~~~
+op.h:935:3: error: conflicting types for 'XOPRETANY'; have 'union <anonymous>'
+  935 | } XOPRETANY;
+      |   ^~~~~~~~~
+op.h:935:3: note: previous declaration of 'XOPRETANY' with type 'XOPRETANY'
+  935 | } XOPRETANY;
+      |   ^~~~~~~~~
+op.h:946:5: error: redeclaration of enumerator 'XOPe_xop_ptr'
+  946 |     XOPe_xop_ptr = 0, /* just get the XOP *, don't look inside it */
+      |     ^~~~~~~~~~~~
+op.h:946:5: note: previous definition of 'XOPe_xop_ptr' with type 'enum <anonymous>'
+  946 |     XOPe_xop_ptr = 0, /* just get the XOP *, don't look inside it */
+      |     ^~~~~~~~~~~~
+op.h:947:5: error: redeclaration of enumerator 'XOPe_xop_name'
+  947 |     XOPe_xop_name = XOPf_xop_name,
+      |     ^~~~~~~~~~~~~
+op.h:947:5: note: previous definition of 'XOPe_xop_name' with type 'enum <anonymous>'
+  947 |     XOPe_xop_name = XOPf_xop_name,
+      |     ^~~~~~~~~~~~~
+op.h:948:5: error: redeclaration of enumerator 'XOPe_xop_desc'
+  948 |     XOPe_xop_desc = XOPf_xop_desc,
+      |     ^~~~~~~~~~~~~
+op.h:948:5: note: previous definition of 'XOPe_xop_desc' with type 'enum <anonymous>'
+  948 |     XOPe_xop_desc = XOPf_xop_desc,
+      |     ^~~~~~~~~~~~~
+op.h:949:5: error: redeclaration of enumerator 'XOPe_xop_class'
+  949 |     XOPe_xop_class = XOPf_xop_class,
+      |     ^~~~~~~~~~~~~~
+op.h:949:5: note: previous definition of 'XOPe_xop_class' with type 'enum <anonymous>'
+  949 |     XOPe_xop_class = XOPf_xop_class,
+      |     ^~~~~~~~~~~~~~
+op.h:950:5: error: redeclaration of enumerator 'XOPe_xop_peep'
+  950 |     XOPe_xop_peep = XOPf_xop_peep
+      |     ^~~~~~~~~~~~~
+op.h:950:5: note: previous definition of 'XOPe_xop_peep' with type 'enum <anonymous>'
+  950 |     XOPe_xop_peep = XOPf_xop_peep
+      |     ^~~~~~~~~~~~~
+op.h:951:3: error: conflicting types for 'xop_flags_enum'; have 'enum <anonymous>'
+  951 | } xop_flags_enum;
+      |   ^~~~~~~~~~~~~~
+op.h:951:3: note: previous declaration of 'xop_flags_enum' with type 'xop_flags_enum'
+  951 | } xop_flags_enum;
+      |   ^~~~~~~~~~~~~~
+op.h:1171:1: error: redefinition of struct or union 'struct op_argcheck_aux'
+ 1171 | };
+      | ^
+op.h:1167:8: note: originally defined here
+ 1167 | struct op_argcheck_aux {
+      |        ^~~~~~~~~~~~~~~
+perl.h:5390:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5390 |   INIT("Use of uninitialized value%s%s%s");
+      |   ^~~~
+perl.h:5392:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5392 |   INIT("Use of uninitialized value%" SVf "%s%s");
+      |   ^~~~
+perl.h:5394:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5394 |   INIT("Semicolon seems to be missing");
+      |   ^~~~
+perl.h:5396:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5396 |   INIT("Unquoted string \"%s\" may clash with future reserved word");
+      |   ^~~~
+perl.h:5398:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5398 |   INIT("Unsuccessful %s on filename containing newline");
+      |   ^~~~
+perl.h:5400:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5400 |   INIT("Can't use %s ref as %s ref");
+      |   ^~~~
+perl.h:5404:3: error: expected ',' or ';' before 'INIT'
+ 5404 |   INIT("Can't use string (\"%.32s\") as %s ref while \"strict refs\" in use");
+      |   ^~~~
+perl.h:5406:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5406 |   INIT("Can't use string (\"%" SVf32 "\"%s) as %s ref while \"strict refs\" in use");
+      |   ^~~~
+perl.h:5409:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5409 |   INIT("Can't use an undefined value as %s reference");
+      |   ^~~~
+perl.h:5411:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5411 |   INIT("Modification of non-creatable array value attempted, subscript %d");
+      |   ^~~~
+perl.h:5413:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5413 |   INIT("Modification of non-creatable hash value attempted, subscript \"%" SVf "\"");
+      |   ^~~~
+perl.h:5415:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5415 |   INIT("Modification of a read-only value attempted");
+      |   ^~~~
+perl.h:5417:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5417 |   INIT("Insecure dependency in %s%s");
+      |   ^~~~
+perl.h:5419:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5419 |   INIT("Unsupported socket function \"%s\" called");
+      |   ^~~~
+perl.h:5421:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5421 |   INIT("Unsupported directory function \"%s\" called");
+      |   ^~~~
+perl.h:5423:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5423 |   INIT("The %s function is unimplemented");
+      |   ^~~~
+perl.h:5425:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5425 |   INIT("\"%s\" %s %s can't be in a package");
+      |   ^~~~
+perl.h:5427:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5427 |   INIT("Can't localize through a reference");
+      |   ^~~~
+perl.h:5429:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5429 |   INIT("panic: memory wrap");
+      |   ^~~~
+perl.h:5431:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5431 |   INIT("Code point 0x%" UVXf " is not Unicode, requires a Perl extension,"
+      |   ^~~~
+perl.h:5434:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5434 |   INIT("1");
+      |   ^~~~
+perl.h:5436:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5436 |   INIT("");
+      |   ^~~~
+perl.h:5438:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5438 |   INIT("0");
+      |   ^~~~
+perl.h:5456:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5456 |   INIT("0123456789abcdef0123456789ABCDEF");
+      |   ^~~~
+perl.h:5459:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5459 |   INIT(0);
+      |   ^~~~
+perl.h:5461:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5461 |   INIT(0);
+      |   ^~~~
+perl.h:5466:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5466 |   INIT(SH_PATH); /* full path of shell */
+      |   ^~~~
+perl.h:5480:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5480 |   INIT(PERL_REVISION);
+      |   ^~~~
+perl.h:5482:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5482 |   INIT(PERL_VERSION);
+      |   ^~~~
+perl.h:5484:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5484 |   INIT(PERL_SUBVERSION);
+      |   ^~~~
+perl.h:5487:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5487 |   INIT("`!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_");
+      |   ^~~~
+perl.h:5493:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 5493 |   INIT("isa");
+      |   ^~~~
+In file included from perl.h:6189:
+opcode.h:148:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+  148 | EXTCONST char* const PL_op_name[] INIT({
+      |                                   ^~~~
+opcode.h:572:2: error: expected identifier or '(' before ')' token
+  572 | });
+      |  ^
+opcode.h:574:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+  574 | EXTCONST char* const PL_op_desc[] INIT({
+      |                                   ^~~~
+opcode.h:998:2: error: expected identifier or '(' before ')' token
+  998 | });
+      |  ^
+opcode.h:1005:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 1005 | INIT({
+      | ^~~~
+opcode.h:1428:2: error: expected identifier or '(' before ')' token
+ 1428 | });
+      |  ^
+opcode.h:1431:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 1431 | INIT({
+      | ^~~~
+opcode.h:1854:2: error: expected identifier or '(' before ')' token
+ 1854 | });
+      |  ^
+opcode.h:1856:26: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 1856 | EXTCONST U32 PL_opargs[] INIT({
+      |                          ^~~~
+opcode.h:2279:2: error: expected identifier or '(' before ')' token
+ 2279 | });
+      |  ^
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:48:1: note: in expansion of macro 'PERLVARI'
+   48 | PERLVARI(I, tmps_ix,    SSize_t,        -1)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:49:1: note: in expansion of macro 'PERLVARI'
+   49 | PERLVARI(I, tmps_floor, SSize_t,        -1)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:57:1: note: in expansion of macro 'PERLVARI'
+   57 | PERLVARI(I, sub_generation, U32, 1)     /* incr to invalidate method cache */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:61:1: note: in expansion of macro 'PERLVARI'
+   61 | PERLVARI(I, hash_rand_bits_enabled, U8, 1) /* used to randomize hash stuff
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:66:1: note: in expansion of macro 'PERLVARI'
+   66 | PERLVARI(I, hash_rand_bits, UV, 0)      /* used to randomize hash stuff */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:78:1: note: in expansion of macro 'PERLVARI'
+   78 | PERLVARI(I, tainted,    bool, FALSE)    /* using variables controlled by $< */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:117:1: note: in expansion of macro 'PERLVARI'
+  117 | PERLVARI(I, utf8cache, I8, PERL___I)    /* Is the utf8 caching code enabled? */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:182:1: note: in expansion of macro 'PERLVARI'
+  182 | PERLVARI(I, reg_curpm, PMOP*, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:188:1: note: in expansion of macro 'PERLVARI'
+  188 | PERLVARI(I, regmatch_slab, regmatch_slab *,     NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:279:1: note: in expansion of macro 'PERLVARI'
+  279 | PERLVARI(I, statname,   SV *,   NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:316:1: note: in expansion of macro 'PERLVARI'
+  316 | PERLVARI(I, chopset,    const char *, " \n-")   /* $: */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:327:1: note: in expansion of macro 'PERLVARI'
+  327 | PERLVARI(I, errors,     SV *,   NULL)   /* outstanding queued errors */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:344:1: note: in expansion of macro 'PERLVARI'
+  344 | PERLVARI(I, dumpindent, U16,    4)      /* number of blanks per dump
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:398:1: note: in expansion of macro 'PERLVARI'
+  398 | PERLVARI(I, in_utf8_CTYPE_locale, bool, false)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:399:1: note: in expansion of macro 'PERLVARI'
+  399 | PERLVARI(I, in_utf8_turkic_locale, bool, false)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:430:1: note: in expansion of macro 'PERLVARI'
+  430 | PERLVARI(I, peepp,      peep_t, Perl_peep)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:459:1: note: in expansion of macro 'PERLVARI'
+  459 | PERLVARI(I, rpeepp,     peep_t, Perl_rpeep)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:478:1: note: in expansion of macro 'PERLVARI'
+  478 | PERLVARI(I, opfreehook, Perl_ophook_t, 0) /* op_free() hook */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:480:1: note: in expansion of macro 'PERLVARI'
+  480 | PERLVARI(I, watchaddr,  char **, 0)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:496:1: note: in expansion of macro 'PERLVARI'
+  496 | PERLVARI(I, xsubfilename, const char *, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:500:1: note: in expansion of macro 'PERLVARI'
+  500 | PERLVARI(I, hook__require__before, SV *,NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:501:1: note: in expansion of macro 'PERLVARI'
+  501 | PERLVARI(I, hook__require__after, SV *,NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:506:1: note: in expansion of macro 'PERLVARI'
+  506 | PERLVARI(I, splitstr,   char *, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:522:1: note: in expansion of macro 'PERLVARI'
+  522 | PERLVARI(I, maxsysfd,   I32,    MAXSYSFD)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:531:1: note: in expansion of macro 'PERLVARI'
+  531 | PERLVARI(I, sig_pending, int, 0)        /* Number if highest signal pending */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:608:1: note: in expansion of macro 'PERLVARI'
+  608 | PERLVARI(I, op_mask,    char *, NULL)   /* masked operations for safe evals */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:618:1: note: in expansion of macro 'PERLVARI'
+  618 | PERLVARI(I, curcopdb,   COP *,  NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:635:1: note: in expansion of macro 'PERLVARI'
+  635 | PERLVARI(I, gensym,     I32,    0)      /* next symbol for getsym() to define */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:636:1: note: in expansion of macro 'PERLVARI'
+  636 | PERLVARI(I, cv_has_eval, bool, FALSE)   /* PL_compcv includes an entereval or similar */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:638:1: note: in expansion of macro 'PERLVARI'
+  638 | PERLVARI(I, laststype,  U16,    OP_STAT)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:640:1: note: in expansion of macro 'PERLVARI'
+  640 | PERLVARI(I, laststatval, int,   -1)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:646:1: note: in expansion of macro 'PERLVARI'
+  646 | PERLVARI(I, exitlistlen, I32, 0)        /* length of same */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:647:1: note: in expansion of macro 'PERLVARI'
+  647 | PERLVARI(I, exitlist,   PerlExitListEntry *, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:670:1: note: in expansion of macro 'PERLVARI'
+  670 | PERLVARI(I, profiledata, U32 *, NULL)   /* table of ops, counts */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:686:1: note: in expansion of macro 'PERLVARI'
+  686 | PERLVARI(I, generation, int,    100)    /* scan sequence# for OP_AASSIGN
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:691:1: note: in expansion of macro 'PERLVARI'
+  691 | PERLVARI(I, in_clean_objs,bool,    FALSE)       /* from sv.c */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:692:1: note: in expansion of macro 'PERLVARI'
+  692 | PERLVARI(I, in_clean_all, bool,    FALSE)       /* ptrs to freed SVs now legal */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:694:1: note: in expansion of macro 'PERLVARI'
+  694 | PERLVARI(I, savebegin,  bool,   FALSE)  /* save BEGINs for compiler     */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:701:1: note: in expansion of macro 'PERLVARI'
+  701 | PERLVARI(I, an,         U32,    0)      /* malloc sequence number */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:704:1: note: in expansion of macro 'PERLVARI'
+  704 | PERLVARI(I, breakable_sub_gen, U32, 0)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:712:1: note: in expansion of macro 'PERLVARI'
+  712 | PERLVARI(I, cop_seqmax, U32,    PERL_COP_SEQMAX) /* statement sequence number */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:715:1: note: in expansion of macro 'PERLVARI'
+  715 | PERLVARI(I, evalseq,    U32,    0)      /* eval sequence number */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:732:1: note: in expansion of macro 'PERLVARI'
+  732 | PERLVARI(I, padlist_generation, U32, 1) /* id to identify padlist clones */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:734:1: note: in expansion of macro 'PERLVARI'
+  734 | PERLVARI(I, runops,     runops_proc_t, RUNOPS_DEFAULT)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:769:1: note: in expansion of macro 'PERLVARI'
+  769 | PERLVARI(I, collxfrm_mult,Size_t, 0)    /* Expansion factor in *xfrm();
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:777:1: note: in expansion of macro 'PERLVARI'
+  777 | PERLVARI(I, collation_ix, PERL_UINTMAX_T, 0)    /* Collation generation index */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:778:1: note: in expansion of macro 'PERLVARI'
+  778 | PERLVARI(I, strxfrm_NUL_replacement, U8, 0)  /* Code point to replace NULs */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:779:1: note: in expansion of macro 'PERLVARI'
+  779 | PERLVARI(I, strxfrm_is_behaved, bool, TRUE)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:781:1: note: in expansion of macro 'PERLVARI'
+  781 | PERLVARI(I, strxfrm_max_cp, U8, 0)      /* Highest collating cp in locale */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:782:1: note: in expansion of macro 'PERLVARI'
+  782 | PERLVARI(I, collation_standard, bool, TRUE)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:787:1: note: in expansion of macro 'PERLVARI'
+  787 | PERLVARI(I, langinfo_sv, SV *, NULL)         /* For Perl_langinfo8? */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:788:1: note: in expansion of macro 'PERLVARI'
+  788 | PERLVARI(I, scratch_langinfo, SV *, NULL)     /* For internal use */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:789:1: note: in expansion of macro 'PERLVARI'
+  789 | PERLVARI(I, setlocale_buf, char *, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:790:1: note: in expansion of macro 'PERLVARI'
+  790 | PERLVARI(I, setlocale_bufsize, Size_t, 0)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:804:1: note: in expansion of macro 'PERLVARI'
+  804 | PERLVARI(I, phase,      enum perl_phase, PERL_PHASE_CONSTRUCT)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:806:1: note: in expansion of macro 'PERLVARI'
+  806 | PERLVARI(I, in_load_module, bool, FALSE)        /* to prevent recursions in PerlIO_find_layer */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:808:1: note: in expansion of macro 'PERLVARI'
+  808 | PERLVARI(I, eval_begin_nest_depth, U32, 0)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:841:1: note: in expansion of macro 'PERLVARI'
+  841 | PERLVARI(I, perl_destruct_level, signed char,   0)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:845:1: note: in expansion of macro 'PERLVARI'
+  845 | PERLVARI(I, srand_called, bool, false)      /* has random_state been initialized yet? */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:846:1: note: in expansion of macro 'PERLVARI'
+  846 | PERLVARI(I, srand_override, U32, 0)         /* Should we use a deterministic sequence? */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:847:1: note: in expansion of macro 'PERLVARI'
+  847 | PERLVARI(I, srand_override_next, U32, 0)    /* Next item in the sequence */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:849:1: note: in expansion of macro 'PERLVARI'
+  849 | PERLVARI(I, numeric_underlying, bool, TRUE)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:851:1: note: in expansion of macro 'PERLVARI'
+  851 | PERLVARI(I, numeric_underlying_is_standard, bool, TRUE)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:853:1: note: in expansion of macro 'PERLVARI'
+  853 | PERLVARI(I, numeric_standard, int, TRUE)    /* Assume C locale numerics */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:864:1: note: in expansion of macro 'PERLVARI'
+  864 | PERLVARI(I, ctype_name, const char *, NULL)   /* Name of current ctype locale */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:889:1: note: in expansion of macro 'PERLVARI'
+  889 | PERLVARI(I, beginav_save, AV *, NULL)   /* save BEGIN{}s when compiling */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:915:1: note: in expansion of macro 'PERLVARI'
+  915 | PERLVARI(I, perlio,     PerlIOl *, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:916:1: note: in expansion of macro 'PERLVARI'
+  916 | PERLVARI(I, known_layers, PerlIO_list_t *, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:917:1: note: in expansion of macro 'PERLVARI'
+  917 | PERLVARI(I, def_layerlist, PerlIO_list_t *, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:920:1: note: in expansion of macro 'PERLVARI'
+  920 | PERLVARI(I, checkav_save, AV *, NULL)   /* save CHECK{}s when compiling */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:921:1: note: in expansion of macro 'PERLVARI'
+  921 | PERLVARI(I, unitcheckav_save, AV *, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:924:1: note: in expansion of macro 'PERLVARI'
+  924 | PERLVARI(I, clocktick,  long,   0)      /* this many times() ticks in a second */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:927:1: note: in expansion of macro 'PERLVARI'
+  927 | PERLVARI(I, sharehook,  share_proc_t, Perl_sv_nosharing)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:928:1: note: in expansion of macro 'PERLVARI'
+  928 | PERLVARI(I, lockhook,   share_proc_t, Perl_sv_nosharing)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:942:1: note: in expansion of macro 'PERLVARI'
+  942 | PERLVARI(I, unlockhook, share_proc_t, PERL_UNLOCK_HOOK)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:950:1: note: in expansion of macro 'PERLVARI'
+  950 | PERLVARI(I, threadhook, thrhook_proc_t, Perl_nothreadhook)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:953:1: note: in expansion of macro 'PERLVARI'
+  953 | PERLVARI(I, destroyhook, destroyable_proc_t, Perl_sv_destroyable)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:955:1: note: in expansion of macro 'PERLVARI'
+  955 | PERLVARI(I, signalhook, despatch_signals_proc_t, Perl_despatch_signals)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:957:1: note: in expansion of macro 'PERLVARI'
+  957 | PERLVARI(I, isarev, HV *, NULL)         /* Reverse map of @ISA dependencies */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:974:1: note: in expansion of macro 'PERLVARI'
+  974 | PERLVARI(I, scopestack_name, const char **, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:979:1: note: in expansion of macro 'PERLVARI'
+  979 | PERLVARI(I, globhook,   globhook_t, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:1024:1: note: in expansion of macro 'PERLVARI'
+ 1024 | PERLVARI(I, dump_re_max_len, STRLEN, 60)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+intrpvar.h:1073:1: note: in expansion of macro 'PERLVARI'
+ 1073 | PERLVARI(I, InBitmap,   SV *, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:40:1: note: in expansion of macro 'PERLVARI'
+   40 | PERLVARI(G, curinterp,  PerlInterpreter *, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:49:1: note: in expansion of macro 'PERLVARI'
+   49 | PERLVARI(G, do_undump,  bool,   FALSE)  /* -u or dump seen? */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:65:1: note: in expansion of macro 'PERLVARI'
+   65 | PERLVARI(G, sig_trapped, int,   0)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:75:1: note: in expansion of macro 'PERLVARI'
+   75 | PERLVARI(G, csighandlerp,  Sighandler_t,  Perl_csighandler)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:76:1: note: in expansion of macro 'PERLVARI'
+   76 | PERLVARI(G, csighandler1p, Sighandler1_t, Perl_csighandler1)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:77:1: note: in expansion of macro 'PERLVARI'
+   77 | PERLVARI(G, csighandler3p, Sighandler3_t, Perl_csighandler3)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:90:1: note: in expansion of macro 'PERLVARI'
+   90 | PERLVARI(G, perlio_fd_refcnt, int *, 0) /* Pointer to array of fd refcounts.  */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:91:1: note: in expansion of macro 'PERLVARI'
+   91 | PERLVARI(G, perlio_fd_refcnt_size, int, 0) /* Size of the array */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:92:1: note: in expansion of macro 'PERLVARI'
+   92 | PERLVARI(G, perlio_debug_fd, int, 0)    /* the fd to write perlio debug into, 0 means not set yet */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:109:1: note: in expansion of macro 'PERLVARI'
+  109 | PERLVARI(G, watch_pvx,  char *, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:177:1: note: in expansion of macro 'PERLVARI'
+  177 | PERLVARI(G, veto_cleanup, int, FALSE)   /* exit without cleanup */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:238:1: note: in expansion of macro 'PERLVARI'
+  238 | PERLVARI(G, keyword_plugin, Perl_keyword_plugin_t, Perl_keyword_plugin_standard)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:335:1: note: in expansion of macro 'PERLVARI'
+  335 | PERLVARI(G, infix_plugin, Perl_infix_plugin_t, Perl_infix_plugin_standard)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:337:1: note: in expansion of macro 'PERLVARI'
+  337 | PERLVARI(G, op_sequence, HV *, NULL)    /* dump.c */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:338:1: note: in expansion of macro 'PERLVARI'
+  338 | PERLVARI(G, op_seq,     UV,     0)      /* dump.c */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:355:1: note: in expansion of macro 'PERLVARI'
+  355 | PERLVARI(G, hash_seed_set, bool, FALSE) /* perl.c */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:374:1: note: in expansion of macro 'PERLVARI'
+  374 | PERLVARI(G, user_def_props,     HV *, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:389:1: note: in expansion of macro 'PERLVARI'
+  389 | PERLVARI(G, strategy_dup,        int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:390:1: note: in expansion of macro 'PERLVARI'
+  390 | PERLVARI(G, strategy_dup2,       int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:391:1: note: in expansion of macro 'PERLVARI'
+  391 | PERLVARI(G, strategy_open,       int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:392:1: note: in expansion of macro 'PERLVARI'
+  392 | PERLVARI(G, strategy_open3,      int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:393:1: note: in expansion of macro 'PERLVARI'
+  393 | PERLVARI(G, strategy_mkstemp,    int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:394:1: note: in expansion of macro 'PERLVARI'
+  394 | PERLVARI(G, strategy_socket,     int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:395:1: note: in expansion of macro 'PERLVARI'
+  395 | PERLVARI(G, strategy_accept,     int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:396:1: note: in expansion of macro 'PERLVARI'
+  396 | PERLVARI(G, strategy_pipe,       int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:397:1: note: in expansion of macro 'PERLVARI'
+  397 | PERLVARI(G, strategy_socketpair, int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:399:1: note: in expansion of macro 'PERLVARI'
+  399 | PERLVARI(G, my_environ, char **, NULL)
+      | ^~~~~~~~
+perl.h:6204:59: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                           ^~~~
+perlvars.h:400:1: note: in expansion of macro 'PERLVARI'
+  400 | PERLVARI(G, origenviron, char **, NULL)
+      | ^~~~~~~~
+perl.h:6264:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6264 |   INIT(Perl_runops_standard);
+      |   ^~~~
+perl.h:6266:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'INIT'
+ 6266 |   INIT(Perl_runops_debug);
+      |   ^~~~
+In file included from perl.h:7868:
+perlstatic.h: In function 'Perl_croak_memory_wrap':
+perlstatic.h:24:31: error: 'PL_memory_wrap' undeclared (first use in this function); did you mean 'croak_memory_wrap'?
+   24 |     Perl_croak_nocontext("%s",PL_memory_wrap);
+      |                               ^~~~~~~~~~~~~~
+      |                               croak_memory_wrap
+perlstatic.h:24:31: note: each undeclared identifier is reported only once for each function it appears in
+In file included from perl.h:7869:
+inline.h: In function 'Perl_cx_pushblock':
+inline.h:3590:29: error: 'PL_tmps_floor' undeclared (first use in this function)
+ 3590 |     cx->blk_old_tmpsfloor = PL_tmps_floor;
+      |                             ^~~~~~~~~~~~~
+inline.h:3592:28: error: 'PL_tmps_ix' undeclared (first use in this function); did you mean 'PL_tmps_max'?
+ 3592 |     PL_tmps_floor        = PL_tmps_ix;
+      |                            ^~~~~~~~~~
+      |                            PL_tmps_max
+inline.h: In function 'Perl_cx_popblock':
+inline.h:3617:5: error: 'PL_tmps_floor' undeclared (first use in this function)
+ 3617 |     PL_tmps_floor = cx->blk_old_tmpsfloor;
+      |     ^~~~~~~~~~~~~
+inline.h: In function 'Perl_cx_pushwhen':
+inline.h:3906:30: error: assignment to 'OP *' {aka 'struct op *'} from incompatible pointer type 'int *' [-Wincompatible-pointer-types]
+ 3906 |     cx->blk_givwhen.leave_op = cLOGOP->op_other;
+      |                              ^
+inline.h: In function 'Perl_cx_pushgiven':
+inline.h:3927:30: error: assignment to 'OP *' {aka 'struct op *'} from incompatible pointer type 'int *' [-Wincompatible-pointer-types]
+ 3927 |     cx->blk_givwhen.leave_op = cLOGOP->op_other;
+      |                              ^
+In file included from perl.h:4541:
+inline.h: In function 'Perl_sv_isbool':
+sv.h:1026:29: error: 'PL_Yes' undeclared (first use in this function); did you mean 'PL_rs'?
+ 1026 |         (SvPVX_const(sv) == PL_Yes || SvPVX_const(sv) == PL_No))
+      |                             ^~~~~~
+inline.h:4454:33: note: in expansion of macro 'BOOL_INTERNALS_sv_isbool'
+ 4454 |     return SvBoolFlagsOK(sv) && BOOL_INTERNALS_sv_isbool(sv);
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~
+sv.h:1026:58: error: 'PL_No' undeclared (first use in this function)
+ 1026 |         (SvPVX_const(sv) == PL_Yes || SvPVX_const(sv) == PL_No))
+      |                                                          ^~~~~
+inline.h:4454:33: note: in expansion of macro 'BOOL_INTERNALS_sv_isbool'
+ 4454 |     return SvBoolFlagsOK(sv) && BOOL_INTERNALS_sv_isbool(sv);
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from perl.h:7870:
+sv_inline.h: In function 'Perl_newSV_type_mortal':
+sv_inline.h:552:20: error: 'PL_tmps_ix' undeclared (first use in this function); did you mean 'PL_tmps_max'?
+  552 |     SSize_t ix = ++PL_tmps_ix;
+      |                    ^~~~~~~~~~
+      |                    PL_tmps_max
+sv_inline.h: In function 'Perl_sv_setpv_freshbuf':
+perl.h:1028:49: error: 'PL_tainted' undeclared (first use in this function); did you mean 'sv_tainted'?
+ 1028 | #   define TAINT_get            (cBOOL(UNLIKELY(PL_tainted)))    /* Is something tainted? */
+      |                                                 ^~~~~~~~~~
+perl.h:4235:46: note: in definition of macro 'EXPECT'
+ 4235 | #  define EXPECT(expr,val)                  (expr)
+      |                                              ^~~~
+perl.h:4254:52: note: in expansion of macro 'cBOOL'
+ 4254 | #define UNLIKELY(cond)                      EXPECT(cBOOL(cond),FALSE)
+      |                                                    ^~~~~
+sv.h:1724:13: note: in expansion of macro 'UNLIKELY'
+ 1724 |         if (UNLIKELY(TAINT_get))        \
+      |             ^~~~~~~~
+perl.h:1028:34: note: in expansion of macro 'cBOOL'
+ 1028 | #   define TAINT_get            (cBOOL(UNLIKELY(PL_tainted)))    /* Is something tainted? */
+      |                                  ^~~~~
+perl.h:4254:45: note: in expansion of macro 'EXPECT'
+ 4254 | #define UNLIKELY(cond)                      EXPECT(cBOOL(cond),FALSE)
+      |                                             ^~~~~~
+perl.h:4254:52: note: in expansion of macro 'cBOOL'
+ 4254 | #define UNLIKELY(cond)                      EXPECT(cBOOL(cond),FALSE)
+      |                                                    ^~~~~
+perl.h:1028:40: note: in expansion of macro 'UNLIKELY'
+ 1028 | #   define TAINT_get            (cBOOL(UNLIKELY(PL_tainted)))    /* Is something tainted? */
+      |                                        ^~~~~~~~
+sv.h:1724:22: note: in expansion of macro 'TAINT_get'
+ 1724 |         if (UNLIKELY(TAINT_get))        \
+      |                      ^~~~~~~~~
+sv_inline.h:1013:5: note: in expansion of macro 'SvTAINT'
+ 1013 |     SvTAINT(sv);
+      |     ^~~~~~~
+globals.c: At top level:
+globals.c:72:9: warning: 'PERLVAR' redefined
+   72 | #define PERLVAR(G,var,type) type PL_##var;
+      |         ^~~~~~~
+globals.c:63:9: note: this is the location of the previous definition
+   63 | #define PERLVAR(prefix,var,type) type PL_##var;
+      |         ^~~~~~~
+globals.c:73:9: warning: 'PERLVARI' redefined
+   73 | #define PERLVARI(G,var,type,init) type PL_##var = init;
+      |         ^~~~~~~~
+globals.c:65:9: note: this is the location of the previous definition
+   65 | #define PERLVARI(prefix,var,type,init) type PL_##var = init;
+      |         ^~~~~~~~
+perlstatic.h: In function 'Perl_croak_memory_wrap':
+perlstatic.h:25:1: warning: 'noreturn' function does return
+   25 | }
+      | ^

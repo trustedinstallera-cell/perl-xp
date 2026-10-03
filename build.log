@@ -1,0 +1,199 @@
+# CCTYPE=GCC
+# GCCBIN=i686-w64-mingw32-gcc
+# GCCVER=16.2.0
+# GCCTARGET=i686-w64-mingw32
+# GCCCROSS=i686-w64-mingw32
+# WIN64=undef
+# ARCHITECTURE=x86
+# ARCHNAME=MSWin32-x86-multi-thread
+# MAKE=gmake
+if not exist "mini" mkdir "mini"
+copy config_H.gc mini\config.h
+已复制         1 个文件。
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\toke.o  ..\toke.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\regcomp.o  ..\regcomp.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\regcomp_trie.o  ..\regcomp_trie.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\regcomp_debug.o  ..\regcomp_debug.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\regcomp_invlist.o  ..\regcomp_invlist.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\regcomp_study.o  ..\regcomp_study.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\regexec.o  ..\regexec.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\op.o  ..\op.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\sv.o  ..\sv.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\pp.o  ..\pp.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\pp_ctl.o  ..\pp_ctl.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\pp_sys.o  ..\pp_sys.c
+..\pp_sys.c: In function 'Perl_pp_shostent':
+..\pp_sys.c:5583:15: warning: unused variable 'stayopen' [-Wunused-variable]
+ 5583 |     const int stayopen = TOPi;
+      |               ^~~~~~~~
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\pp_pack.o  ..\pp_pack.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\pp_hot.o  ..\pp_hot.c
+..\pp_hot.c: In function 'Perl_pp_aelemfastlex_store':
+..\pp_hot.c:363:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+  363 |         targ = AvARRAY(av)[key];
+      |                           ^
+..\pp_hot.c: In function 'Perl_pp_aelemfast':
+..\pp_hot.c:2050:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+ 2050 |         sv = AvARRAY(av)[key];
+      |                         ^
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\gv.o  ..\gv.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\perl.o  ..\perl.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\utf8.o  ..\utf8.c
+In file included from ..\perl.h:6225,
+                 from ..\utf8.c:33:
+..\utf8.c: In function 'S__to_utf8_case':
+..\embed.h:794:49: warning: 'remaining_list' may be used uninitialized [-Wmaybe-uninitialized]
+  794 | # define uvoffuni_to_utf8_flags_msgs(a,b,c,d)   Perl_uvoffuni_to_utf8_flags_msgs(aTHX_ a,b,c,d)
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\utf8.h:154:17: note: in expansion of macro 'uvoffuni_to_utf8_flags_msgs'
+  154 |                 uvoffuni_to_utf8_flags_msgs(d,NATIVE_TO_UNI(uv),flags, msgs)
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\utf8.h:152:37: note: in expansion of macro 'uvchr_to_utf8_flags_msgs'
+  152 |                                     uvchr_to_utf8_flags_msgs(d,uv,flags, 0)
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~
+..\utf8.h:150:37: note: in expansion of macro 'uvchr_to_utf8_flags'
+  150 | #define uvchr_to_utf8(a,b)          uvchr_to_utf8_flags(a,b,0)
+      |                                     ^~~~~~~~~~~~~~~~~~~
+..\utf8.c:3537:17: note: in expansion of macro 'uvchr_to_utf8'
+ 3537 |             d = uvchr_to_utf8(d, remaining_list[i]);
+      |                 ^~~~~~~~~~~~~
+..\utf8.c:3511:17: note: 'remaining_list' was declared here
+ 3511 |     const U32 * remaining_list;
+      |                 ^~~~~~~~~~~~~~
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\dump.o  ..\dump.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\hv.o  ..\hv.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\av.o  ..\av.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\builtin.o  ..\builtin.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\caretx.o  ..\caretx.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\class.o  ..\class.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\deb.o  ..\deb.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\doio.o  ..\doio.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\doop.o  ..\doop.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\dquote.o  ..\dquote.c
+i686-w64-mingw32-g++ -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -o..\generate_uudmap.exe ..\generate_uudmap.c \
+ -s -L"D:/perl-xp/inst\lib\CORE" -L"C:\MinGW\i686-w64-mingw32\lib"  -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32
+cc1plus.exe: warning: command-line option '-std=c99' is valid for C/ObjC but not for C++
+..\generate_uudmap.exe ..\uudmap.h ..\bitcount.h ..\mg_data.h
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\globals.o  ..\globals.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\mro_core.o  ..\mro_core.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\locale.o  ..\locale.c
+..\locale.c: In function 'S_ints_to_tm':
+..\locale.c:8216:33: warning: unused parameter 'locale' [-Wunused-parameter]
+ 8216 |                    const char * locale,
+      |                    ~~~~~~~~~~~~~^~~~~~
+..\locale.c: At top level:
+..\locale.c:867:19: warning: 'category_available' defined but not used [-Wunused-const-variable=]
+  867 | STATIC const bool category_available[] = {
+      |                   ^~~~~~~~~~~~~~~~~~
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\keywords.o  ..\keywords.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\mathoms.o  ..\mathoms.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\mg.o  ..\mg.c
+..\mg.c: In function 'Perl_magic_setenv':
+..\mg.c:1302:12: warning: variable 'len' set but not used [-Wunused-but-set-variable=]
+ 1302 |     STRLEN len = 0, klen;
+      |            ^~~
+..\mg.c: In function 'Perl_perly_sighandler':
+..\mg.c:3664:54: warning: unused parameter 'safe' [-Wunused-parameter]
+ 3664 |                     void *uap PERL_UNUSED_DECL, bool safe)
+      |                                                      ^
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\numeric.o  ..\numeric.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\pad.o  ..\pad.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\peep.o  ..\peep.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\perly.o  ..\perly.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\pp_sort.o  ..\pp_sort.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\reentr.o  ..\reentr.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\run.o  ..\run.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\scope.o  ..\scope.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\taint.o  ..\taint.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\time64.o  ..\time64.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\universal.o  ..\universal.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\util.o  ..\util.c
+..\util.c: In function 'sig_trap':
+..\util.c:3075:14: warning: unused parameter 'signo' [-Wunused-parameter]
+ 3075 | sig_trap(int signo)
+      |          ~~~~^~~~~
+..\util.c: In function 'Perl_find_script':
+..\util.c:3521:39: warning: comparison of integer expressions of different signedness: 'long int' and 'unsigned int' [-Wsign-compare]
+ 3521 |                 if (len+MAX_EXT_LEN+1 >= sizeof(tmpbuf))
+      |                                       ^~
+..\util.c:3546:25: warning: comparison of integer expressions of different signedness: 'I32' {aka 'long int'} and 'unsigned int' [-Wsign-compare]
+ 3546 |                 if (len < sizeof tmpbuf)
+      |                         ^
+..\util.c:3549:21: warning: comparison of integer expressions of different signedness: 'I32' {aka 'long int'} and 'unsigned int' [-Wsign-compare]
+ 3549 |             if (len < sizeof tmpbuf)
+      |                     ^
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\miniperlmain.o  ..\miniperlmain.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\perlio.o  ..\perlio.c
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\win32.o  win32.c
+win32.c:14:9: warning: '_WIN32_WINNT' redefined
+   14 | #define _WIN32_WINNT 0x0601
+      |         ^~~~~~~~~~~~
+<command-line>: note: this is the location of the previous definition
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\win32sck.o  win32sck.c
+win32sck.c: In function 'win32_getnetbyname':
+win32sck.c:781:26: warning: unused parameter 'name' [-Wunused-parameter]
+  781 | win32_getnetbyname(char *name)
+      |                    ~~~~~~^~~~
+win32sck.c: In function 'win32_getnetbyaddr':
+win32sck.c:788:25: warning: unused parameter 'net' [-Wunused-parameter]
+  788 | win32_getnetbyaddr(long net, int type)
+      |                    ~~~~~^~~
+win32sck.c:788:34: warning: unused parameter 'type' [-Wunused-parameter]
+  788 | win32_getnetbyaddr(long net, int type)
+      |                              ~~~~^~~~
+win32sck.c: In function 'win32_sethostent':
+win32sck.c:809:22: warning: unused parameter 'stayopen' [-Wunused-parameter]
+  809 | win32_sethostent(int stayopen)
+      |                  ~~~~^~~~~~~~
+win32sck.c: In function 'win32_setnetent':
+win32sck.c:816:21: warning: unused parameter 'stayopen' [-Wunused-parameter]
+  816 | win32_setnetent(int stayopen)
+      |                 ~~~~^~~~~~~~
+win32sck.c: In function 'win32_setprotoent':
+win32sck.c:823:23: warning: unused parameter 'stayopen' [-Wunused-parameter]
+  823 | win32_setprotoent(int stayopen)
+      |                   ~~~~^~~~~~~~
+win32sck.c: In function 'win32_setservent':
+win32sck.c:830:22: warning: unused parameter 'stayopen' [-Wunused-parameter]
+  830 | win32_setservent(int stayopen)
+      |                  ~~~~^~~~~~~~
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\win32thread.o  win32thread.c
+win32thread.c: In function 'Perl_set_context':
+win32thread.c:9:24: warning: unused parameter 't' [-Wunused-parameter]
+    9 | Perl_set_context(void *t)
+      |                  ~~~~~~^
+i686-w64-mingw32-gcc -c -Imini -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -I.\include -I. -I.. -DWIN32 -DPERLDLL -DPERL_CORE -Os -Wall -Wextra -Werror=pointer-arith -Wno-format -Wno-long-long -Werror=vla -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -DPERL_EXTERNAL_GLOB -DPERL_IS_MINIPERL -omini\fcrypt.o  fcrypt.c
+fcrypt.c: In function 'des_fcrypt':
+fcrypt.c:473:17: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  473 |     ((c) >= '.' && (c) <= '9' || (c) >= 'A' && (c) <= 'Z' ||  \
+      |      ~~~~~~~~~~~^~~~~~~~~~~~~
+fcrypt.c:488:14: note: in expansion of macro 'good_for_salt'
+  488 |         if (!good_for_salt(salt[0]) || !good_for_salt(salt[1])) {
+      |              ^~~~~~~~~~~~~
+fcrypt.c:474:17: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  474 |      (c) >= 'a' && (c) <= 'z')
+      |      ~~~~~~~~~~~^~~~~~~~~~~~~
+fcrypt.c:488:14: note: in expansion of macro 'good_for_salt'
+  488 |         if (!good_for_salt(salt[0]) || !good_for_salt(salt[1])) {
+      |              ^~~~~~~~~~~~~
+fcrypt.c:473:17: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  473 |     ((c) >= '.' && (c) <= '9' || (c) >= 'A' && (c) <= 'Z' ||  \
+      |      ~~~~~~~~~~~^~~~~~~~~~~~~
+fcrypt.c:488:41: note: in expansion of macro 'good_for_salt'
+  488 |         if (!good_for_salt(salt[0]) || !good_for_salt(salt[1])) {
+      |                                         ^~~~~~~~~~~~~
+fcrypt.c:474:17: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  474 |      (c) >= 'a' && (c) <= 'z')
+      |      ~~~~~~~~~~~^~~~~~~~~~~~~
+fcrypt.c:488:41: note: in expansion of macro 'good_for_salt'
+  488 |         if (!good_for_salt(salt[0]) || !good_for_salt(salt[1])) {
+      |                                         ^~~~~~~~~~~~~
+i686-w64-mingw32-g++ -mconsole -o ..\miniperl.exe  -s -L"D:/perl-xp/inst\lib\CORE" -L"C:\MinGW\i686-w64-mingw32\lib" mini\toke.o mini\regcomp.o mini\regcomp_trie.o mini\regcomp_debug.o mini\regcomp_invlist.o mini\regcomp_study.o mini\regexec.o mini\op.o mini\sv.o mini\pp.o mini\pp_ctl.o mini\pp_sys.o mini\pp_pack.o mini\pp_hot.o mini\gv.o mini\perl.o mini\utf8.o mini\dump.o mini\hv.o mini\av.o mini\builtin.o mini\caretx.o mini\class.o mini\deb.o mini\doio.o mini\doop.o mini\dquote.o mini\globals.o mini\mro_core.o mini\locale.o mini\keywords.o mini\mathoms.o mini\mg.o mini\numeric.o mini\pad.o mini\peep.o mini\perly.o mini\pp_sort.o mini\reentr.o mini\run.o mini\scope.o mini\taint.o mini\time64.o mini\universal.o mini\util.o mini\miniperlmain.o mini\perlio.o mini\win32.o mini\win32sck.o mini\win32thread.o mini\fcrypt.o  -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32
+..\miniperl.exe -I..\lib -f ..\write_buildcustomize.pl ..
+..\miniperl.exe -I..\lib config_sh.PL -o ..\config.sh "INST_TOP=D:/perl-xp/inst" "INST_VER=" "INST_ARCH=" "archname=MSWin32-x86-multi-thread" "cc=i686-w64-mingw32-gcc" "ld=i686-w64-mingw32-g++" "ccflags=-D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields" "usecplusplus=" "cf_email=" "d_mymalloc=undef" "i_quadmath=undef" "libs= -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32" "incpath=C:\MinGW\i686-w64-mingw32\include" "libperl=libperl540.a" "libpth=C:\MinGW\i686-w64-mingw32\lib;" "libc=" "make=gmake" "_o=.o" "obj_ext=.o" "_a=.a" "lib_ext=.a" "static_ext=Win32CORE" "usethreads=define" "useithreads=define" "usemultiplicity=define" "useperlio=define" "use64bitint=undef" "uselongdouble=undef" "usequadmath=undef" "usesitecustomize=undef" "default_inc_excludes_dot=define" "LINK_FLAGS=-s -L\"D:/perl-xp/inst\lib\CORE\" -L\"C:\MinGW\i686-w64-mingw32\lib\"" "optimize=-Os" "ARCHPREFIX=i686-w64-mingw32-" "WIN64=undef" "SKIP_CCHOME_CHECK=" config.gc
+'CCLIBDIR' contains the following non-existing paths:
+	C:\MinGW\i686-w64-mingw32\lib
+Did you provide a correct value for the 'CCHOME' option?
+
+(This check can be skipped by using the SKIP_CCHOME_CHECK=1 option)
+make: *** [GNUmakefile:1192: ..\config.sh] Error 1

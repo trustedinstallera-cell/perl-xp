@@ -1,0 +1,934 @@
+# CCTYPE=GCC
+# GCCBIN=gcc
+# GCCVER=16.2.0
+# GCCTARGET=i686-w64-mingw32
+# GCCCROSS=
+# WIN64=undef
+# ARCHITECTURE=x86
+# ARCHNAME=MSWin32-x86-multi-thread
+# MAKE=gmake
+..\miniperl.exe -I..\lib ..\make_ext.pl "MAKE=gmake" --dir=..\ext --dir=..\dist --dynaloader
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/DynaLoader'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" DynaLoader_pm.PL DynaLoader.pm 
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e rm_f -- DynaLoader.xs
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e cp -- dl_win32.xs DynaLoader.xs
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp" -noprototypes -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  DynaLoader.xs > DynaLoader.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- DynaLoader.xsc DynaLoader.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -DPERLDLL -Os   -DVERSION=\"1.56\" -DXS_VERSION=\"1.56\"  "-I..\..\lib\CORE"  -DLIBC="-lmsvcrt" DynaLoader.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e rm_rf -- ..\..\DynaLoader.o
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e cp -- DynaLoader.o ..\..\DynaLoader.o
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/DynaLoader'
+..\miniperl.exe -I..\lib ..\make_ext.pl "MAKE=gmake" --dir=..\cpan --dir=..\dist --dir=..\ext lib
+Generating a gmake-style Makefile
+Writing Makefile for lib
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/lib'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" lib_pm.PL lib.pm 
+Extracting lib.pm (with variable substitutions)
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/lib'
+g++ -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -Os  -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" -mconsole -o ..\perlglob.exe perlglob.c  -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32
+cc1plus.exe: warning: command-line option '-std=c99' is valid for C/ObjC but not for C++
+..\miniperl.exe -I..\lib ..\mkppport
+running "D:\perl-xp\perl-5.40.3\miniperl.exe" -I..\..\lib PPPort_pm.PL
+including ppphdoc
+including inctools
+including ppphbin
+including version
+including threads
+including limits
+including variables
+including subparse
+including newCONSTSUB
+including magic_defs
+including misc
+including sv_xpvf
+including SvPV
+including warn
+including format
+including uv
+including memory
+including mess
+including mPUSH
+including call
+including newRV
+including MY_CXT
+including SvREFCNT
+including newSV_type
+including newSVpv
+including Sv_set
+including shared_pv
+including HvNAME
+including gv
+including pvs
+including magic
+including cop
+including grok
+including snprintf
+including sprintf
+including exception
+including strlfuncs
+including utf8
+including pv_tools
+including locale
+running "D:\perl-xp\perl-5.40.3\miniperl.exe" -I..\..\lib ppport_h.PL
+installing ppport.h for cpan/DB_File
+installing ppport.h for cpan/IPC-SysV
+installing ppport.h for cpan/Win32API-File
+installing ppport.h for dist/Data-Dumper
+ppport.h in dist/Devel-PPPort is up-to-date
+installing ppport.h for dist/ExtUtils-ParseXS
+installing ppport.h for dist/IO
+installing ppport.h for dist/PathTools
+installing ppport.h for dist/Storable
+installing ppport.h for dist/threads
+installing ppport.h for dist/threads-shared
+installing ppport.h for dist/Time-HiRes
+installing ppport.h for dist/Unicode-Normalize
+removing temporary file PPPort.pm
+removing temporary file ppport.h
+..\miniperl.exe -I..\lib ..\make_ext.pl "MAKE=gmake" --dir=..\cpan --dir=..\dist --dir=..\ext --dynamic !Unicode/Normalize
+Skipping extension Unicode/Normalize, not ported to current platform at ..\make_ext.pl line 194.
+Generating a gmake-style Makefile
+Writing Makefile for Cwd
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/PathTools'
+Running Mkbootstrap for Cwd ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Cwd.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Cwd.bs ..\..\lib\auto\Cwd\Cwd.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Cwd.xs > Cwd.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- Cwd.xsc Cwd.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"3.91\" -DXS_VERSION=\"3.91\"  "-I..\..\lib\CORE"  -DDOUBLE_SLASHES_SPECIAL=0 Cwd.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Cwd\", 'DLBASE' => 'Cwd', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Cwd.def -o ..\..\lib\auto\Cwd\Cwd.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Cwd.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Cwd\Cwd.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/PathTools'
+Generating a gmake-style Makefile
+Writing Makefile for B
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/B'
+Running Mkbootstrap for B ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "B.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- B.bs ..\..\lib\auto\B\B.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap -typemap D:\perl-xp\perl-5.40.3\ext\B\typemap  B.xs > B.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- B.xsc B.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"1.89\" -DXS_VERSION=\"1.89\"  "-I..\..\lib\CORE"   B.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"B\", 'DLBASE' => 'B', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ B.def -o ..\..\lib\auto\B\B.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" B.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\B\B.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/B'
+Generating a gmake-style Makefile
+Writing Makefile for Compress::Raw::Bzip2
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Bzip2'
+Running Mkbootstrap for Bzip2 ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Bzip2.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Bzip2.bs ..\..\lib\auto\Compress\Raw\Bzip2\Bzip2.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap -typemap D:\perl-xp\perl-5.40.3\cpan\Compress-Raw-Bzip2\typemap  Bzip2.xs > Bzip2.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- Bzip2.xsc Bzip2.c
+gcc -c  -I. -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -Wall -Wno-comment  -DBZ_NO_STDIO  Bzip2.c
+Bzip2.xs: In function 'XS_Compress__Raw__Bzip2_new':
+Bzip2.xs:376:17: warning: variable 'flags' set but not used [-Wunused-but-set-variable=]
+  376 |             int flags = 0 ;
+      |                 ^~~~~
+gcc -c  -I. -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -Wall -Wno-comment  -DBZ_NO_STDIO  blocksort.c
+blocksort.c: In function 'mainSort':
+blocksort.c:765:11: warning: variable 'numQSorted' set but not used [-Wunused-but-set-variable=]
+  765 |    Int32  numQSorted;
+      |           ^~~~~~~~~~
+gcc -c  -I. -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -Wall -Wno-comment  -DBZ_NO_STDIO  bzlib.c
+gcc -c  -I. -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -Wall -Wno-comment  -DBZ_NO_STDIO  compress.c
+compress.c: In function 'sendMTFValues':
+compress.c:247:30: warning: variable 'totc' set but not used [-Wunused-but-set-variable=]
+  247 |    Int32 v, t, i, j, gs, ge, totc, bt, bc, iter;
+      |                              ^~~~
+gcc -c  -I. -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -Wall -Wno-comment  -DBZ_NO_STDIO  crctable.c
+gcc -c  -I. -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -Wall -Wno-comment  -DBZ_NO_STDIO  decompress.c
+gcc -c  -I. -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -Wall -Wno-comment  -DBZ_NO_STDIO  huffman.c
+gcc -c  -I. -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -Wall -Wno-comment  -DBZ_NO_STDIO  randtable.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Compress::Raw::Bzip2\", 'DLBASE' => 'Bzip2', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Bzip2.def -o ..\..\lib\auto\Compress\Raw\Bzip2\Bzip2.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Bzip2.o blocksort.o bzlib.o compress.o crctable.o decompress.o huffman.o randtable.o    "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Compress\Raw\Bzip2\Bzip2.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Bzip2'
+Parsing config.in...
+Building Zlib is enabled
+Auto Detect Gzip OS Code..
+Setting Gzip OS Code to 14 [VFAT file system (Win95, NT)]
+Looks Good.
+Generating a gmake-style Makefile
+Writing Makefile for Compress::Raw::Zlib
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Zlib'
+Running Mkbootstrap for Zlib ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Zlib.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Zlib.bs ..\..\lib\auto\Compress\Raw\Zlib\Zlib.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap -typemap D:\perl-xp\perl-5.40.3\cpan\Compress-Raw-Zlib\typemap  Zlib.xs > Zlib.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- Zlib.xsc Zlib.c
+gcc -c  -I./zlib-src -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -DNO_VIZ -DZ_SOLO   -DZ_PREFIX  -DGZIP_OS_CODE=14  -DPerl_crz_BUILD_ZLIB=1 -Dregister= Zlib.c
+gcc -c  -I./zlib-src -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -DNO_VIZ -DZ_SOLO   -DZ_PREFIX  -DGZIP_OS_CODE=14  -DPerl_crz_BUILD_ZLIB=1 -Dregister= adler32.c
+gcc -c  -I./zlib-src -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -DNO_VIZ -DZ_SOLO   -DZ_PREFIX  -DGZIP_OS_CODE=14  -DPerl_crz_BUILD_ZLIB=1 -Dregister= compress.c
+gcc -c  -I./zlib-src -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -DNO_VIZ -DZ_SOLO   -DZ_PREFIX  -DGZIP_OS_CODE=14  -DPerl_crz_BUILD_ZLIB=1 -Dregister= crc32.c
+gcc -c  -I./zlib-src -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -DNO_VIZ -DZ_SOLO   -DZ_PREFIX  -DGZIP_OS_CODE=14  -DPerl_crz_BUILD_ZLIB=1 -Dregister= deflate.c
+gcc -c  -I./zlib-src -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -DNO_VIZ -DZ_SOLO   -DZ_PREFIX  -DGZIP_OS_CODE=14  -DPerl_crz_BUILD_ZLIB=1 -Dregister= infback.c
+gcc -c  -I./zlib-src -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -DNO_VIZ -DZ_SOLO   -DZ_PREFIX  -DGZIP_OS_CODE=14  -DPerl_crz_BUILD_ZLIB=1 -Dregister= inffast.c
+gcc -c  -I./zlib-src -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -DNO_VIZ -DZ_SOLO   -DZ_PREFIX  -DGZIP_OS_CODE=14  -DPerl_crz_BUILD_ZLIB=1 -Dregister= inflate.c
+gcc -c  -I./zlib-src -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -DNO_VIZ -DZ_SOLO   -DZ_PREFIX  -DGZIP_OS_CODE=14  -DPerl_crz_BUILD_ZLIB=1 -Dregister= inftrees.c
+gcc -c  -I./zlib-src -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -DNO_VIZ -DZ_SOLO   -DZ_PREFIX  -DGZIP_OS_CODE=14  -DPerl_crz_BUILD_ZLIB=1 -Dregister= trees.c
+gcc -c  -I./zlib-src -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -DNO_VIZ -DZ_SOLO   -DZ_PREFIX  -DGZIP_OS_CODE=14  -DPerl_crz_BUILD_ZLIB=1 -Dregister= uncompr.c
+gcc -c  -I./zlib-src -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.212\" -DXS_VERSION=\"2.212\"  "-I..\..\lib\CORE"  -DNO_VIZ -DZ_SOLO   -DZ_PREFIX  -DGZIP_OS_CODE=14  -DPerl_crz_BUILD_ZLIB=1 -Dregister= zutil.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Compress::Raw::Zlib\", 'DLBASE' => 'Zlib', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Zlib.def -o ..\..\lib\auto\Compress\Raw\Zlib\Zlib.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Zlib.o adler32.o compress.o crc32.o deflate.o infback.o inffast.o inflate.o inftrees.o trees.o uncompr.o zutil.o    "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Compress\Raw\Zlib\Zlib.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Compress-Raw-Zlib'
+Generating a gmake-style Makefile
+Writing Makefile for Data::Dumper
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Data-Dumper'
+Running Mkbootstrap for Dumper ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Dumper.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Dumper.bs ..\..\lib\auto\Data\Dumper\Dumper.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Dumper.xs > Dumper.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- Dumper.xsc Dumper.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.189\" -DXS_VERSION=\"2.189\"  "-I..\..\lib\CORE"   Dumper.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Data::Dumper\", 'DLBASE' => 'Dumper', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Dumper.def -o ..\..\lib\auto\Data\Dumper\Dumper.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Dumper.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Data\Dumper\Dumper.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Data-Dumper'
+Setting license tag...
+Adding META_MERGE...
+Generating a gmake-style Makefile
+Writing Makefile for Devel::PPPort
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/Devel-PPPort'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" PPPort_pm.PL PPPort.pm 
+including ppphdoc
+including inctools
+including ppphbin
+including version
+including threads
+including limits
+including variables
+including subparse
+including newCONSTSUB
+including magic_defs
+including misc
+including sv_xpvf
+including SvPV
+including warn
+including format
+including uv
+including memory
+including mess
+including mPUSH
+including call
+including newRV
+including MY_CXT
+including SvREFCNT
+including newSV_type
+including newSVpv
+including Sv_set
+including shared_pv
+including HvNAME
+including gv
+including pvs
+including magic
+including cop
+including grok
+including snprintf
+including sprintf
+including exception
+including strlfuncs
+including utf8
+including pv_tools
+including locale
+Running Mkbootstrap for PPPort ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "PPPort.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- PPPort.bs ..\..\lib\auto\Devel\PPPort\PPPort.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "-I..\..\lib" ppport_h.PL ppport.h 
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "-I..\..\lib" RealPPPort_xs.PL RealPPPort.xs 
+adding XS code from parts\inc\HvNAME
+adding XS code from parts\inc\MY_CXT
+adding XS code from parts\inc\SvPV
+adding XS code from parts\inc\SvREFCNT
+adding XS code from parts\inc\Sv_set
+adding XS code from parts\inc\call
+adding XS code from parts\inc\cop
+adding XS code from parts\inc\exception
+adding XS code from parts\inc\format
+adding XS code from parts\inc\grok
+adding XS code from parts\inc\gv
+adding XS code from parts\inc\limits
+adding XS code from parts\inc\locale
+adding XS code from parts\inc\mPUSH
+adding XS code from parts\inc\magic
+adding XS code from parts\inc\memory
+adding XS code from parts\inc\mess
+adding XS code from parts\inc\misc
+adding XS code from parts\inc\newCONSTSUB
+adding XS code from parts\inc\newRV
+adding XS code from parts\inc\newSV_type
+adding XS code from parts\inc\newSVpv
+adding XS code from parts\inc\pv_tools
+adding XS code from parts\inc\pvs
+adding XS code from parts\inc\shared_pv
+adding XS code from parts\inc\snprintf
+adding XS code from parts\inc\sprintf
+adding XS code from parts\inc\strlfuncs
+adding XS code from parts\inc\sv_xpvf
+adding XS code from parts\inc\threads
+adding XS code from parts\inc\utf8
+adding XS code from parts\inc\uv
+adding XS code from parts\inc\variables
+adding XS code from parts\inc\version
+adding XS code from parts\inc\warn
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp" -noprototypes -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap -typemap D:\perl-xp\perl-5.40.3\dist\Devel-PPPort\typemap  RealPPPort.xs > RealPPPort.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- RealPPPort.xsc RealPPPort.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"3.72\" -DXS_VERSION=\"3.72\"  "-I..\..\lib\CORE"  -W -Wall RealPPPort.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"3.72\" -DXS_VERSION=\"3.72\"  "-I..\..\lib\CORE"  -W -Wall module2.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"3.72\" -DXS_VERSION=\"3.72\"  "-I..\..\lib\CORE"  -W -Wall module3.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Devel::PPPort\", 'DLBASE' => 'PPPort', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ PPPort.def -o ..\..\lib\auto\Devel\PPPort\PPPort.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" RealPPPort.o module2.o module3.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Devel\PPPort\PPPort.dll
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "-I..\..\lib" mktests.PL t\01_test.t 
+generating t/01_test.t
+generating t/HvNAME.t
+generating t/MY_CXT.t
+generating t/SvPV.t
+generating t/SvREFCNT.t
+generating t/Sv_set.t
+generating t/call.t
+generating t/cop.t
+generating t/exception.t
+generating t/format.t
+generating t/grok.t
+generating t/gv.t
+generating t/limits.t
+generating t/locale.t
+generating t/mPUSH.t
+generating t/magic.t
+generating t/memory.t
+generating t/mess.t
+generating t/misc.t
+generating t/newCONSTSUB.t
+generating t/newRV.t
+generating t/newSV_type.t
+generating t/newSVpv.t
+generating t/podtest.t
+generating t/ppphtest.t
+generating t/pv_tools.t
+generating t/pvs.t
+generating t/shared_pv.t
+generating t/snprintf.t
+generating t/sprintf.t
+generating t/strlfuncs.t
+generating t/sv_xpvf.t
+generating t/threads.t
+generating t/utf8.t
+generating t/uv.t
+generating t/variables.t
+generating t/warn.t
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/Devel-PPPort'
+Generating a gmake-style Makefile
+Writing Makefile for Devel::Peek
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Devel-Peek'
+Running Mkbootstrap for Peek ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Peek.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Peek.bs ..\..\lib\auto\Devel\Peek\Peek.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Peek.xs > Peek.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- Peek.xsc Peek.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"1.34\" -DXS_VERSION=\"1.34\"  "-I..\..\lib\CORE"   Peek.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Devel::Peek\", 'DLBASE' => 'Peek', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Peek.def -o ..\..\lib\auto\Devel\Peek\Peek.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Peek.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Devel\Peek\Peek.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Devel-Peek'
+Generating a gmake-style Makefile
+Writing Makefile for Digest::MD5
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-MD5'
+Running Mkbootstrap for MD5 ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "MD5.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- MD5.bs ..\..\lib\auto\Digest\MD5\MD5.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap -typemap D:\perl-xp\perl-5.40.3\cpan\Digest-MD5\typemap  MD5.xs > MD5.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- MD5.xsc MD5.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.58_01\" -DXS_VERSION=\"2.58_01\"  "-I..\..\lib\CORE"   MD5.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Digest::MD5\", 'DLBASE' => 'MD5', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ MD5.def -o ..\..\lib\auto\Digest\MD5\MD5.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" MD5.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Digest\MD5\MD5.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-MD5'
+Generating a gmake-style Makefile
+Writing Makefile for Digest::SHA
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-SHA'
+Running Mkbootstrap for SHA ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "SHA.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- SHA.bs ..\..\lib\auto\Digest\SHA\SHA.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap -typemap D:\perl-xp\perl-5.40.3\cpan\Digest-SHA\typemap  SHA.xs > SHA.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- SHA.xsc SHA.c
+gcc -c  -I. -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"6.04\" -DXS_VERSION=\"6.04\"  "-I..\..\lib\CORE"   SHA.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Digest::SHA\", 'DLBASE' => 'SHA', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ SHA.def -o ..\..\lib\auto\Digest\SHA\SHA.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" SHA.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Digest\SHA\SHA.dll
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e cp -- shasum blib\script\shasum
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -I..\..\cpan\ExtUtils-PL2Bat\lib ..\..\win32\bin\pl2bat.pl blib\script\shasum
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Digest-SHA'
+Generating a gmake-style Makefile
+Writing Makefile for Encode
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Byte'
+Running Mkbootstrap for Byte ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 644 "Byte.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Byte.bs ..\..\..\lib\auto\Encode\Byte\Byte.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -"O" -o byte_t.c -f byte_t.fnm
+Reading iso-8859-2 (iso-8859-2)
+Reading iso-8859-3 (iso-8859-3)
+Reading iso-8859-4 (iso-8859-4)
+Reading iso-8859-5 (iso-8859-5)
+Reading iso-8859-6 (iso-8859-6)
+Reading iso-8859-7 (iso-8859-7)
+Reading iso-8859-8 (iso-8859-8)
+Reading iso-8859-9 (iso-8859-9)
+Reading iso-8859-10 (iso-8859-10)
+Reading iso-8859-11 (iso-8859-11)
+Reading iso-8859-13 (iso-8859-13)
+Reading iso-8859-14 (iso-8859-14)
+Reading iso-8859-15 (iso-8859-15)
+Reading iso-8859-16 (iso-8859-16)
+Reading AdobeStandardEncoding (AdobeStandardEncoding)
+Reading cp1006 (cp1006)
+Reading cp1250 (cp1250)
+Reading cp1251 (cp1251)
+Reading cp1253 (cp1253)
+Reading cp1254 (cp1254)
+Reading cp1255 (cp1255)
+Reading cp1256 (cp1256)
+Reading cp1257 (cp1257)
+Reading cp1258 (cp1258)
+Reading cp424 (cp424)
+Reading cp437 (cp437)
+Reading cp737 (cp737)
+Reading cp775 (cp775)
+Reading cp850 (cp850)
+Reading cp852 (cp852)
+Reading cp855 (cp855)
+Reading cp856 (cp856)
+Reading cp857 (cp857)
+Reading cp858 (cp858)
+Reading cp860 (cp860)
+Reading cp861 (cp861)
+Reading cp862 (cp862)
+Reading cp863 (cp863)
+Reading cp864 (cp864)
+Reading cp865 (cp865)
+Reading cp866 (cp866)
+Reading cp869 (cp869)
+Reading cp874 (cp874)
+Reading hp-roman8 (hp-roman8)
+Reading koi8-f (koi8-f)
+Reading koi8-r (koi8-r)
+Reading koi8-u (koi8-u)
+Reading MacArabic (MacArabic)
+Reading MacCentralEurRoman (MacCentralEurRoman)
+Reading MacCroatian (MacCroatian)
+Reading MacCyrillic (MacCyrillic)
+Reading MacFarsi (MacFarsi)
+Reading MacGreek (MacGreek)
+Reading MacHebrew (MacHebrew)
+Reading MacIcelandic (MacIcelandic)
+Reading MacRomanian (MacRomanian)
+Reading MacRumanian (MacRumanian)
+Reading MacRoman (MacRoman)
+Reading MacSami (MacSami)
+Reading MacThai (MacThai)
+Reading MacTurkish (MacTurkish)
+Reading MacUkrainian (MacUkrainian)
+Reading nextstep (nextstep)
+Reading viscii (viscii)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -nolinenumbers -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Byte.xs > Byte.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e mv -- Byte.xsc Byte.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.04\" -DXS_VERSION=\"2.04\"  "-I..\..\..\lib\CORE"   Byte.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.04\" -DXS_VERSION=\"2.04\"  "-I..\..\..\lib\CORE"   byte_t.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Encode::Byte\", 'DLBASE' => 'Byte', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Byte.def -o ..\..\..\lib\auto\Encode\Byte\Byte.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Byte.o byte_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\Byte\Byte.dll
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Byte'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/CN'
+Running Mkbootstrap for CN ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 644 "CN.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- CN.bs ..\..\..\lib\auto\Encode\CN\CN.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o cp_00_t.c -f cp_00_t.fnm
+Reading cp936 (cp936)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o eu_01_t.c -f eu_01_t.fnm
+Reading euc-cn (euc-cn)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o gb_02_t.c -f gb_02_t.fnm
+Reading gb12345-raw (gb12345-raw)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o gb_03_t.c -f gb_03_t.fnm
+Reading gb2312-raw (gb2312-raw)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o ir_04_t.c -f ir_04_t.fnm
+Reading iso-ir-165 (iso-ir-165)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o ma_05_t.c -f ma_05_t.fnm
+Reading MacChineseSimp (MacChineseSimp)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp" -noprototypes -nolinenumbers -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  CN.xs > CN.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e mv -- CN.xsc CN.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   CN.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   cp_00_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   eu_01_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   gb_02_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   gb_03_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   ir_04_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   ma_05_t.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Encode::CN\", 'DLBASE' => 'CN', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ CN.def -o ..\..\..\lib\auto\Encode\CN\CN.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" CN.o cp_00_t.o eu_01_t.o gb_02_t.o gb_03_t.o ir_04_t.o ma_05_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\CN\CN.dll
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/CN'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/EBCDIC'
+Running Mkbootstrap for EBCDIC ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 644 "EBCDIC.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- EBCDIC.bs ..\..\..\lib\auto\Encode\EBCDIC\EBCDIC.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -"O" -o ebcdic_t.c -f ebcdic_t.fnm
+Reading cp37 (cp37)
+Reading cp1026 (cp1026)
+Reading cp1047 (cp1047)
+Reading cp500 (cp500)
+Reading cp875 (cp875)
+Reading posix-bc (posix-bc)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -nolinenumbers -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  EBCDIC.xs > EBCDIC.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e mv -- EBCDIC.xsc EBCDIC.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.02\" -DXS_VERSION=\"2.02\"  "-I..\..\..\lib\CORE"   EBCDIC.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.02\" -DXS_VERSION=\"2.02\"  "-I..\..\..\lib\CORE"   ebcdic_t.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Encode::EBCDIC\", 'DLBASE' => 'EBCDIC', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ EBCDIC.def -o ..\..\..\lib\auto\Encode\EBCDIC\EBCDIC.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" EBCDIC.o ebcdic_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\EBCDIC\EBCDIC.dll
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/EBCDIC'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/JP'
+Running Mkbootstrap for JP ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 644 "JP.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- JP.bs ..\..\..\lib\auto\Encode\JP\JP.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o cp_00_t.c -f cp_00_t.fnm
+Reading cp932 (cp932)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o eu_01_t.c -f eu_01_t.fnm
+Reading euc-jp (euc-jp)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o ji_02_t.c -f ji_02_t.fnm
+Reading jis0201-raw (jis0201-raw)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o ji_03_t.c -f ji_03_t.fnm
+Reading jis0208-raw (jis0208-raw)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o ji_04_t.c -f ji_04_t.fnm
+Reading jis0212-raw (jis0212-raw)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o ma_05_t.c -f ma_05_t.fnm
+Reading MacJapanese (MacJapanese)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o sh_06_t.c -f sh_06_t.fnm
+Reading shiftjis (shiftjis)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -nolinenumbers -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  JP.xs > JP.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e mv -- JP.xsc JP.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.05\" -DXS_VERSION=\"2.05\"  "-I..\..\..\lib\CORE"   JP.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.05\" -DXS_VERSION=\"2.05\"  "-I..\..\..\lib\CORE"   cp_00_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.05\" -DXS_VERSION=\"2.05\"  "-I..\..\..\lib\CORE"   eu_01_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.05\" -DXS_VERSION=\"2.05\"  "-I..\..\..\lib\CORE"   ji_02_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.05\" -DXS_VERSION=\"2.05\"  "-I..\..\..\lib\CORE"   ji_03_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.05\" -DXS_VERSION=\"2.05\"  "-I..\..\..\lib\CORE"   ji_04_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.05\" -DXS_VERSION=\"2.05\"  "-I..\..\..\lib\CORE"   ma_05_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.05\" -DXS_VERSION=\"2.05\"  "-I..\..\..\lib\CORE"   sh_06_t.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Encode::JP\", 'DLBASE' => 'JP', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ JP.def -o ..\..\..\lib\auto\Encode\JP\JP.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" JP.o cp_00_t.o eu_01_t.o ji_02_t.o ji_03_t.o ji_04_t.o ma_05_t.o sh_06_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\JP\JP.dll
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/JP'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/KR'
+Running Mkbootstrap for KR ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 644 "KR.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- KR.bs ..\..\..\lib\auto\Encode\KR\KR.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o cp_00_t.c -f cp_00_t.fnm
+Reading cp949 (cp949)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o eu_01_t.c -f eu_01_t.fnm
+Reading euc-kr (euc-kr)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o jo_02_t.c -f jo_02_t.fnm
+Reading johab (johab)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o ks_03_t.c -f ks_03_t.fnm
+Reading ksc5601-raw (ksc5601-raw)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o ma_04_t.c -f ma_04_t.fnm
+Reading MacKorean (MacKorean)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -nolinenumbers -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  KR.xs > KR.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e mv -- KR.xsc KR.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   KR.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   cp_00_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   eu_01_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   jo_02_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   ks_03_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   ma_04_t.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Encode::KR\", 'DLBASE' => 'KR', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ KR.def -o ..\..\..\lib\auto\Encode\KR\KR.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" KR.o cp_00_t.o eu_01_t.o jo_02_t.o ks_03_t.o ma_04_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\KR\KR.dll
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/KR'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Symbol'
+Running Mkbootstrap for Symbol ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 644 "Symbol.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Symbol.bs ..\..\..\lib\auto\Encode\Symbol\Symbol.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -"O" -o symbol_t.c -f symbol_t.fnm
+Reading AdobeSymbol (AdobeSymbol)
+Reading AdobeZdingbat (AdobeZdingbat)
+Reading dingbats (dingbats)
+Reading MacDingbats (MacDingbats)
+Reading MacSymbol (MacSymbol)
+Reading symbol (symbol)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -nolinenumbers -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Symbol.xs > Symbol.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e mv -- Symbol.xsc Symbol.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.02\" -DXS_VERSION=\"2.02\"  "-I..\..\..\lib\CORE"   Symbol.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.02\" -DXS_VERSION=\"2.02\"  "-I..\..\..\lib\CORE"   symbol_t.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Encode::Symbol\", 'DLBASE' => 'Symbol', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Symbol.def -o ..\..\..\lib\auto\Encode\Symbol\Symbol.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Symbol.o symbol_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\Symbol\Symbol.dll
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Symbol'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/TW'
+Running Mkbootstrap for TW ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 644 "TW.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- TW.bs ..\..\..\lib\auto\Encode\TW\TW.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o bi_00_t.c -f bi_00_t.fnm
+Reading big5-eten (big5-eten)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o bi_01_t.c -f bi_01_t.fnm
+Reading big5-hkscs (big5-hkscs)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o cp_02_t.c -f cp_02_t.fnm
+Reading cp950 (cp950)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" ..\bin\enc2xs -"Q" -o ma_03_t.c -f ma_03_t.fnm
+Reading MacChineseTrad (MacChineseTrad)
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -nolinenumbers -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  TW.xs > TW.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e mv -- TW.xsc TW.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   TW.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   bi_00_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   bi_01_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   cp_02_t.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.03\" -DXS_VERSION=\"2.03\"  "-I..\..\..\lib\CORE"   ma_03_t.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Encode::TW\", 'DLBASE' => 'TW', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ TW.def -o ..\..\..\lib\auto\Encode\TW\TW.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" TW.o bi_00_t.o bi_01_t.o cp_02_t.o ma_03_t.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\TW\TW.dll
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/TW'
+gmake[2]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Unicode'
+Running Mkbootstrap for Unicode ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 644 "Unicode.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Unicode.bs ..\..\..\lib\auto\Encode\Unicode\Unicode.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Unicode.xs > Unicode.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e mv -- Unicode.xsc Unicode.c
+gcc -c -IEncode  -I../Encode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.20\" -DXS_VERSION=\"2.20\"  "-I..\..\..\lib\CORE"   Unicode.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Encode::Unicode\", 'DLBASE' => 'Unicode', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Unicode.def -o ..\..\..\lib\auto\Encode\Unicode\Unicode.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Unicode.o   "..\..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\..\lib\auto\Encode\Unicode\Unicode.dll
+gmake[2]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode/Unicode'
+Running Mkbootstrap for Encode ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Encode.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Encode.bs ..\..\lib\auto\Encode\Encode.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Encode.xs > Encode.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- Encode.xsc Encode.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" bin\enc2xs -"Q" -"O" -o def_t.c -f def_t.fnm
+Reading iso-8859-1 (iso-8859-1)
+Reading ascii (ascii)
+Reading cp1252 (cp1252)
+Reading ascii-ctrl (ascii-ctrl)
+Reading null (null)
+gcc -c  -IEncode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"3.21\" -DXS_VERSION=\"3.21\"  "-I..\..\lib\CORE"   Encode.c
+gcc -c  -IEncode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"3.21\" -DXS_VERSION=\"3.21\"  "-I..\..\lib\CORE"   def_t.c
+gcc -c  -IEncode -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"3.21\" -DXS_VERSION=\"3.21\"  "-I..\..\lib\CORE"   encengine.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Encode\", 'DLBASE' => 'Encode', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Encode.def -o ..\..\lib\auto\Encode\Encode.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Encode.o def_t.o encengine.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Encode\Encode.dll
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e cp -- bin/enc2xs blib\script\enc2xs
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -I..\..\cpan\ExtUtils-PL2Bat\lib ..\..\win32\bin\pl2bat.pl blib\script\enc2xs
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e cp -- bin/encguess blib\script\encguess
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -I..\..\cpan\ExtUtils-PL2Bat\lib ..\..\win32\bin\pl2bat.pl blib\script\encguess
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e cp -- bin/piconv blib\script\piconv
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -I..\..\cpan\ExtUtils-PL2Bat\lib ..\..\win32\bin\pl2bat.pl blib\script\piconv
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Encode'
+Generating a gmake-style Makefile
+Writing Makefile for Fcntl
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Fcntl'
+Running Mkbootstrap for Fcntl ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Fcntl.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Fcntl.bs ..\..\lib\auto\Fcntl\Fcntl.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp" -noprototypes -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Fcntl.xs > Fcntl.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- Fcntl.xsc Fcntl.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"1.18\" -DXS_VERSION=\"1.18\"  "-I..\..\lib\CORE"   Fcntl.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Fcntl\", 'DLBASE' => 'Fcntl', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Fcntl.def -o ..\..\lib\auto\Fcntl\Fcntl.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Fcntl.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Fcntl\Fcntl.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Fcntl'
+Generating a gmake-style Makefile
+Writing Makefile for File::DosGlob
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/File-DosGlob'
+Running Mkbootstrap for DosGlob ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "DosGlob.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- DosGlob.bs ..\..\lib\auto\File\DosGlob\DosGlob.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  DosGlob.xs > DosGlob.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- DosGlob.xsc DosGlob.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"1.12\" -DXS_VERSION=\"1.12\"  "-I..\..\lib\CORE"   DosGlob.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"File::DosGlob\", 'DLBASE' => 'DosGlob', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ DosGlob.def -o ..\..\lib\auto\File\DosGlob\DosGlob.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" DosGlob.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\File\DosGlob\DosGlob.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/File-DosGlob'
+Generating a gmake-style Makefile
+Writing Makefile for File::Glob
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/File-Glob'
+Running Mkbootstrap for Glob ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Glob.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Glob.bs ..\..\lib\auto\File\Glob\Glob.bs 644
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"1.42\" -DXS_VERSION=\"1.42\"  "-I..\..\lib\CORE"   bsd_glob.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Glob.xs > Glob.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- Glob.xsc Glob.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"1.42\" -DXS_VERSION=\"1.42\"  "-I..\..\lib\CORE"   Glob.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"File::Glob\", 'DLBASE' => 'Glob', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Glob.def -o ..\..\lib\auto\File\Glob\Glob.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" bsd_glob.o Glob.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\File\Glob\Glob.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/File-Glob'
+Generating a gmake-style Makefile
+Writing Makefile for Filter::Util::Call
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Filter-Util-Call'
+Running Mkbootstrap for Call ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Call.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Call.bs ..\..\lib\auto\Filter\Util\Call\Call.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Call.xs > Call.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- Call.xsc Call.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"1.64\" -DXS_VERSION=\"1.64\"  "-I..\..\lib\CORE"   Call.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Filter::Util::Call\", 'DLBASE' => 'Call', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Call.def -o ..\..\lib\auto\Filter\Util\Call\Call.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Call.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Filter\Util\Call\Call.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Filter-Util-Call'
+Generating a gmake-style Makefile
+Writing Makefile for Hash::Util
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util'
+Running Mkbootstrap for Util ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Util.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Util.bs ..\..\lib\auto\Hash\Util\Util.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Util.xs > Util.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- Util.xsc Util.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"0.32\" -DXS_VERSION=\"0.32\"  "-I..\..\lib\CORE"  -DPERL_EXT Util.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Hash::Util\", 'DLBASE' => 'Util', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Util.def -o ..\..\lib\auto\Hash\Util\Util.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Util.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Hash\Util\Util.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util'
+Generating a gmake-style Makefile
+Writing Makefile for Hash::Util::FieldHash
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util-FieldHash'
+Running Mkbootstrap for FieldHash ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "FieldHash.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- FieldHash.bs ..\..\lib\auto\Hash\Util\FieldHash\FieldHash.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  FieldHash.xs > FieldHash.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- FieldHash.xsc FieldHash.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"1.27\" -DXS_VERSION=\"1.27\"  "-I..\..\lib\CORE"   FieldHash.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Hash::Util::FieldHash\", 'DLBASE' => 'FieldHash', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ FieldHash.def -o ..\..\lib\auto\Hash\Util\FieldHash\FieldHash.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" FieldHash.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Hash\Util\FieldHash\FieldHash.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Hash-Util-FieldHash'
+Generating a gmake-style Makefile
+Writing Makefile for I18N::Langinfo
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/I18N-Langinfo'
+Running Mkbootstrap for Langinfo ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Langinfo.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Langinfo.bs ..\..\lib\auto\I18N\Langinfo\Langinfo.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Langinfo.xs > Langinfo.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- Langinfo.xsc Langinfo.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"0.24\" -DXS_VERSION=\"0.24\"  "-I..\..\lib\CORE"   Langinfo.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"I18N::Langinfo\", 'DLBASE' => 'Langinfo', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Langinfo.def -o ..\..\lib\auto\I18N\Langinfo\Langinfo.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Langinfo.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\I18N\Langinfo\Langinfo.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/I18N-Langinfo'
+Generating a gmake-style Makefile
+Writing Makefile for IO
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/dist/IO'
+Running Mkbootstrap for IO ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "IO.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- IO.bs ..\..\lib\auto\IO\IO.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  IO.xs > IO.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- IO.xsc IO.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"1.55\" -DXS_VERSION=\"1.55\"  "-I..\..\lib\CORE"   IO.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"1.55\" -DXS_VERSION=\"1.55\"  "-I..\..\lib\CORE"   poll.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"IO\", 'DLBASE' => 'IO', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ IO.def -o ..\..\lib\auto\IO\IO.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" IO.o poll.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\IO\IO.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/dist/IO'
+Generating a gmake-style Makefile
+Writing Makefile for List::Util
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Scalar-List-Utils'
+Running Mkbootstrap for Util ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Util.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Util.bs ..\..\lib\auto\List\Util\Util.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  ListUtil.xs > ListUtil.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- ListUtil.xsc ListUtil.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"1.63\" -DXS_VERSION=\"1.63\"  "-I..\..\lib\CORE"  -DPERL_EXT ListUtil.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"List::Util\", 'DLBASE' => 'Util', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Util.def -o ..\..\lib\auto\List\Util\Util.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" ListUtil.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\List\Util\Util.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Scalar-List-Utils'
+Generating a gmake-style Makefile
+Writing Makefile for MIME::Base64
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/MIME-Base64'
+Running Mkbootstrap for Base64 ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Base64.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Base64.bs ..\..\lib\auto\MIME\Base64\Base64.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Base64.xs > Base64.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- Base64.xsc Base64.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"3.16_01\" -DXS_VERSION=\"3.16_01\"  "-I..\..\lib\CORE"   Base64.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"MIME::Base64\", 'DLBASE' => 'Base64', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Base64.def -o ..\..\lib\auto\MIME\Base64\Base64.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Base64.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\MIME\Base64\Base64.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/MIME-Base64'
+Generating a gmake-style Makefile
+Writing Makefile for Math::BigInt::FastCalc
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/cpan/Math-BigInt-FastCalc'
+Running Mkbootstrap for FastCalc ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "FastCalc.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- FastCalc.bs ..\..\lib\auto\Math\BigInt\FastCalc\FastCalc.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  FastCalc.xs > FastCalc.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- FastCalc.xsc FastCalc.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"0.5018\" -DXS_VERSION=\"0.5018\"  "-I..\..\lib\CORE"   FastCalc.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Math::BigInt::FastCalc\", 'DLBASE' => 'FastCalc', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ FastCalc.def -o ..\..\lib\auto\Math\BigInt\FastCalc\FastCalc.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" FastCalc.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Math\BigInt\FastCalc\FastCalc.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/cpan/Math-BigInt-FastCalc'
+Generating a gmake-style Makefile
+Writing Makefile for Opcode
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/Opcode'
+Running Mkbootstrap for Opcode ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "Opcode.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- Opcode.bs ..\..\lib\auto\Opcode\Opcode.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp"  -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap  Opcode.xs > Opcode.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- Opcode.xsc Opcode.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"1.65\" -DXS_VERSION=\"1.65\"  "-I..\..\lib\CORE"   Opcode.c
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"Opcode\", 'DLBASE' => 'Opcode', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+g++ Opcode.def -o ..\..\lib\auto\Opcode\Opcode.dll -shared -s -L"c:\perl\lib\CORE" -L"C:\toolchains\w64devkit\lib" -L"C:\toolchains\w64devkit\i686-w64-mingw32\lib" -L"C:\toolchains\w64devkit\lib\gcc\i686-w64-mingw32\16.2.0" Opcode.o   "..\..\lib\CORE\libperl540.a" -lmoldname -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -lnetapi32 -luuid -lws2_32 -lmpr -lwinmm -lversion -lodbc32 -lodbccp32 -lcomctl32 -Wl,--enable-auto-image-base
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 755 ..\..\lib\auto\Opcode\Opcode.dll
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/Opcode'
+Generating a gmake-style Makefile
+Writing Makefile for POSIX
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/POSIX'
+Running Mkbootstrap for POSIX ()
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e chmod -- 644 "POSIX.bs"
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- POSIX.bs ..\..\lib\auto\POSIX\POSIX.bs 644
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" "D:\perl-xp\perl-5.40.3\dist\ExtUtils-ParseXS\lib\ExtUtils/xsubpp" -noprototypes -typemap D:\perl-xp\perl-5.40.3\lib\ExtUtils\typemap -typemap D:\perl-xp\perl-5.40.3\ext\POSIX\typemap  POSIX.xs > POSIX.xsc
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command -e mv -- POSIX.xsc POSIX.c
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.20\" -DXS_VERSION=\"2.20\"  "-I..\..\lib\CORE"   POSIX.c
+POSIX.xs: In function 'fix_win32_tzenv':
+POSIX.xs:1725:13: error: implicit declaration of function 'putenv'; did you mean '_putenv'? [-Wimplicit-function-declaration]
+ 1725 |             putenv(newenv);
+      |             ^~~~~~
+      |             _putenv
+POSIX.xs: In function 'XS_POSIX_acos':
+POSIX.xs:604:23: error: implicit declaration of function 'j0'; did you mean '_j0'? [-Wimplicit-function-declaration]
+  604 | #    define bessel_j0 j0
+      |                       ^~
+POSIX.xs:2196:22: note: in expansion of macro 'bessel_j0'
+ 2196 |             RETVAL = bessel_j0(x);
+      |                      ^~~~~~~~~
+POSIX.xs:605:23: error: implicit declaration of function 'j1'; did you mean '_j1'? [-Wimplicit-function-declaration]
+  605 | #    define bessel_j1 j1
+      |                       ^~
+POSIX.xs:2203:22: note: in expansion of macro 'bessel_j1'
+ 2203 |             RETVAL = bessel_j1(x);
+      |                      ^~~~~~~~~
+POSIX.xs:607:23: error: implicit declaration of function 'y0'; did you mean '_y0'? [-Wimplicit-function-declaration]
+  607 | #    define bessel_y0 y0
+      |                       ^~
+POSIX.xs:2290:22: note: in expansion of macro 'bessel_y0'
+ 2290 |             RETVAL = bessel_y0(x);
+      |                      ^~~~~~~~~
+POSIX.xs:608:23: error: implicit declaration of function 'y1'; did you mean '_y1'? [-Wimplicit-function-declaration]
+  608 | #    define bessel_y1 y1
+      |                       ^~
+POSIX.xs:2298:22: note: in expansion of macro 'bessel_y1'
+ 2298 |             RETVAL = bessel_y1(x);
+      |                      ^~~~~~~~~
+In file included from POSIX.xs:11:
+POSIX.xs: In function 'XS_POSIX_fpclassify':
+..\..\lib\CORE/perl.h:2794:33: error: implicit declaration of function 'finite'; did you mean '_finite'? [-Wimplicit-function-declaration]
+ 2794 | #       define Perl_isfinite(x) finite(x)
+      |                                 ^~~~~~
+POSIX.xs:2413:22: note: in expansion of macro 'Perl_isfinite'
+ 2413 |             RETVAL = Perl_isfinite(x);
+      |                      ^~~~~~~~~~~~~
+POSIX.xs: In function 'XS_POSIX_jn':
+POSIX.xs:606:23: error: implicit declaration of function 'jn'; did you mean '_jn'? [-Wimplicit-function-declaration]
+  606 | #    define bessel_jn jn
+      |                       ^~
+POSIX.xs:2766:20: note: in expansion of macro 'bessel_jn'
+ 2766 |           RETVAL = bessel_jn(x, y);
+      |                    ^~~~~~~~~
+POSIX.xs:609:23: error: implicit declaration of function 'yn'; did you mean '_yn'? [-Wimplicit-function-declaration]
+  609 | #    define bessel_yn yn
+      |                       ^~
+POSIX.xs:2776:20: note: in expansion of macro 'bessel_yn'
+ 2776 |           RETVAL = bessel_yn(x, y);
+      |                    ^~~~~~~~~
+gmake[1]: *** [Makefile:335: POSIX.o] Error 1
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/POSIX'
+gmake[1]: Entering directory 'D:/perl-xp/perl-5.40.3/ext/POSIX'
+"D:\perl-xp\perl-5.40.3\miniperl.exe" "-I..\..\lib" -MExtUtils::Command::MM -e cp_nonempty -- POSIX.bs ..\..\lib\auto\POSIX\POSIX.bs 644
+gcc -c   -D_WIN32_WINNT=0x0501 -DWINVER=0x0501 -D_WIN32_WINDOWS=0x0501 -march=pentium4 -std=c99 -DWIN32 -DPERL_TEXTMODE_SCRIPTS -DMULTIPLICITY -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D__USE_MINGW_ANSI_STDIO -fwrapv -fno-strict-aliasing -mms-bitfields -Os   -DVERSION=\"2.20\" -DXS_VERSION=\"2.20\"  "-I..\..\lib\CORE"   POSIX.c
+POSIX.xs: In function 'fix_win32_tzenv':
+POSIX.xs:1725:13: error: implicit declaration of function 'putenv'; did you mean '_putenv'? [-Wimplicit-function-declaration]
+ 1725 |             putenv(newenv);
+      |             ^~~~~~
+      |             _putenv
+POSIX.xs: In function 'XS_POSIX_acos':
+POSIX.xs:604:23: error: implicit declaration of function 'j0'; did you mean '_j0'? [-Wimplicit-function-declaration]
+  604 | #    define bessel_j0 j0
+      |                       ^~
+POSIX.xs:2196:22: note: in expansion of macro 'bessel_j0'
+ 2196 |             RETVAL = bessel_j0(x);
+      |                      ^~~~~~~~~
+POSIX.xs:605:23: error: implicit declaration of function 'j1'; did you mean '_j1'? [-Wimplicit-function-declaration]
+  605 | #    define bessel_j1 j1
+      |                       ^~
+POSIX.xs:2203:22: note: in expansion of macro 'bessel_j1'
+ 2203 |             RETVAL = bessel_j1(x);
+      |                      ^~~~~~~~~
+POSIX.xs:607:23: error: implicit declaration of function 'y0'; did you mean '_y0'? [-Wimplicit-function-declaration]
+  607 | #    define bessel_y0 y0
+      |                       ^~
+POSIX.xs:2290:22: note: in expansion of macro 'bessel_y0'
+ 2290 |             RETVAL = bessel_y0(x);
+      |                      ^~~~~~~~~
+POSIX.xs:608:23: error: implicit declaration of function 'y1'; did you mean '_y1'? [-Wimplicit-function-declaration]
+  608 | #    define bessel_y1 y1
+      |                       ^~
+POSIX.xs:2298:22: note: in expansion of macro 'bessel_y1'
+ 2298 |             RETVAL = bessel_y1(x);
+      |                      ^~~~~~~~~
+In file included from POSIX.xs:11:
+POSIX.xs: In function 'XS_POSIX_fpclassify':
+..\..\lib\CORE/perl.h:2794:33: error: implicit declaration of function 'finite'; did you mean '_finite'? [-Wimplicit-function-declaration]
+ 2794 | #       define Perl_isfinite(x) finite(x)
+      |                                 ^~~~~~
+POSIX.xs:2413:22: note: in expansion of macro 'Perl_isfinite'
+ 2413 |             RETVAL = Perl_isfinite(x);
+      |                      ^~~~~~~~~~~~~
+POSIX.xs: In function 'XS_POSIX_jn':
+POSIX.xs:606:23: error: implicit declaration of function 'jn'; did you mean '_jn'? [-Wimplicit-function-declaration]
+  606 | #    define bessel_jn jn
+      |                       ^~
+POSIX.xs:2766:20: note: in expansion of macro 'bessel_jn'
+ 2766 |           RETVAL = bessel_jn(x, y);
+      |                    ^~~~~~~~~
+POSIX.xs:609:23: error: implicit declaration of function 'yn'; did you mean '_yn'? [-Wimplicit-function-declaration]
+  609 | #    define bessel_yn yn
+      |                       ^~
+POSIX.xs:2776:20: note: in expansion of macro 'bessel_yn'
+ 2776 |           RETVAL = bessel_yn(x, y);
+      |                    ^~~~~~~~~
+gmake[1]: *** [Makefile:335: POSIX.o] Error 1
+gmake[1]: Leaving directory 'D:/perl-xp/perl-5.40.3/ext/POSIX'
+Unsuccessful make(ext/POSIX): code=512 at ..\make_ext.pl line 584.
+make: *** [GNUmakefile:1561: Extensions] Error 2

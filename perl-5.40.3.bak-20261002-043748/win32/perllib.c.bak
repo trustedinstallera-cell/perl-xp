@@ -1,0 +1,73 @@
+/*
+ * perllib.c - adapted for perl 5.40 static link
+ */
+
+#define PERLIO_NOT_STDIO 0
+#include "EXTERN.h"
+#include "perl.h"
+#include "XSUB.h"
+
+/* perl_alloc_using - declared in proto.h with 9 IPerl* args */
+/* We need extern "C" to avoid C++ name mangling */
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Forward declare if not already visible */
+PerlInterpreter* perl_alloc_using(void* p1, void* p2, void* p3, void* p4,
+                                  void* p5, void* p6, void* p7, void* p8, void* p9);
+
+#ifdef __cplusplus
+}
+#endif
+
+const char * const staticlinkmodules[] = {
+    "DynaLoader",
+    NULL,
+};
+
+EXTERN_C void boot_DynaLoader (pTHX_ CV* cv);
+
+static void
+xs_init(pTHX)
+{
+    const char *file = __FILE__;
+    newXS("DynaLoader::boot_DynaLoader", boot_DynaLoader, file);
+}
+
+EXTERN_C HANDLE w32_perldll_handle;
+
+EXTERN_C DllExport int
+RunPerl(int argc, char **argv, char **env)
+{
+    int exitstatus;
+    PerlInterpreter *my_perl;
+
+    Perl_sys_init(&argc, &argv);
+
+    /* perl_alloc_using with NULL IPerl* args - minimal host */
+    my_perl = perl_alloc_using(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+    if (!my_perl) {
+        Perl_sys_term();
+        return 1;
+    }
+
+    perl_construct(my_perl);
+    PL_exit_flags |= PERL_EXIT_DESTRUCT_END;
+
+    if (!perl_parse(my_perl, xs_init, argc, argv, env)) {
+        (void) perl_run(my_perl);
+    }
+
+    exitstatus = perl_destruct(my_perl);
+    perl_free(my_perl);
+    Perl_sys_term();
+
+    return exitstatus;
+}
+
+BOOL APIENTRY
+DllMain(HINSTANCE hModule, DWORD fdwReason, LPVOID lpvReserved)
+{
+    return TRUE;
+}

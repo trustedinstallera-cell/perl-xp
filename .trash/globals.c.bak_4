@@ -1,0 +1,36 @@
+/*    globals.c
+ *
+ *    Copyright (C) 1995, 1999, 2000, 2001, 2008 by Larry Wall and others
+ */
+
+#include "INTERN.h"
+#define PERL_IN_GLOBALS_C
+#include "perl.h"
+
+#include "regcomp.h"
+
+/* ========== perlvars.h: G-prefix (3 and 4 arg forms) ========== */
+#undef PERLVAR
+#undef PERLVARI
+#undef PERLVARIC
+
+#define PERLVAR(gprefix, name, type)            type PL_##name;
+#define PERLVARI(gprefix, name, type, init)     type PL_##name;
+#define PERLVARIC(gprefix, name, type, init, cond) type PL_##name;
+
+#include "perlvars.h"
+
+/* ========== intrpvar.h: I-prefix (3 and 4 arg forms) ========== */
+#undef PERLVAR
+#undef PERLVARI
+#undef PERLVARIC
+
+#define PERLVAR(iprefix, name, type)            type PL_##name;
+#define PERLVARI(iprefix, name, type, init)     type PL_##name;
+#define PERLVARIC(iprefix, name, type, init, cond) type PL_##name;
+
+#include "intrpvar.h"
+
+#if defined(USE_ITHREADS) && defined(PERL_THREAD_LOCAL)
+PERL_THREAD_LOCAL void *PL_current_context;
+#endif

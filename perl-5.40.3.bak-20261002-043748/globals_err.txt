@@ -1,0 +1,930 @@
+globals.c:10:9: warning: 'PERL_IN_GLOBALS_C' redefined
+   10 | #define PERL_IN_GLOBALS_C
+      |         ^~~~~~~~~~~~~~~~~
+<command-line>: note: this is the location of the previous definition
+In file included from perl.h:3329,
+                 from globals.c:11:
+handy.h:1609:15: warning: 'PL_charclass' initialized and declared 'extern'
+ 1609 | EXTCONST  U32 PL_charclass[] = {
+      |               ^~~~~~~~~~~~
+In file included from regexp.h:21,
+                 from perl.h:4542:
+utf8.h:207:24: warning: 'PL_utf8skip' initialized and declared 'extern'
+  207 | EXTCONST unsigned char PL_utf8skip[] = {
+      |                        ^~~~~~~~~~~
+perl.h:5389:15: warning: 'PL_warn_uninit' initialized and declared 'extern'
+ 5389 | EXTCONST char PL_warn_uninit[]
+      |               ^~~~~~~~~~~~~~
+perl.h:5391:15: warning: 'PL_warn_uninit_sv' initialized and declared 'extern'
+ 5391 | EXTCONST char PL_warn_uninit_sv[]
+      |               ^~~~~~~~~~~~~~~~~
+perl.h:5393:15: warning: 'PL_warn_nosemi' initialized and declared 'extern'
+ 5393 | EXTCONST char PL_warn_nosemi[]
+      |               ^~~~~~~~~~~~~~
+perl.h:5395:15: warning: 'PL_warn_reserved' initialized and declared 'extern'
+ 5395 | EXTCONST char PL_warn_reserved[]
+      |               ^~~~~~~~~~~~~~~~
+perl.h:5397:15: warning: 'PL_warn_nl' initialized and declared 'extern'
+ 5397 | EXTCONST char PL_warn_nl[]
+      |               ^~~~~~~~~~
+perl.h:5399:15: warning: 'PL_no_wrongref' initialized and declared 'extern'
+ 5399 | EXTCONST char PL_no_wrongref[]
+      |               ^~~~~~~~~~~~~~
+perl.h:5403:15: warning: 'PL_no_symref' initialized and declared 'extern'
+ 5403 | EXTCONST char PL_no_symref[] __attribute__deprecated__
+      |               ^~~~~~~~~~~~
+perl.h:5405:15: warning: 'PL_no_symref_sv' initialized and declared 'extern'
+ 5405 | EXTCONST char PL_no_symref_sv[]
+      |               ^~~~~~~~~~~~~~~
+perl.h:5408:15: warning: 'PL_no_usym' initialized and declared 'extern'
+ 5408 | EXTCONST char PL_no_usym[]
+      |               ^~~~~~~~~~
+perl.h:5410:15: warning: 'PL_no_aelem' initialized and declared 'extern'
+ 5410 | EXTCONST char PL_no_aelem[]
+      |               ^~~~~~~~~~~
+perl.h:5412:15: warning: 'PL_no_helem_sv' initialized and declared 'extern'
+ 5412 | EXTCONST char PL_no_helem_sv[]
+      |               ^~~~~~~~~~~~~~
+perl.h:5414:15: warning: 'PL_no_modify' initialized and declared 'extern'
+ 5414 | EXTCONST char PL_no_modify[]
+      |               ^~~~~~~~~~~~
+perl.h:5416:15: warning: 'PL_no_security' initialized and declared 'extern'
+ 5416 | EXTCONST char PL_no_security[]
+      |               ^~~~~~~~~~~~~~
+perl.h:5418:15: warning: 'PL_no_sock_func' initialized and declared 'extern'
+ 5418 | EXTCONST char PL_no_sock_func[]
+      |               ^~~~~~~~~~~~~~~
+perl.h:5420:15: warning: 'PL_no_dir_func' initialized and declared 'extern'
+ 5420 | EXTCONST char PL_no_dir_func[]
+      |               ^~~~~~~~~~~~~~
+perl.h:5422:15: warning: 'PL_no_func' initialized and declared 'extern'
+ 5422 | EXTCONST char PL_no_func[]
+      |               ^~~~~~~~~~
+perl.h:5424:15: warning: 'PL_no_myglob' initialized and declared 'extern'
+ 5424 | EXTCONST char PL_no_myglob[]
+      |               ^~~~~~~~~~~~
+perl.h:5426:15: warning: 'PL_no_localize_ref' initialized and declared 'extern'
+ 5426 | EXTCONST char PL_no_localize_ref[]
+      |               ^~~~~~~~~~~~~~~~~~
+perl.h:5428:15: warning: 'PL_memory_wrap' initialized and declared 'extern'
+ 5428 | EXTCONST char PL_memory_wrap[]
+      |               ^~~~~~~~~~~~~~
+perl.h:5430:15: warning: 'PL_extended_cp_format' initialized and declared 'extern'
+ 5430 | EXTCONST char PL_extended_cp_format[]
+      |               ^~~~~~~~~~~~~~~~~~~~~
+perl.h:5433:15: warning: 'PL_Yes' initialized and declared 'extern'
+ 5433 | EXTCONST char PL_Yes[]
+      |               ^~~~~~
+perl.h:5435:15: warning: 'PL_No' initialized and declared 'extern'
+ 5435 | EXTCONST char PL_No[]
+      |               ^~~~~
+perl.h:5437:15: warning: 'PL_Zero' initialized and declared 'extern'
+ 5437 | EXTCONST char PL_Zero[]
+      |               ^~~~~~~
+perl.h:5455:15: warning: 'PL_hexdigit' initialized and declared 'extern'
+ 5455 | EXTCONST char PL_hexdigit[]
+      |               ^~~~~~~~~~~
+perl.h:5458:10: warning: 'PL_WARN_ALL' initialized and declared 'extern'
+ 5458 | EXT char PL_WARN_ALL
+      |          ^~~~~~~~~~~
+perl.h:5460:10: warning: 'PL_WARN_NONE' initialized and declared 'extern'
+ 5460 | EXT char PL_WARN_NONE
+      |          ^~~~~~~~~~~~
+perl.h:5465:15: warning: 'PL_sh_path' initialized and declared 'extern'
+ 5465 | EXTCONST char PL_sh_path[]
+      |               ^~~~~~~~~~
+perl.h:5479:13: warning: 'PL_revision' initialized and declared 'extern'
+ 5479 | EXTCONST U8 PL_revision
+      |             ^~~~~~~~~~~
+perl.h:5481:13: warning: 'PL_version' initialized and declared 'extern'
+ 5481 | EXTCONST U8 PL_version
+      |             ^~~~~~~~~~
+perl.h:5483:13: warning: 'PL_subversion' initialized and declared 'extern'
+ 5483 | EXTCONST U8 PL_subversion
+      |             ^~~~~~~~~~~~~
+perl.h:5486:15: warning: 'PL_uuemap' initialized and declared 'extern'
+ 5486 | EXTCONST char PL_uuemap[65]
+      |               ^~~~~~~~~
+perl.h:5492:15: warning: 'PL_isa_DOES' initialized and declared 'extern'
+ 5492 | EXTCONST char PL_isa_DOES[]
+      |               ^~~~~~~~~~~
+perl.h:5496:15: warning: 'PL_uudmap' initialized and declared 'extern'
+ 5496 | EXTCONST char PL_uudmap[256] =
+      |               ^~~~~~~~~
+perl.h:5499:15: warning: 'PL_bitcount' initialized and declared 'extern'
+ 5499 | EXTCONST char PL_bitcount[256] =
+      |               ^~~~~~~~~~~
+perl.h:5502:22: warning: 'PL_sig_name' initialized and declared 'extern'
+ 5502 | EXTCONST char* const PL_sig_name[] = { SIG_NAME };
+      |                      ^~~~~~~~~~~
+perl.h:5503:22: warning: 'PL_sig_num' initialized and declared 'extern'
+ 5503 | EXTCONST int         PL_sig_num[]  = { SIG_NUM };
+      |                      ^~~~~~~~~~
+perl.h:5521:25: warning: 'PL_fold' initialized and declared 'extern'
+ 5521 | EXTCONST  unsigned char PL_fold[] = {
+      |                         ^~~~~~~
+perl.h:5556:25: warning: 'PL_fold_latin1' initialized and declared 'extern'
+ 5556 | EXTCONST  unsigned char PL_fold_latin1[] = {
+      |                         ^~~~~~~~~~~~~~
+perl.h:5602:25: warning: 'PL_latin1_lc' initialized and declared 'extern'
+ 5602 | EXTCONST  unsigned char PL_latin1_lc[] = {  /* lowercasing */
+      |                         ^~~~~~~~~~~~
+perl.h:5639:25: warning: 'PL_mod_latin1_uc' initialized and declared 'extern'
+ 5639 | EXTCONST  unsigned char PL_mod_latin1_uc[] = {
+      |                         ^~~~~~~~~~~~~~~~
+perl.h:5694:22: warning: 'PL_block_type' initialized and declared 'extern'
+ 5694 | EXTCONST char* const PL_block_type[] = {
+      |                      ^~~~~~~~~~~~~
+perl.h:5720:15: warning: 'PL_bincompat_options' initialized and declared 'extern'
+ 5720 | EXTCONST char PL_bincompat_options[] =
+      |               ^~~~~~~~~~~~~~~~~~~~
+perl.h:5848:22: warning: 'PL_phase_names' initialized and declared 'extern'
+ 5848 | EXTCONST char *const PL_phase_names[] = {
+      |                      ^~~~~~~~~~~~~~
+In file included from perl.h:6189:
+opcode.h:148:22: warning: 'PL_op_name' initialized and declared 'extern'
+  148 | EXTCONST char* const PL_op_name[] INIT({
+      |                      ^~~~~~~~~~
+opcode.h:574:22: warning: 'PL_op_desc' initialized and declared 'extern'
+  574 | EXTCONST char* const PL_op_desc[] INIT({
+      |                      ^~~~~~~~~~
+opcode.h:1004:19: warning: 'PL_ppaddr' initialized and declared 'extern'
+ 1004 | EXT Perl_ppaddr_t PL_ppaddr[] /* or perlvars.h */
+      |                   ^~~~~~~~~
+opcode.h:1430:18: warning: 'PL_check' initialized and declared 'extern'
+ 1430 | EXT Perl_check_t PL_check[] /* or perlvars.h */
+      |                  ^~~~~~~~
+opcode.h:1856:14: warning: 'PL_opargs' initialized and declared 'extern'
+ 1856 | EXTCONST U32 PL_opargs[] INIT({
+      |              ^~~~~~~~~
+opcode.h:2430:15: warning: 'PL_op_private_labels' initialized and declared 'extern'
+ 2430 | EXTCONST char PL_op_private_labels[] = {
+      |               ^~~~~~~~~~~~~~~~~~~~
+opcode.h:2555:14: warning: 'PL_op_private_bitfields' initialized and declared 'extern'
+ 2555 | EXTCONST I16 PL_op_private_bitfields[] = {
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+opcode.h:2574:15: warning: 'PL_op_private_bitdef_ix' initialized and declared 'extern'
+ 2574 | EXTCONST I16  PL_op_private_bitdef_ix[] = {
+      |               ^~~~~~~~~~~~~~~~~~~~~~~
+opcode.h:3014:15: warning: 'PL_op_private_bitdefs' initialized and declared 'extern'
+ 3014 | EXTCONST U16  PL_op_private_bitdefs[] = {
+      |               ^~~~~~~~~~~~~~~~~~~~~
+opcode.h:3104:13: warning: 'PL_op_private_valid' initialized and declared 'extern'
+ 3104 | EXTCONST U8 PL_op_private_valid[] = {
+      |             ^~~~~~~~~~~~~~~~~~~
+perl.h:6204:50: warning: 'PL_tmps_ix' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:48:1: note: in expansion of macro 'PERLVARI'
+   48 | PERLVARI(I, tmps_ix,    SSize_t,        -1)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_tmps_floor' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:49:1: note: in expansion of macro 'PERLVARI'
+   49 | PERLVARI(I, tmps_floor, SSize_t,        -1)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_sub_generation' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:57:1: note: in expansion of macro 'PERLVARI'
+   57 | PERLVARI(I, sub_generation, U32, 1)     /* incr to invalidate method cache */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_hash_rand_bits_enabled' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:61:1: note: in expansion of macro 'PERLVARI'
+   61 | PERLVARI(I, hash_rand_bits_enabled, U8, 1) /* used to randomize hash stuff
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_hash_rand_bits' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:66:1: note: in expansion of macro 'PERLVARI'
+   66 | PERLVARI(I, hash_rand_bits, UV, 0)      /* used to randomize hash stuff */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_tainted' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:78:1: note: in expansion of macro 'PERLVARI'
+   78 | PERLVARI(I, tainted,    bool, FALSE)    /* using variables controlled by $< */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_utf8cache' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:117:1: note: in expansion of macro 'PERLVARI'
+  117 | PERLVARI(I, utf8cache, I8, PERL___I)    /* Is the utf8 caching code enabled? */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_reg_curpm' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:182:1: note: in expansion of macro 'PERLVARI'
+  182 | PERLVARI(I, reg_curpm, PMOP*, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_regmatch_slab' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:188:1: note: in expansion of macro 'PERLVARI'
+  188 | PERLVARI(I, regmatch_slab, regmatch_slab *,     NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_statname' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:279:1: note: in expansion of macro 'PERLVARI'
+  279 | PERLVARI(I, statname,   SV *,   NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_chopset' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:316:1: note: in expansion of macro 'PERLVARI'
+  316 | PERLVARI(I, chopset,    const char *, " \n-")   /* $: */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_errors' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:327:1: note: in expansion of macro 'PERLVARI'
+  327 | PERLVARI(I, errors,     SV *,   NULL)   /* outstanding queued errors */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_dumpindent' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:344:1: note: in expansion of macro 'PERLVARI'
+  344 | PERLVARI(I, dumpindent, U16,    4)      /* number of blanks per dump
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_in_utf8_CTYPE_locale' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:398:1: note: in expansion of macro 'PERLVARI'
+  398 | PERLVARI(I, in_utf8_CTYPE_locale, bool, false)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_in_utf8_turkic_locale' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:399:1: note: in expansion of macro 'PERLVARI'
+  399 | PERLVARI(I, in_utf8_turkic_locale, bool, false)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_peepp' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:430:1: note: in expansion of macro 'PERLVARI'
+  430 | PERLVARI(I, peepp,      peep_t, Perl_peep)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_rpeepp' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:459:1: note: in expansion of macro 'PERLVARI'
+  459 | PERLVARI(I, rpeepp,     peep_t, Perl_rpeep)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_opfreehook' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:478:1: note: in expansion of macro 'PERLVARI'
+  478 | PERLVARI(I, opfreehook, Perl_ophook_t, 0) /* op_free() hook */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_watchaddr' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:480:1: note: in expansion of macro 'PERLVARI'
+  480 | PERLVARI(I, watchaddr,  char **, 0)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_xsubfilename' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:496:1: note: in expansion of macro 'PERLVARI'
+  496 | PERLVARI(I, xsubfilename, const char *, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_hook__require__before' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:500:1: note: in expansion of macro 'PERLVARI'
+  500 | PERLVARI(I, hook__require__before, SV *,NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_hook__require__after' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:501:1: note: in expansion of macro 'PERLVARI'
+  501 | PERLVARI(I, hook__require__after, SV *,NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_splitstr' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:506:1: note: in expansion of macro 'PERLVARI'
+  506 | PERLVARI(I, splitstr,   char *, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_maxsysfd' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:522:1: note: in expansion of macro 'PERLVARI'
+  522 | PERLVARI(I, maxsysfd,   I32,    MAXSYSFD)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_sig_pending' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:531:1: note: in expansion of macro 'PERLVARI'
+  531 | PERLVARI(I, sig_pending, int, 0)        /* Number if highest signal pending */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_op_mask' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:608:1: note: in expansion of macro 'PERLVARI'
+  608 | PERLVARI(I, op_mask,    char *, NULL)   /* masked operations for safe evals */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_curcopdb' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:618:1: note: in expansion of macro 'PERLVARI'
+  618 | PERLVARI(I, curcopdb,   COP *,  NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_gensym' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:635:1: note: in expansion of macro 'PERLVARI'
+  635 | PERLVARI(I, gensym,     I32,    0)      /* next symbol for getsym() to define */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_cv_has_eval' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:636:1: note: in expansion of macro 'PERLVARI'
+  636 | PERLVARI(I, cv_has_eval, bool, FALSE)   /* PL_compcv includes an entereval or similar */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_laststype' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:638:1: note: in expansion of macro 'PERLVARI'
+  638 | PERLVARI(I, laststype,  U16,    OP_STAT)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_laststatval' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:640:1: note: in expansion of macro 'PERLVARI'
+  640 | PERLVARI(I, laststatval, int,   -1)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_exitlistlen' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:646:1: note: in expansion of macro 'PERLVARI'
+  646 | PERLVARI(I, exitlistlen, I32, 0)        /* length of same */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_exitlist' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:647:1: note: in expansion of macro 'PERLVARI'
+  647 | PERLVARI(I, exitlist,   PerlExitListEntry *, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_profiledata' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:670:1: note: in expansion of macro 'PERLVARI'
+  670 | PERLVARI(I, profiledata, U32 *, NULL)   /* table of ops, counts */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_generation' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:686:1: note: in expansion of macro 'PERLVARI'
+  686 | PERLVARI(I, generation, int,    100)    /* scan sequence# for OP_AASSIGN
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_in_clean_objs' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:691:1: note: in expansion of macro 'PERLVARI'
+  691 | PERLVARI(I, in_clean_objs,bool,    FALSE)       /* from sv.c */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_in_clean_all' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:692:1: note: in expansion of macro 'PERLVARI'
+  692 | PERLVARI(I, in_clean_all, bool,    FALSE)       /* ptrs to freed SVs now legal */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_savebegin' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:694:1: note: in expansion of macro 'PERLVARI'
+  694 | PERLVARI(I, savebegin,  bool,   FALSE)  /* save BEGINs for compiler     */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_an' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:701:1: note: in expansion of macro 'PERLVARI'
+  701 | PERLVARI(I, an,         U32,    0)      /* malloc sequence number */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_breakable_sub_gen' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:704:1: note: in expansion of macro 'PERLVARI'
+  704 | PERLVARI(I, breakable_sub_gen, U32, 0)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_cop_seqmax' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:712:1: note: in expansion of macro 'PERLVARI'
+  712 | PERLVARI(I, cop_seqmax, U32,    PERL_COP_SEQMAX) /* statement sequence number */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_evalseq' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:715:1: note: in expansion of macro 'PERLVARI'
+  715 | PERLVARI(I, evalseq,    U32,    0)      /* eval sequence number */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_padlist_generation' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:732:1: note: in expansion of macro 'PERLVARI'
+  732 | PERLVARI(I, padlist_generation, U32, 1) /* id to identify padlist clones */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_runops' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:734:1: note: in expansion of macro 'PERLVARI'
+  734 | PERLVARI(I, runops,     runops_proc_t, RUNOPS_DEFAULT)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_collxfrm_mult' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:769:1: note: in expansion of macro 'PERLVARI'
+  769 | PERLVARI(I, collxfrm_mult,Size_t, 0)    /* Expansion factor in *xfrm();
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_collation_ix' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:777:1: note: in expansion of macro 'PERLVARI'
+  777 | PERLVARI(I, collation_ix, PERL_UINTMAX_T, 0)    /* Collation generation index */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_strxfrm_NUL_replacement' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:778:1: note: in expansion of macro 'PERLVARI'
+  778 | PERLVARI(I, strxfrm_NUL_replacement, U8, 0)  /* Code point to replace NULs */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_strxfrm_is_behaved' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:779:1: note: in expansion of macro 'PERLVARI'
+  779 | PERLVARI(I, strxfrm_is_behaved, bool, TRUE)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_strxfrm_max_cp' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:781:1: note: in expansion of macro 'PERLVARI'
+  781 | PERLVARI(I, strxfrm_max_cp, U8, 0)      /* Highest collating cp in locale */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_collation_standard' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:782:1: note: in expansion of macro 'PERLVARI'
+  782 | PERLVARI(I, collation_standard, bool, TRUE)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_langinfo_sv' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:787:1: note: in expansion of macro 'PERLVARI'
+  787 | PERLVARI(I, langinfo_sv, SV *, NULL)         /* For Perl_langinfo8? */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_scratch_langinfo' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:788:1: note: in expansion of macro 'PERLVARI'
+  788 | PERLVARI(I, scratch_langinfo, SV *, NULL)     /* For internal use */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_setlocale_buf' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:789:1: note: in expansion of macro 'PERLVARI'
+  789 | PERLVARI(I, setlocale_buf, char *, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_setlocale_bufsize' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:790:1: note: in expansion of macro 'PERLVARI'
+  790 | PERLVARI(I, setlocale_bufsize, Size_t, 0)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_phase' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:804:1: note: in expansion of macro 'PERLVARI'
+  804 | PERLVARI(I, phase,      enum perl_phase, PERL_PHASE_CONSTRUCT)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_in_load_module' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:806:1: note: in expansion of macro 'PERLVARI'
+  806 | PERLVARI(I, in_load_module, bool, FALSE)        /* to prevent recursions in PerlIO_find_layer */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_eval_begin_nest_depth' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:808:1: note: in expansion of macro 'PERLVARI'
+  808 | PERLVARI(I, eval_begin_nest_depth, U32, 0)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_perl_destruct_level' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:841:1: note: in expansion of macro 'PERLVARI'
+  841 | PERLVARI(I, perl_destruct_level, signed char,   0)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_srand_called' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:845:1: note: in expansion of macro 'PERLVARI'
+  845 | PERLVARI(I, srand_called, bool, false)      /* has random_state been initialized yet? */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_srand_override' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:846:1: note: in expansion of macro 'PERLVARI'
+  846 | PERLVARI(I, srand_override, U32, 0)         /* Should we use a deterministic sequence? */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_srand_override_next' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:847:1: note: in expansion of macro 'PERLVARI'
+  847 | PERLVARI(I, srand_override_next, U32, 0)    /* Next item in the sequence */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_numeric_underlying' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:849:1: note: in expansion of macro 'PERLVARI'
+  849 | PERLVARI(I, numeric_underlying, bool, TRUE)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_numeric_underlying_is_standard' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:851:1: note: in expansion of macro 'PERLVARI'
+  851 | PERLVARI(I, numeric_underlying_is_standard, bool, TRUE)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_numeric_standard' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:853:1: note: in expansion of macro 'PERLVARI'
+  853 | PERLVARI(I, numeric_standard, int, TRUE)    /* Assume C locale numerics */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_ctype_name' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:864:1: note: in expansion of macro 'PERLVARI'
+  864 | PERLVARI(I, ctype_name, const char *, NULL)   /* Name of current ctype locale */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_beginav_save' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:889:1: note: in expansion of macro 'PERLVARI'
+  889 | PERLVARI(I, beginav_save, AV *, NULL)   /* save BEGIN{}s when compiling */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_perlio' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:915:1: note: in expansion of macro 'PERLVARI'
+  915 | PERLVARI(I, perlio,     PerlIOl *, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_known_layers' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:916:1: note: in expansion of macro 'PERLVARI'
+  916 | PERLVARI(I, known_layers, PerlIO_list_t *, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_def_layerlist' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:917:1: note: in expansion of macro 'PERLVARI'
+  917 | PERLVARI(I, def_layerlist, PerlIO_list_t *, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_checkav_save' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:920:1: note: in expansion of macro 'PERLVARI'
+  920 | PERLVARI(I, checkav_save, AV *, NULL)   /* save CHECK{}s when compiling */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_unitcheckav_save' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:921:1: note: in expansion of macro 'PERLVARI'
+  921 | PERLVARI(I, unitcheckav_save, AV *, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_clocktick' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:924:1: note: in expansion of macro 'PERLVARI'
+  924 | PERLVARI(I, clocktick,  long,   0)      /* this many times() ticks in a second */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_sharehook' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:927:1: note: in expansion of macro 'PERLVARI'
+  927 | PERLVARI(I, sharehook,  share_proc_t, Perl_sv_nosharing)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_lockhook' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:928:1: note: in expansion of macro 'PERLVARI'
+  928 | PERLVARI(I, lockhook,   share_proc_t, Perl_sv_nosharing)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_unlockhook' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:942:1: note: in expansion of macro 'PERLVARI'
+  942 | PERLVARI(I, unlockhook, share_proc_t, PERL_UNLOCK_HOOK)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_threadhook' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:950:1: note: in expansion of macro 'PERLVARI'
+  950 | PERLVARI(I, threadhook, thrhook_proc_t, Perl_nothreadhook)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_destroyhook' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:953:1: note: in expansion of macro 'PERLVARI'
+  953 | PERLVARI(I, destroyhook, destroyable_proc_t, Perl_sv_destroyable)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_signalhook' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:955:1: note: in expansion of macro 'PERLVARI'
+  955 | PERLVARI(I, signalhook, despatch_signals_proc_t, Perl_despatch_signals)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_isarev' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:957:1: note: in expansion of macro 'PERLVARI'
+  957 | PERLVARI(I, isarev, HV *, NULL)         /* Reverse map of @ISA dependencies */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_scopestack_name' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:974:1: note: in expansion of macro 'PERLVARI'
+  974 | PERLVARI(I, scopestack_name, const char **, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_globhook' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:979:1: note: in expansion of macro 'PERLVARI'
+  979 | PERLVARI(I, globhook,   globhook_t, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_dump_re_max_len' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:1024:1: note: in expansion of macro 'PERLVARI'
+ 1024 | PERLVARI(I, dump_re_max_len, STRLEN, 60)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_InBitmap' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+intrpvar.h:1073:1: note: in expansion of macro 'PERLVARI'
+ 1073 | PERLVARI(I, InBitmap,   SV *, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_curinterp' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:40:1: note: in expansion of macro 'PERLVARI'
+   40 | PERLVARI(G, curinterp,  PerlInterpreter *, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_do_undump' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:49:1: note: in expansion of macro 'PERLVARI'
+   49 | PERLVARI(G, do_undump,  bool,   FALSE)  /* -u or dump seen? */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_sig_trapped' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:65:1: note: in expansion of macro 'PERLVARI'
+   65 | PERLVARI(G, sig_trapped, int,   0)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_csighandlerp' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:75:1: note: in expansion of macro 'PERLVARI'
+   75 | PERLVARI(G, csighandlerp,  Sighandler_t,  Perl_csighandler)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_csighandler1p' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:76:1: note: in expansion of macro 'PERLVARI'
+   76 | PERLVARI(G, csighandler1p, Sighandler1_t, Perl_csighandler1)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_csighandler3p' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:77:1: note: in expansion of macro 'PERLVARI'
+   77 | PERLVARI(G, csighandler3p, Sighandler3_t, Perl_csighandler3)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_perlio_fd_refcnt' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:90:1: note: in expansion of macro 'PERLVARI'
+   90 | PERLVARI(G, perlio_fd_refcnt, int *, 0) /* Pointer to array of fd refcounts.  */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_perlio_fd_refcnt_size' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:91:1: note: in expansion of macro 'PERLVARI'
+   91 | PERLVARI(G, perlio_fd_refcnt_size, int, 0) /* Size of the array */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_perlio_debug_fd' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:92:1: note: in expansion of macro 'PERLVARI'
+   92 | PERLVARI(G, perlio_debug_fd, int, 0)    /* the fd to write perlio debug into, 0 means not set yet */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_watch_pvx' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:109:1: note: in expansion of macro 'PERLVARI'
+  109 | PERLVARI(G, watch_pvx,  char *, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_veto_cleanup' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:177:1: note: in expansion of macro 'PERLVARI'
+  177 | PERLVARI(G, veto_cleanup, int, FALSE)   /* exit without cleanup */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_keyword_plugin' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:238:1: note: in expansion of macro 'PERLVARI'
+  238 | PERLVARI(G, keyword_plugin, Perl_keyword_plugin_t, Perl_keyword_plugin_standard)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_infix_plugin' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:335:1: note: in expansion of macro 'PERLVARI'
+  335 | PERLVARI(G, infix_plugin, Perl_infix_plugin_t, Perl_infix_plugin_standard)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_op_sequence' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:337:1: note: in expansion of macro 'PERLVARI'
+  337 | PERLVARI(G, op_sequence, HV *, NULL)    /* dump.c */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_op_seq' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:338:1: note: in expansion of macro 'PERLVARI'
+  338 | PERLVARI(G, op_seq,     UV,     0)      /* dump.c */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_hash_seed_set' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:355:1: note: in expansion of macro 'PERLVARI'
+  355 | PERLVARI(G, hash_seed_set, bool, FALSE) /* perl.c */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_user_def_props' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:374:1: note: in expansion of macro 'PERLVARI'
+  374 | PERLVARI(G, user_def_props,     HV *, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_strategy_dup' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:389:1: note: in expansion of macro 'PERLVARI'
+  389 | PERLVARI(G, strategy_dup,        int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_strategy_dup2' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:390:1: note: in expansion of macro 'PERLVARI'
+  390 | PERLVARI(G, strategy_dup2,       int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_strategy_open' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:391:1: note: in expansion of macro 'PERLVARI'
+  391 | PERLVARI(G, strategy_open,       int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_strategy_open3' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:392:1: note: in expansion of macro 'PERLVARI'
+  392 | PERLVARI(G, strategy_open3,      int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_strategy_mkstemp' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:393:1: note: in expansion of macro 'PERLVARI'
+  393 | PERLVARI(G, strategy_mkstemp,    int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_strategy_socket' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:394:1: note: in expansion of macro 'PERLVARI'
+  394 | PERLVARI(G, strategy_socket,     int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_strategy_accept' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:395:1: note: in expansion of macro 'PERLVARI'
+  395 | PERLVARI(G, strategy_accept,     int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_strategy_pipe' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:396:1: note: in expansion of macro 'PERLVARI'
+  396 | PERLVARI(G, strategy_pipe,       int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_strategy_socketpair' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:397:1: note: in expansion of macro 'PERLVARI'
+  397 | PERLVARI(G, strategy_socketpair, int, 0)        /* doio.c */
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_my_environ' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:399:1: note: in expansion of macro 'PERLVARI'
+  399 | PERLVARI(G, my_environ, char **, NULL)
+      | ^~~~~~~~
+perl.h:6204:50: warning: 'PL_origenviron' initialized and declared 'extern'
+ 6204 | #define PERLVARI(prefix,var,type,init) EXT type  PL_##var INIT(init);
+      |                                                  ^~~
+perlvars.h:400:1: note: in expansion of macro 'PERLVARI'
+  400 | PERLVARI(G, origenviron, char **, NULL)
+      | ^~~~~~~~
+perl.h:6263:24: warning: 'PL_runops_std' initialized and declared 'extern'
+ 6263 | EXTCONST runops_proc_t PL_runops_std
+      |                        ^~~~~~~~~~~~~
+perl.h:6265:24: warning: 'PL_runops_dbg' initialized and declared 'extern'
+ 6265 | EXTCONST runops_proc_t PL_runops_dbg
+      |                        ^~~~~~~~~~~~~
+In file included from perl.h:6284:
+mg_vtable.h:107:23: warning: 'PL_magic_vtable_names' initialized and declared 'extern'
+  107 | EXTCONST char * const PL_magic_vtable_names[magic_vtable_max] = {
+      |                       ^~~~~~~~~~~~~~~~~~~~~
+mg_vtable.h:167:12: warning: 'PL_magic_vtables' initialized and declared 'extern'
+  167 | EXT_MGVTBL PL_magic_vtables[magic_vtable_max] = {
+      |            ^~~~~~~~~~~~~~~~
+perl.h:6287:13: warning: 'PL_magic_data' initialized and declared 'extern'
+ 6287 | EXTCONST U8 PL_magic_data[256] =
+      |             ^~~~~~~~~~~~~
+perl.h:6297:1: warning: 'PL_valid_types_IVX' initialized and declared 'extern'
+ 6297 | PL_valid_types_IVX[]    = { 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0 };
+      | ^~~~~~~~~~~~~~~~~~
+perl.h:6299:1: warning: 'PL_valid_types_NVX' initialized and declared 'extern'
+ 6299 | PL_valid_types_NVX[]    = { 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0 };
+      | ^~~~~~~~~~~~~~~~~~
+perl.h:6301:1: warning: 'PL_valid_types_PVX' initialized and declared 'extern'
+ 6301 | PL_valid_types_PVX[]    = { 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0 };
+      | ^~~~~~~~~~~~~~~~~~
+perl.h:6303:1: warning: 'PL_valid_types_RV' initialized and declared 'extern'
+ 6303 | PL_valid_types_RV[]     = { 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0 };
+      | ^~~~~~~~~~~~~~~~~
+perl.h:6305:1: warning: 'PL_valid_types_IV_set' initialized and declared 'extern'
+ 6305 | PL_valid_types_IV_set[] = { 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0 };
+      | ^~~~~~~~~~~~~~~~~~~~~
+perl.h:6307:1: warning: 'PL_valid_types_NV_set' initialized and declared 'extern'
+ 6307 | PL_valid_types_NV_set[] = { 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0 };
+      | ^~~~~~~~~~~~~~~~~~~~~
+perl.h:6310:1: warning: 'PL_deBruijn_bitpos_tab32' initialized and declared 'extern'
+ 6310 | PL_deBruijn_bitpos_tab32[] = {
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+perl.h:6317:1: warning: 'PL_deBruijn_bitpos_tab64' initialized and declared 'extern'
+ 6317 | PL_deBruijn_bitpos_tab64[] = {
+      | ^~~~~~~~~~~~~~~~~~~~~~~~
+perl.h:6580:13: warning: 'PL_extended_utf8_dfa_tab' initialized and declared 'extern'
+ 6580 | EXTCONST U8 PL_extended_utf8_dfa_tab[] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+perl.h:6719:13: warning: 'PL_strict_utf8_dfa_tab' initialized and declared 'extern'
+ 6719 | EXTCONST U8 PL_strict_utf8_dfa_tab[] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+perl.h:6833:13: warning: 'PL_c9_utf8_dfa_tab' initialized and declared 'extern'
+ 6833 | EXTCONST U8 PL_c9_utf8_dfa_tab[] = {
+      |             ^~~~~~~~~~~~~~~~~~
+perl.h:8659:19: warning: 'PL_inf' initialized and declared 'extern'
+ 8659 | INFNAN_U8_NV_DECL PL_inf = { { DOUBLEINFBYTES } };
+      |                   ^~~~~~
+perl.h:8695:19: warning: 'PL_nan' initialized and declared 'extern'
+ 8695 | INFNAN_U8_NV_DECL PL_nan = { { DOUBLENANBYTES } };
+      |                   ^~~~~~
+In file included from regcomp.h:1104,
+                 from globals.c:14:
+regnodes.h:1598:23: warning: 'PL_regnode_name' initialized and declared 'extern'
+ 1598 | EXTCONST char * const PL_regnode_name[] = {
+      |                       ^~~~~~~~~~~~~~~
+regnodes.h:1763:30: warning: 'PL_regnode_info' initialized and declared 'extern'
+ 1763 | EXTCONST struct regnode_meta PL_regnode_info[] = {
+      |                              ^~~~~~~~~~~~~~~
+regnodes.h:2850:23: warning: 'PL_reg_extflags_name' initialized and declared 'extern'
+ 2850 | EXTCONST char * const PL_reg_extflags_name[] = {
+      |                       ^~~~~~~~~~~~~~~~~~~~
+regnodes.h:2896:23: warning: 'PL_reg_intflags_name' initialized and declared 'extern'
+ 2896 | EXTCONST char * const PL_reg_intflags_name[] = {
+      |                       ^~~~~~~~~~~~~~~~~~~~
+regnodes.h:2925:13: warning: 'PL_varies' initialized and declared 'extern'
+ 2925 | EXTCONST U8 PL_varies[] __attribute__deprecated__ = {
+      |             ^~~~~~~~~
+regnodes.h:2936:13: warning: 'PL_varies_bitmask' initialized and declared 'extern'
+ 2936 | EXTCONST U8 PL_varies_bitmask[] = {
+      |             ^~~~~~~~~~~~~~~~~
+regnodes.h:2948:13: warning: 'PL_simple' initialized and declared 'extern'
+ 2948 | EXTCONST U8 PL_simple[] __attribute__deprecated__ = {
+      |             ^~~~~~~~~
+regnodes.h:2959:13: warning: 'PL_simple_bitmask' initialized and declared 'extern'
+ 2959 | EXTCONST U8 PL_simple_bitmask[] = {
+      |             ^~~~~~~~~~~~~~~~~
+regnodes.h:2974:14: warning: 'PL_EXACTFish_bitmask' initialized and declared 'extern'
+ 2974 | EXTCONST U32 PL_EXACTFish_bitmask = 0x33F8;
+      |              ^~~~~~~~~~~~~~~~~~~~
+regnodes.h:2975:14: warning: 'PL_EXACT_REQ8_bitmask' initialized and declared 'extern'
+ 2975 | EXTCONST U32 PL_EXACT_REQ8_bitmask = 0x1E00;
+      |              ^~~~~~~~~~~~~~~~~~~~~
+regcomp.h:1111:24: warning: 'PL_core_reg_engine' initialized and declared 'extern'
+ 1111 | EXTCONST regexp_engine PL_core_reg_engine = {
+      |                        ^~~~~~~~~~~~~~~~~~
